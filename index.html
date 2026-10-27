@@ -79,14 +79,14 @@
 
     <!-- RESPONSIVE FLOATING GLASS NAV -->
     <div class="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[96%] max-w-5xl" data-aos="fade-down" data-aos-duration="600">
-        <nav class="bg-[#0e0f14]/95 backdrop-blur-xl border border-white/10 rounded-full px-3 py-2 flex items-center justify-between shadow-2xl">
+        <nav class="bg-[#0e0f14]/95 backdrop-blur-xl border border-white/10 rounded-full px-4 py-2.5 flex items-center justify-between shadow-2xl">
             <!-- Brand Name -->
-            <a href="#" class="font-extrabold text-[11px] sm:text-xs tracking-wider bg-gradient-to-r from-blue-400 via-sky-300 to-amber-400 bg-clip-text text-transparent shrink-0">
+            <a href="#" class="font-extrabold text-xs tracking-wider bg-gradient-to-r from-blue-400 via-sky-300 to-amber-400 bg-clip-text text-transparent shrink-0">
                 ARUP KUMAR SAHA
             </a>
 
-            <!-- Menu Links (Compact for Laptops) -->
-            <div class="hidden lg:flex items-center space-x-3 text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
+            <!-- Menu Links (Only visible on large screens to prevent crowding) -->
+            <div class="hidden xl:flex items-center space-x-4 text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
                 <a href="#about" class="hover:text-blue-400 transition">About</a>
                 <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
                 <a href="#ventures" class="hover:text-blue-400 transition">Ventures</a>
@@ -96,26 +96,26 @@
                 <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
             </div>
 
-            <!-- Right Controls & Mobile Menu Toggle (Triggers earlier on smaller screens) -->
+            <!-- Right Controls & Hamburger Menu Toggle -->
             <div class="flex items-center space-x-2 shrink-0">
-                <div class="hidden lg:block">
-                    <a href="Arup_Kumar_Saha_CV.pdf" download class="bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-bold px-3 py-1.5 rounded-full transition shadow-lg shadow-blue-500/20 flex items-center space-x-1">
+                <div class="hidden md:block">
+                    <a href="Arup_Kumar_Saha_CV.pdf" download class="bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-bold px-3.5 py-1.5 rounded-full transition shadow-lg shadow-blue-500/20 flex items-center space-x-1">
                         <i class="fa-solid fa-file-pdf"></i>
                         <span>Download CV</span>
                     </a>
                 </div>
-                <a href="Arup_Kumar_Saha_CV.pdf" download class="lg:hidden bg-blue-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center space-x-1">
+                <a href="Arup_Kumar_Saha_CV.pdf" download class="md:hidden bg-blue-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center space-x-1">
                     <i class="fa-solid fa-file-pdf"></i>
                     <span>CV</span>
                 </a>
-                <button id="menuBtn" class="lg:hidden text-zinc-300 hover:text-white focus:outline-none p-1.5 bg-zinc-900 rounded-xl border border-white/10">
+                <button id="menuBtn" class="xl:hidden text-zinc-300 hover:text-white focus:outline-none p-1.5 bg-zinc-900 rounded-xl border border-white/10">
                     <i class="fa-solid fa-ellipsis-vertical text-sm"></i>
                 </button>
             </div>
         </nav>
 
-        <!-- Dropdown Menu for Smaller Screens -->
-        <div id="mobileMenu" class="hidden w-full bg-[#0e0f14]/95 backdrop-blur-xl border border-white/10 rounded-2xl mt-2 p-3.5 flex flex-col space-y-2 text-xs font-semibold uppercase tracking-wider text-zinc-300 lg:hidden shadow-2xl">
+        <!-- Dropdown Menu for Laptops & Mobile -->
+        <div id="mobileMenu" class="hidden w-full bg-[#0e0f14]/95 backdrop-blur-xl border border-white/10 rounded-2xl mt-2 p-4 flex flex-col space-y-2 text-xs font-semibold uppercase tracking-wider text-zinc-300 xl:hidden shadow-2xl">
             <a href="#about" class="mobile-link hover:text-blue-400 py-1 transition flex items-center space-x-2"><i class="fa-solid fa-user text-blue-400 w-4"></i><span>About</span></a>
             <a href="#experience" class="mobile-link hover:text-blue-400 py-1 transition flex items-center space-x-2"><i class="fa-solid fa-briefcase text-amber-400 w-4"></i><span>Experience</span></a>
             <a href="#ventures" class="mobile-link hover:text-blue-400 py-1 transition flex items-center space-x-2"><i class="fa-solid fa-lightbulb text-emerald-400 w-4"></i><span>Ventures</span></a>
