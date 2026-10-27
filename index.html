@@ -43,7 +43,6 @@
             transform: translateY(-4px);
             box-shadow: 0 30px 60px -15px rgba(59, 130, 246, 0.25);
         }
-        /* Relevant Section Watermark Icons */
         .section-bg-icon {
             position: absolute;
             right: -15px;
@@ -67,7 +66,6 @@
             border-radius: 50%;
             z-index: -1;
         }
-        /* Interconnected Flow Line Background Effect */
         .interconnected-line {
             position: absolute;
             left: 50%;
@@ -82,7 +80,6 @@
             .interconnected-line { display: none; }
             .section-bg-icon { font-size: 80px; right: -10px; bottom: -10px; }
         }
-        /* Typewriter Cursor Blinking */
         .typed-cursor {
             display: inline-block;
             background-color: #3b82f6;
@@ -93,7 +90,6 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
         }
-        /* Slideshow transitions */
         .slide-item, .photo-slide-item {
             display: none;
             animation: fadeIn 0.6s ease-in-out;
@@ -112,11 +108,10 @@
 </head>
 <body class="antialiased selection:bg-blue-500 selection:text-white pb-24 relative">
 
-    <!-- Background Glows -->
     <div class="blob-glow top-10 left-5"></div>
     <div class="blob-glow bottom-1/3 right-5"></div>
 
-    <!-- LEFT SIDE VERTICAL SOCIAL SIDEBAR (Desktop Only) -->
+    <!-- LEFT SOCIAL SIDEBAR -->
     <div class="hidden lg:flex flex-col fixed left-6 top-1/2 -translate-y-1/2 z-40 space-y-4 bg-[#0e0f14]/90 py-4 px-2.5 rounded-full border border-white/10 shadow-xl items-center" data-aos="fade-right" data-aos-duration="1000">
         <span class="text-[9px] uppercase font-bold text-zinc-500 tracking-widest [writing-mode:vertical-lr] mb-1">Connect</span>
         <div class="w-full h-[1px] bg-white/10"></div>
@@ -126,20 +121,19 @@
         <a href="mailto:arup.bu.bd@gmail.com" class="w-9 h-9 rounded-full bg-zinc-900 hover:bg-amber-600 text-zinc-400 hover:text-white flex items-center justify-center transition shadow-md hover:scale-110" title="Email"><i class="fa-solid fa-envelope text-xs"></i></a>
     </div>
 
-    <!-- RIGHT SIDE VERTICAL STATUS SIDEBAR (Desktop Only) -->
+    <!-- RIGHT STATUS SIDEBAR -->
     <div class="hidden lg:flex flex-col fixed right-6 top-1/2 -translate-y-1/2 z-40 items-center space-y-4 bg-[#0e0f14]/90 py-5 px-3 rounded-full border border-white/10 shadow-xl" data-aos="fade-left" data-aos-duration="1000">
         <span class="text-[10px] uppercase font-bold text-zinc-400 tracking-widest [writing-mode:vertical-lr]">Arup Saha</span>
         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
     </div>
 
-    <!-- FIXED RESPONSIVE HEADER CONTAINER -->
+    <!-- HEADER -->
     <div class="max-w-5xl mx-auto px-3 sm:px-6 pt-3 z-50 fixed inset-x-0 top-0 pointer-events-none">
         <nav class="bg-[#0e0f14]/95 border border-white/10 rounded-full px-4 sm:px-5 py-3 flex items-center justify-between shadow-xl pointer-events-auto" data-aos="fade-down" data-aos-duration="800">
             <a href="#" class="font-extrabold text-[11px] sm:text-xs tracking-wider bg-gradient-to-r from-blue-400 via-sky-300 to-amber-400 bg-clip-text text-transparent shrink-0">
                 ARUP KUMAR SAHA
             </a>
 
-            <!-- Desktop Menu -->
             <div class="hidden lg:flex items-center space-x-3 xl:space-x-4 text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
                 <a href="#about" class="hover:text-blue-400 transition">About</a>
                 <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
@@ -152,7 +146,6 @@
                 <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
             </div>
 
-            <!-- Right: CV & Mobile Menu Button -->
             <div class="flex items-center space-x-2 shrink-0">
                 <a href="Arup_Kumar_Saha_CV.pdf" download class="bg-blue-600 hover:bg-blue-500 text-white text-[10px] sm:text-[11px] font-bold px-3 py-1.5 rounded-full transition shadow-md flex items-center space-x-1">
                     <i class="fa-solid fa-file-pdf"></i>
@@ -164,7 +157,7 @@
             </div>
         </nav>
 
-        <!-- Dropdown Menu for Mobile -->
+        <!-- MOBILE MENU -->
         <div id="mobileMenu" class="hidden absolute right-3 sm:right-6 w-64 bg-[#0e0f14]/98 backdrop-blur-2xl border border-white/15 rounded-2xl mt-2 p-3.5 flex flex-col space-y-2 text-xs font-semibold uppercase tracking-wider text-zinc-200 lg:hidden shadow-2xl pointer-events-auto z-50">
             <a href="#about" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-user text-blue-400 w-4"></i><span>About</span></a>
             <a href="#experience" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-briefcase text-amber-400 w-4"></i><span>Experience</span></a>
@@ -178,10 +171,8 @@
         </div>
     </div>
 
-    <!-- MAIN CONTAINER WITH INTER-CONNECTED FLOW -->
+    <!-- MAIN CONTAINER -->
     <main class="max-w-5xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 space-y-12 sm:space-y-16 relative">
-
-        <!-- Inter-connected Center Flow Line -->
         <div class="interconnected-line"></div>
 
         <!-- 1. HERO SECTION -->
@@ -191,7 +182,6 @@
                 <div class="space-y-4 relative z-10">
                     <span class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-[11px] font-bold uppercase tracking-widest border border-blue-500/20">
                         <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
-                        <!-- Typewriter Target Element -->
                         <span><span id="typewriter"></span><span class="typed-cursor">&nbsp;</span></span>
                     </span>
                     <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
@@ -213,20 +203,16 @@
                 </div>
             </div>
             
-            <!-- Profile Card -->
             <div class="md:col-span-4 bento-card p-8 rounded-3xl flex flex-col items-center justify-center relative overflow-hidden group shadow-2xl" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="200">
                 <i class="fa-solid fa-id-badge section-bg-icon"></i>
                 <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/25 via-indigo-600/10 to-amber-500/20 opacity-90 group-hover:opacity-100 transition duration-700"></div>
-                
                 <div class="absolute top-4 left-4 z-20 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-blue-400 uppercase tracking-widest flex items-center space-x-1.5 shadow-lg">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                     <span>Ready to Hire</span>
                 </div>
-
                 <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden border-2 border-blue-500/50 relative z-10 shadow-2xl group-hover:border-blue-400 transition duration-500 group-hover:scale-[1.03]">
-                    <img src="profile.jpg" alt="Arup Kumar Saha" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'">
+                    <img src="profile.jpg" alt="Arup Kumar Saha - Professional Portrait" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'">
                 </div>
-
                 <div class="mt-4 text-center relative z-10 space-y-1">
                     <h3 class="text-sm sm:text-base font-extrabold text-white tracking-wide">Arup Kumar Saha</h3>
                     <p class="text-[11px] text-blue-400 font-semibold">Management & HR Professional</p>
@@ -303,7 +289,7 @@
             </div>
         </section>
 
-        <!-- 4. CO-CURRICULAR & SPORTS SECTION -->
+        <!-- 4. CO-CURRICULAR & SPORTS -->
         <section id="co-curricular" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-left" data-aos-duration="900">
             <i class="fa-solid fa-trophy section-bg-icon"></i>
             <div class="flex items-center justify-between px-2 relative z-10">
@@ -315,7 +301,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10">
-                <!-- Leadership & Club Involvements -->
                 <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
                     <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest"><i class="fa-solid fa-users-rectangle mr-1.5"></i> Leadership & Clubs</div>
                     <h3 class="font-bold text-base text-white">University Club Involvements</h3>
@@ -328,7 +313,6 @@
                     </ul>
                 </div>
 
-                <!-- Sports & Personal Interests -->
                 <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
                     <div class="text-[10px] font-bold text-amber-400 uppercase tracking-widest"><i class="fa-solid fa-futbol mr-1.5"></i> Sports & Passions</div>
                     <h3 class="font-bold text-base text-white">Sports & Recreational Activities</h3>
@@ -351,20 +335,13 @@
 
         <!-- 5. ACADEMICS & SKILLS -->
         <section id="academics" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-right" data-aos-duration="900">
-            
-            <!-- Left: Animated Timeline Education -->
             <div class="md:col-span-7 bento-card p-6 sm:p-8 rounded-3xl space-y-6">
                 <i class="fa-solid fa-graduation-cap section-bg-icon"></i>
-                
                 <div class="flex items-center justify-between relative z-10">
                     <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Educational Background</h2>
                     <span class="text-[11px] font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Timeline</span>
                 </div>
-
-                <!-- Timeline Wrapper -->
                 <div class="relative border-l-2 border-blue-500/30 ml-3 space-y-8 py-3 relative z-10">
-                    
-                    <!-- Timeline Item 1 -->
                     <div class="relative pl-6 group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                         <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-blue-500 ring-4 ring-[#040406] group-hover:scale-125 transition"></div>
                         <div class="space-y-1.5">
@@ -373,8 +350,6 @@
                             <p class="text-xs sm:text-sm text-zinc-400">University of Barishal</p>
                         </div>
                     </div>
-
-                    <!-- Timeline Item 2 -->
                     <div class="relative pl-6 group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                         <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-amber-500 ring-4 ring-[#040406] group-hover:scale-125 transition"></div>
                         <div class="space-y-1.5">
@@ -383,8 +358,6 @@
                             <p class="text-xs sm:text-sm text-zinc-400">University of Barishal</p>
                         </div>
                     </div>
-
-                    <!-- Timeline Item 3 -->
                     <div class="relative pl-6 group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
                         <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-emerald-500 ring-4 ring-[#040406] group-hover:scale-125 transition"></div>
                         <div class="space-y-1.5">
@@ -393,8 +366,6 @@
                             <p class="text-xs sm:text-sm text-zinc-400">Dr. Abdur Razzak Municipal College, Jashore</p>
                         </div>
                     </div>
-
-                    <!-- Timeline Item 4 -->
                     <div class="relative pl-6 group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
                         <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-purple-500 ring-4 ring-[#040406] group-hover:scale-125 transition"></div>
                         <div class="space-y-1.5">
@@ -403,11 +374,9 @@
                             <p class="text-xs sm:text-sm text-zinc-400">Sammilani Institution, Jashore</p>
                         </div>
                     </div>
-
                 </div>
             </div>
 
-            <!-- Right: Skills & Languages -->
             <div class="md:col-span-5 bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
                 <i class="fa-solid fa-brain section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Skills & Competencies</h2>
@@ -415,27 +384,27 @@
                     <div>
                         <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-2">Technical & Software</div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300" data-aos="zoom-in" data-aos-delay="100">SPSS, AMOS & SmartPLS</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300" data-aos="zoom-in" data-aos-delay="150">MS Office (Word, PPT)</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300" data-aos="zoom-in" data-aos-delay="200">MS Excel</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300" data-aos="zoom-in" data-aos-delay="250">HTML, CSS & Bootstrap</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300" data-aos="zoom-in" data-aos-delay="300">AI Prompting</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">SPSS, AMOS & SmartPLS</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">MS Office (Word, PPT)</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">MS Excel</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">HTML, CSS & Bootstrap</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">AI Prompting</span>
                         </div>
                     </div>
                     <div>
                         <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-2">Languages Known</div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300" data-aos="zoom-in" data-aos-delay="150">Bangla (Native)</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300" data-aos="zoom-in" data-aos-delay="200">English (Professional)</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300" data-aos="zoom-in" data-aos-delay="250">Hindi (Conversational)</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Bangla (Native)</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">English (Professional)</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Hindi (Conversational)</span>
                         </div>
                     </div>
                     <div>
                         <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2">Admin & Soft Skills</div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300" data-aos="zoom-in" data-aos-delay="200">Attendance Records</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300" data-aos="zoom-in" data-aos-delay="250">Office Filing</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300" data-aos="zoom-in" data-aos-delay="300">Communication</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Attendance Records</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Office Filing</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Communication</span>
                         </div>
                     </div>
                 </div>
@@ -448,7 +417,7 @@
                 <i class="fa-solid fa-certificate section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Certificates & Trainings</h2>
                 <div class="space-y-4 relative z-10">
-                    <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-1.5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-1.5">
                         <div class="flex justify-between text-[11px] font-bold text-blue-400">
                             <span>360 Hours (Jan - Jun, 2024)</span>
                             <span class="text-emerald-400">Grade A+</span>
@@ -456,7 +425,7 @@
                         <h3 class="font-bold text-base text-white">Computer Office Application</h3>
                         <p class="text-xs text-zinc-400">Urban Social Services Office, Barishal</p>
                     </div>
-                    <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-1.5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-1.5">
                         <div class="flex justify-between text-[11px] font-bold text-amber-400">
                             <span>Aug - Oct, 2024</span>
                             <span class="text-blue-400">Passed</span>
@@ -471,15 +440,15 @@
                 <i class="fa-solid fa-handshake section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Professional Services</h2>
                 <div class="space-y-3.5 relative z-10">
-                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5">
                         <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-calculator text-sm"></i></div>
                         <div><h4 class="font-bold text-xs sm:text-sm text-white">Financial Management Tutoring</h4><p class="text-xs text-zinc-400">Capital Budgeting, Cost of Capital & Working Capital.</p></div>
                     </div>
-                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5">
                         <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-book-open text-sm"></i></div>
                         <div><h4 class="font-bold text-xs sm:text-sm text-white">Academic Mentoring</h4><p class="text-xs text-zinc-400">English grammar, mathematics, and science tutoring.</p></div>
                     </div>
-                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5">
                         <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-chart-line text-sm"></i></div>
                         <div><h4 class="font-bold text-xs sm:text-sm text-white">Research & Data Tabulation</h4><p class="text-xs text-zinc-400">Survey data collection and SPSS statistical analysis.</p></div>
                     </div>
@@ -502,7 +471,6 @@
             </div>
 
             <div class="relative overflow-hidden rounded-2xl bg-zinc-900/80 border border-white/5 p-5 sm:p-6 min-h-[190px] relative z-10">
-                <!-- Slide 1 -->
                 <div class="slide-item active space-y-3">
                     <div class="flex justify-between items-center text-[11px] font-bold text-blue-400 uppercase tracking-widest">
                         <span class="flex items-center space-x-2"><i class="fa-solid fa-file-powerpoint text-base"></i><span>Presentation Deck</span></span>
@@ -519,7 +487,6 @@
                     </div>
                 </div>
 
-                <!-- Slide 2 -->
                 <div class="slide-item space-y-3">
                     <div class="flex justify-between items-center text-[11px] font-bold text-emerald-400 uppercase tracking-widest">
                         <span class="flex items-center space-x-2"><i class="fa-solid fa-file-excel text-base"></i><span>Excel & Data Model</span></span>
@@ -558,7 +525,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10">
-                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3 hover:border-blue-500/40 transition" data-aos="zoom-in" data-aos-delay="100">
+                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3 hover:border-blue-500/40 transition">
                     <div class="flex justify-between text-[11px] font-bold text-blue-400 uppercase tracking-widest">
                         <span>Management</span>
                         <span>Oct 2026</span>
@@ -573,7 +540,7 @@
                     </div>
                 </div>
 
-                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3 hover:border-blue-500/40 transition" data-aos="zoom-in" data-aos-delay="200">
+                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3 hover:border-blue-500/40 transition">
                     <div class="flex justify-between text-[11px] font-bold text-amber-400 uppercase tracking-widest">
                         <span>Finance</span>
                         <span>Sep 2026</span>
@@ -604,12 +571,9 @@
                 </a>
             </div>
 
-            <!-- Photo Slideshow Container -->
             <div class="relative overflow-hidden rounded-2xl bg-zinc-900/80 border border-white/5 aspect-video sm:aspect-[21/9] flex items-center justify-center relative z-10">
-                
-                <!-- Photo Slide 1 -->
                 <div class="photo-slide-item active absolute inset-0 w-full h-full">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Serene Seashore and Coastal Horizon View" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-darkBg/95 via-transparent to-transparent flex items-end p-5 sm:p-6">
                         <div>
                             <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/20 px-2.5 py-1 rounded">Photography</span>
@@ -618,9 +582,8 @@
                     </div>
                 </div>
 
-                <!-- Photo Slide 2 -->
                 <div class="photo-slide-item absolute inset-0 w-full h-full">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Mountain Expedition and Scenic Valleys Landscape" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-darkBg/95 via-transparent to-transparent flex items-end p-5 sm:p-6">
                         <div>
                             <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/20 px-2.5 py-1 rounded">Tours & Travels</span>
@@ -629,9 +592,8 @@
                     </div>
                 </div>
 
-                <!-- Photo Slide 3 -->
                 <div class="photo-slide-item absolute inset-0 w-full h-full">
-                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80" alt="Highway Road Trip Journey and Open Roads" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-darkBg/95 via-transparent to-transparent flex items-end p-5 sm:p-6">
                         <div>
                             <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/20 px-2.5 py-1 rounded">Travel Diary</span>
@@ -640,7 +602,6 @@
                     </div>
                 </div>
 
-                <!-- Photo Navigation Dots -->
                 <div class="absolute bottom-4 right-4 z-10 flex space-x-2 bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-full border border-white/10">
                     <button onclick="currentPhotoSlide(0)" class="photo-dot w-2 h-2 rounded-full bg-blue-500 transition-all"></button>
                     <button onclick="currentPhotoSlide(1)" class="photo-dot w-2 h-2 rounded-full bg-zinc-500 transition-all"></button>
@@ -689,6 +650,15 @@
                         <div><div class="text-[10px] uppercase font-bold text-zinc-500">Location</div><span class="text-white font-medium">Bijoy 24 Hall, University of Barishal</span></div>
                     </div>
                 </div>
+
+                <!-- Hidden Reference Section -->
+                <div class="pt-4 border-t border-white/5 space-y-2.5 relative z-10 hidden">
+                    <h3 class="font-bold text-xs sm:text-sm text-white">Professional References</h3>
+                    <div class="text-xs space-y-1.5 text-zinc-400">
+                        <div><strong class="text-white">Surajit Kumar Mondal</strong> (+880 1747399170)</div>
+                        <div><strong class="text-white">Ashok Bala</strong> (+880 1688156573)</div>
+                    </div>
+                </div>
             </div>
 
             <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-left" data-aos-duration="700">
@@ -728,22 +698,19 @@
         </div>
     </footer>
 
-    <!-- SCROLL TO TOP FLOATING BUTTON -->
+    <!-- SCROLL TO TOP -->
     <a href="#about" id="scrollTopBtn" class="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-blue-600 hover:bg-blue-500 text-white shadow-2xl flex items-center justify-center transition-all opacity-0 pointer-events-none hover:scale-110">
         <i class="fa-solid fa-arrow-up text-xs"></i>
     </a>
 
-    <!-- AOS Animation Library JS -->
+    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Smooth AOS Initialization
         AOS.init({ once: true, offset: 20, duration: 700 });
 
-        // TYPEWRITER EFFECT SCRIPT
+        // TYPEWRITER SCRIPT
         const words = ["MBA in HRM", "Entrepreneur", "Tech Enthusiast", "Researcher"];
         let i = 0;
-        let timer;
-
         function typingEffect() {
             let word = words[i].split("");
             var loopTyping = function() {
@@ -753,11 +720,10 @@
                     setTimeout(deletingEffect, 2000);
                     return false;
                 }
-                timer = setTimeout(loopTyping, 100);
+                setTimeout(loopTyping, 100);
             };
             loopTyping();
         }
-
         function deletingEffect() {
             let word = words[i].split("");
             var loopDeleting = function() {
@@ -765,19 +731,14 @@
                     word.pop();
                     document.getElementById('typewriter').innerHTML = word.join("");
                 } else {
-                    if (words.length > (i + 1)) {
-                        i++;
-                    } else {
-                        i = 0;
-                    }
+                    i = (words.length > (i + 1)) ? i + 1 : 0;
                     setTimeout(typingEffect, 500);
                     return false;
                 }
-                timer = setTimeout(loopDeleting, 50);
+                setTimeout(loopDeleting, 50);
             };
             loopDeleting();
         }
-
         typingEffect();
 
         const menuBtn = document.getElementById('menuBtn');
@@ -788,14 +749,9 @@
             e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
         });
-
         mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+            link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
         });
-
-        // Close mobile menu when clicking anywhere outside
         document.addEventListener('click', (e) => {
             if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
                 mobileMenu.classList.add('hidden');
@@ -811,11 +767,10 @@
             }
         });
 
-        // WORK SHOWCASE AUTO SLIDESHOW
+        // SLIDESHOW
         let slideIndex = 0;
         const slides = document.querySelectorAll('.slide-item');
         const dots = document.querySelectorAll('.dot');
-
         function showSlides() {
             if(slides.length === 0) return;
             slides.forEach((slide) => slide.classList.remove('active'));
@@ -823,15 +778,12 @@
                 dot.classList.remove('bg-blue-500', 'w-6');
                 dot.classList.add('bg-zinc-700', 'w-2');
             });
-
             slideIndex++;
             if (slideIndex > slides.length) { slideIndex = 1; }
-
             slides[slideIndex - 1].classList.add('active');
             dots[slideIndex - 1].classList.remove('bg-zinc-700', 'w-2');
             dots[slideIndex - 1].classList.add('bg-blue-500', 'w-6');
         }
-
         function currentSlide(n) {
             slideIndex = n;
             slides.forEach((slide) => slide.classList.remove('active'));
@@ -839,19 +791,16 @@
                 dot.classList.remove('bg-blue-500', 'w-6');
                 dot.classList.add('bg-zinc-700', 'w-2');
             });
-
             slides[slideIndex].classList.add('active');
             dots[slideIndex].classList.remove('bg-zinc-700', 'w-2');
             dots[slideIndex].classList.add('bg-blue-500', 'w-6');
         }
+        setInterval(showSlides, 4000);
 
-        let slideTimer = setInterval(showSlides, 4000);
-
-        // PHOTOGRAPHY & TRAVELS AUTO SLIDESHOW
+        // PHOTO SLIDESHOW
         let photoSlideIndex = 0;
         const photoSlides = document.querySelectorAll('.photo-slide-item');
         const photoDots = document.querySelectorAll('.photo-dot');
-
         function showPhotoSlides() {
             if(photoSlides.length === 0) return;
             photoSlides.forEach((slide) => slide.classList.remove('active'));
@@ -859,15 +808,12 @@
                 dot.classList.remove('bg-blue-500');
                 dot.classList.add('bg-zinc-500');
             });
-
             photoSlideIndex++;
             if (photoSlideIndex > photoSlides.length) { photoSlideIndex = 1; }
-
             photoSlides[photoSlideIndex - 1].classList.add('active');
             photoDots[photoSlideIndex - 1].classList.remove('bg-zinc-500');
             photoDots[photoSlideIndex - 1].classList.add('bg-blue-500');
         }
-
         function currentPhotoSlide(n) {
             photoSlideIndex = n;
             photoSlides.forEach((slide) => slide.classList.remove('active'));
@@ -875,13 +821,11 @@
                 dot.classList.remove('bg-blue-500');
                 dot.classList.add('bg-zinc-500');
             });
-
             photoSlides[photoSlideIndex].classList.add('active');
             photoDots[photoSlideIndex].classList.remove('bg-zinc-500');
             photoDots[photoSlideIndex].classList.add('bg-blue-500');
         }
-
-        let photoSlideTimer = setInterval(showPhotoSlides, 5000);
+        setInterval(showPhotoSlides, 5000);
     </script>
 </body>
 </html>
