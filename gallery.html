@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arup Kumar Saha — Photography & Travel Gallery</title>
+    <title>Gallery — Photography & Tours | Arup Kumar Saha</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -31,118 +31,75 @@
     <style>
         body { background-color: #040406; color: #f3f4f6; overflow-x: hidden; }
         .bento-card {
-            background: rgba(14, 15, 20, 0.85);
+            background: rgba(14, 15, 20, 0.92);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .bento-card:hover {
-            border-color: rgba(59, 130, 246, 0.5);
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.2);
+            transition: all 0.4s ease;
         }
         .blob-glow {
             position: absolute;
             width: 450px;
             height: 450px;
             background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(245, 158, 11, 0.08) 60%, transparent 100%);
-            filter: blur(80px);
+            filter: blur(90px);
             border-radius: 50%;
             z-index: -1;
         }
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #040406; }
-        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 3px; }
     </style>
 </head>
-<body class="antialiased selection:bg-blue-500 selection:text-white pb-20 relative">
+<body class="antialiased selection:bg-blue-500 selection:text-white min-h-screen flex flex-col justify-between relative">
 
-    <!-- Background Glows -->
-    <div class="blob-glow top-10 left-5"></div>
-    <div class="blob-glow bottom-1/4 right-5"></div>
+    <div class="blob-glow top-1/4 left-1/2 -translate-x-1/2"></div>
 
-    <!-- NAVIGATION BAR -->
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 pt-6 z-50 fixed inset-x-0 top-0 pointer-events-none">
-        <nav class="bg-[#0e0f14]/95 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 flex items-center justify-between shadow-2xl pointer-events-auto">
-            <a href="index.html" class="font-extrabold text-xs tracking-wider bg-gradient-to-r from-blue-400 via-sky-300 to-amber-400 bg-clip-text text-transparent shrink-0">
-                &larr; BACK TO HOME
+    <div class="max-w-5xl mx-auto px-3 sm:px-6 pt-3 z-50 fixed inset-x-0 top-0 pointer-events-none">
+        <nav class="bg-[#0e0f14]/95 border border-white/10 rounded-full px-4 sm:px-5 py-3 flex items-center justify-between shadow-xl pointer-events-auto" data-aos="fade-down" data-aos-duration="800">
+            <a href="index.html" class="font-extrabold text-[11px] sm:text-xs tracking-wider bg-gradient-to-r from-blue-400 via-sky-300 to-amber-400 bg-clip-text text-transparent shrink-0">
+                ARUP KUMAR SAHA
             </a>
-            <div class="hidden lg:flex items-center space-x-4 text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
-                <span class="text-amber-400">Photography & Travel Gallery Hub</span>
-            </div>
-            <a href="index.html#contact" class="bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-bold px-3.5 py-1.5 rounded-full transition shadow-lg">
-                Get in Touch
+            <a href="index.html" class="bg-blue-600 hover:bg-blue-500 text-white text-[10px] sm:text-[11px] font-bold px-4 py-1.5 rounded-full transition shadow-md flex items-center space-x-1.5">
+                <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                <span>Back to Home</span>
             </a>
         </nav>
     </div>
 
-    <!-- MAIN GALLERY CONTENT -->
-    <main class="max-w-5xl mx-auto px-4 sm:px-6 pt-32 sm:pt-28 space-y-6">
-        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-up">
-            <div class="space-y-2">
-                <span class="text-[11px] text-amber-400 font-bold uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Visual Journey</span>
-                <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">Photography & Tours Gallery</h1>
-                <p class="text-xs sm:text-sm text-zinc-400">A curated collection of my captured photographs, scenic tours, and memorable travel explorations.</p>
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 my-auto text-center py-24 z-10" data-aos="zoom-in" data-aos-duration="800">
+        <div class="bento-card p-8 sm:p-14 rounded-3xl space-y-6 shadow-2xl relative overflow-hidden border border-white/10">
+            <div class="absolute -top-20 -right-20 w-40 h-40 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center text-2xl sm:text-3xl shadow-lg">
+                <i class="fa-solid fa-camera-retro"></i>
             </div>
 
-            <!-- Gallery Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-4">
-                
-                <div class="aspect-video sm:aspect-square bg-zinc-900 rounded-2xl overflow-hidden border border-white/5 relative group">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
-                        <span class="text-xs text-white font-medium">Coastal Seashore View</span>
-                    </div>
-                </div>
-
-                <div class="aspect-video sm:aspect-square bg-zinc-900 rounded-2xl overflow-hidden border border-white/5 relative group">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
-                        <span class="text-xs text-white font-medium">Mountain Valley Tour</span>
-                    </div>
-                </div>
-
-                <div class="aspect-video sm:aspect-square bg-zinc-900 rounded-2xl overflow-hidden border border-white/5 relative group">
-                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
-                        <span class="text-xs text-white font-medium">Highway Travel Expedition</span>
-                    </div>
-                </div>
-
-                <div class="aspect-video sm:aspect-square bg-zinc-900 rounded-2xl overflow-hidden border border-white/5 relative group">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
-                        <span class="text-xs text-white font-medium">Night Sky & Horizons</span>
-                    </div>
-                </div>
-
-                <div class="aspect-video sm:aspect-square bg-zinc-900 rounded-2xl overflow-hidden border border-white/5 relative group">
-                    <img src="https://images.unsplash.com/photo-1519074069444-1ba4ea16d66c?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
-                        <span class="text-xs text-white font-medium">Sunset Landscape</span>
-                    </div>
-                </div>
-
-                <div class="aspect-video sm:aspect-square bg-zinc-900 rounded-2xl overflow-hidden border border-white/5 relative group">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
-                        <span class="text-xs text-white font-medium">Architectural Perspective</span>
-                    </div>
-                </div>
-
+            <div class="space-y-3">
+                <span class="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+                    Visual Showcase
+                </span>
+                <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
+                    Gallery & Tours Hub Coming Soon
+                </h1>
+                <p class="text-xs sm:text-sm text-zinc-400 max-w-lg mx-auto leading-relaxed">
+                    আমার ভ্রমণ ডায়েরি এবং ফটোগ্রাফির সেরা মুহূর্তগুলো নিয়ে গ্যালারি পেজটি খুব শীঘ্রই সাজানো হবে।
+                </p>
             </div>
-        </section>
+
+            <div class="pt-2">
+                <a href="index.html" class="inline-flex items-center space-x-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-200 hover:text-white font-bold px-6 py-3 rounded-xl text-xs border border-white/10 transition shadow-lg">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Return to Homepage</span>
+                </a>
+            </div>
+        </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="max-w-5xl mx-auto px-4 sm:px-6 mt-12 pt-6 border-t border-white/10 text-center text-xs text-zinc-500">
+    <footer class="max-w-5xl mx-auto px-4 sm:px-6 py-6 border-t border-white/10 text-center text-xs text-zinc-500 z-10" data-aos="fade-in" data-aos-duration="600">
         <p>&copy; 2026 Arup Kumar Saha. All Rights Reserved.</p>
     </footer>
 
-    <!-- AOS Animation Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ once: true, offset: 30, duration: 700 });
+        AOS.init({ once: true, offset: 20, duration: 700 });
     </script>
 </body>
 </html>
