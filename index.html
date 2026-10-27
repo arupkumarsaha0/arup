@@ -50,6 +50,18 @@
             border-radius: 50%;
             z-index: -1;
         }
+        /* Auto Slideshow Transitions */
+        .slide-item {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        .slide-item.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #040406; }
         ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 3px; }
@@ -324,50 +336,60 @@
             </div>
         </section>
 
-        <!-- SHOWCASE HIGHLIGHTS (Linked to portfolio.html) -->
+        <!-- AUTOMATIC SLIDESHOW SHOWCASE SECTION (Linked to portfolio.html) -->
         <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-4" data-aos="fade-up">
             <div class="flex items-center justify-between px-2">
                 <div>
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Featured Presentations & Excel Demos</h2>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Featured Presentations & Excel Demos (Auto-Slides)</h2>
                     <p class="text-xs text-zinc-400">Highlights from my work hub and academic slide decks.</p>
                 </div>
                 <a href="portfolio.html" class="text-[11px] font-bold text-blue-400 hover:text-blue-300 uppercase tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20 transition flex items-center space-x-1">
-                    <span>View All</span>
+                    <span>View All Hub</span>
                     <i class="fa-solid fa-arrow-right text-[9px]"></i>
                 </a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Highlight 1 -->
-                <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-2 hover:border-blue-500/40 transition">
+            <!-- Slideshow Container -->
+            <div class="relative overflow-hidden rounded-2xl bg-zinc-900/60 border border-white/5 p-5 min-h-[160px]">
+                
+                <!-- Slide 1 -->
+                <div class="slide-item active space-y-2">
                     <div class="flex justify-between text-[10px] font-bold text-blue-400 uppercase tracking-widest">
                         <span>Presentation Deck</span>
                         <span>Slides / PDF</span>
                     </div>
-                    <h3 class="font-bold text-sm sm:text-base text-white hover:text-blue-400 transition cursor-pointer">HR Practices & Employee Retention Strategy</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">Comprehensive slide deck covering modern recruitment trends and retention frameworks.</p>
-                    <div class="pt-2">
+                    <h3 class="font-bold text-sm sm:text-base text-white">HR Practices & Employee Retention Strategy</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">Comprehensive slide deck covering modern recruitment trends, employee motivation theories, and retention frameworks.</p>
+                    <div class="pt-2 flex justify-between items-center">
                         <a href="portfolio.html" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1">
                             <span>Explore Showcase</span>
                             <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </a>
+                        <span class="text-[10px] text-zinc-500">Slide 1 of 2</span>
                     </div>
                 </div>
 
-                <!-- Highlight 2 -->
-                <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-2 hover:border-blue-500/40 transition">
+                <!-- Slide 2 -->
+                <div class="slide-item space-y-2">
                     <div class="flex justify-between text-[10px] font-bold text-emerald-400 uppercase tracking-widest">
                         <span>Excel & Data Model</span>
                         <span>XLSX / Dashboard</span>
                     </div>
-                    <h3 class="font-bold text-sm sm:text-base text-white hover:text-blue-400 transition cursor-pointer">Capital Budgeting & Working Capital Model</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">Advanced financial analysis workbook featuring automated NPV, IRR calculations, and charts.</p>
-                    <div class="pt-2">
+                    <h3 class="font-bold text-sm sm:text-base text-white">Capital Budgeting & Working Capital Model</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">Advanced financial analysis workbook featuring automated NPV, IRR calculations, ratio analysis, and forecasting charts.</p>
+                    <div class="pt-2 flex justify-between items-center">
                         <a href="portfolio.html" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold inline-flex items-center space-x-1">
                             <span>Explore Showcase</span>
                             <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </a>
+                        <span class="text-[10px] text-zinc-500">Slide 2 of 2</span>
                     </div>
+                </div>
+
+                <!-- Slides Navigation Dots -->
+                <div class="flex justify-center space-x-2 mt-4">
+                    <button onclick="currentSlide(0)" class="dot w-2 h-2 rounded-full bg-blue-500 transition-all"></button>
+                    <button onclick="currentSlide(1)" class="dot w-2 h-2 rounded-full bg-zinc-700 transition-all"></button>
                 </div>
             </div>
         </section>
@@ -558,6 +580,50 @@
                 scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
             }
         });
+
+        // AUTOMATIC SLIDESHOW SCRIPT
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide-item');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlides() {
+            slides.forEach((slide) => slide.classList.remove('active'));
+            dots.forEach((dot) => {
+                dot.classList.remove('bg-blue-500', 'w-6');
+                dot.classList.add('bg-zinc-700', 'w-2');
+            });
+
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+
+            slides[slideIndex - 1].classList.add('active');
+            dots[slideIndex - 1].classList.remove('bg-zinc-700', 'w-2');
+            dots[slideIndex - 1].classList.add('bg-blue-500', 'w-6');
+        }
+
+        // Manual dot click function
+        function currentSlide(n) {
+            slideIndex = n;
+            slides.forEach((slide) => slide.classList.remove('active'));
+            dots.forEach((dot) => {
+                dot.classList.remove('bg-blue-500', 'w-6');
+                dot.classList.add('bg-zinc-700', 'w-2');
+            });
+
+            slides[slideIndex].classList.add('active');
+            dots[slideIndex].classList.remove('bg-zinc-700', 'w-2');
+            dots[slideIndex].classList.add('bg-blue-500', 'w-6');
+        }
+
+        // Auto slide interval (Every 4 seconds)
+        let slideTimer = setInterval(showSlides, 4000);
+
+        // Pause slideshow when mouse hovers over the card
+        const sliderContainer = document.querySelector('.relative.overflow-hidden');
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', () => clearInterval(slideTimer));
+            sliderContainer.addEventListener('mouseleave', () => slideTimer = setInterval(showSlides, 4000));
+        }
     </script>
 </body>
 </html>
