@@ -120,16 +120,16 @@
             </div>
         </nav>
 
-        <!-- Dropdown Menu for Mobile -->
-        <div id="mobileMenu" class="hidden w-full bg-[#0e0f14]/98 border border-white/15 rounded-2xl mt-2 p-3 flex flex-col space-y-2 text-xs font-semibold uppercase tracking-wider text-zinc-300 lg:hidden shadow-2xl pointer-events-auto">
-            <a href="#about" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-user text-blue-400 w-4"></i><span>About</span></a>
-            <a href="#experience" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-briefcase text-amber-400 w-4"></i><span>Experience</span></a>
-            <a href="#ventures" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-lightbulb text-emerald-400 w-4"></i><span>Ventures</span></a>
-            <a href="#academics" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-graduation-cap text-purple-400 w-4"></i><span>Academics</span></a>
-            <a href="portfolio.html" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-presentation-screen text-sky-400 w-4"></i><span>Showcase</span></a>
-            <a href="blog.html" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-blog text-pink-400 w-4"></i><span>Blog</span></a>
-            <a href="gallery.html" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-camera text-amber-500 w-4"></i><span>Gallery</span></a>
-            <a href="#contact" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-envelope text-emerald-500 w-4"></i><span>Contact</span></a>
+        <!-- Dropdown Menu for Mobile (Fixed Z-Index & Clean Styling) -->
+        <div id="mobileMenu" class="hidden w-full bg-[#0e0f14]/98 backdrop-blur-2xl border border-white/15 rounded-2xl mt-2 p-4 flex flex-col space-y-2 text-xs font-semibold uppercase tracking-wider text-zinc-200 lg:hidden shadow-2xl pointer-events-auto z-50">
+            <a href="#about" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-user text-blue-400 w-4"></i><span>About</span></a>
+            <a href="#experience" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-briefcase text-amber-400 w-4"></i><span>Experience</span></a>
+            <a href="#ventures" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-lightbulb text-emerald-400 w-4"></i><span>Ventures</span></a>
+            <a href="#academics" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-graduation-cap text-purple-400 w-4"></i><span>Academics</span></a>
+            <a href="portfolio.html" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-presentation-screen text-sky-400 w-4"></i><span>Showcase Hub</span></a>
+            <a href="blog.html" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-blog text-pink-400 w-4"></i><span>Blog Page</span></a>
+            <a href="gallery.html" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-camera text-amber-500 w-4"></i><span>Gallery Hub</span></a>
+            <a href="#contact" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3"><i class="fa-solid fa-envelope text-emerald-500 w-4"></i><span>Contact</span></a>
         </div>
     </div>
 
@@ -391,7 +391,7 @@
                     <div class="pt-2 flex justify-between items-center">
                         <a href="portfolio.html" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1">
                             <span>Explore Showcase</span>
-                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                         </a>
                         <span class="text-[10px] text-zinc-500">Slide 1 of 2</span>
                     </div>
@@ -408,7 +408,7 @@
                     <div class="pt-2 flex justify-between items-center">
                         <a href="portfolio.html" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold inline-flex items-center space-x-1">
                             <span>Explore Showcase</span>
-                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                         </a>
                         <span class="text-[10px] text-zinc-500">Slide 2 of 2</span>
                     </div>
@@ -617,14 +617,15 @@
     <!-- AOS Animation Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Smooth AOS Initialization with quick offset for mobile stability
+        // Smooth AOS Initialization
         AOS.init({ once: true, offset: 10, duration: 600 });
 
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        menuBtn.addEventListener('click', () => {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
         });
 
@@ -634,8 +635,9 @@
             });
         });
 
+        // Close mobile menu when clicking anywhere outside
         document.addEventListener('click', (e) => {
-            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
                 mobileMenu.classList.add('hidden');
             }
         });
