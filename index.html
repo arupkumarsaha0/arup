@@ -50,20 +50,6 @@
             border-radius: 50%;
             z-index: -1;
         }
-        /* Custom Navbar Strict Centering */
-        .custom-nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .nav-links {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            flex-grow: 1;
-            margin: 0 20px;
-        }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #040406; }
         ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 3px; }
@@ -91,16 +77,17 @@
         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
     </div>
 
-    <!-- STRICTLY CENTERED GLASS NAV -->
-    <div class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl" data-aos="fade-down" data-aos-duration="600">
-        <nav class="bg-[#0e0f14]/95 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 custom-nav shadow-2xl">
+    <!-- MAIN CONTAINER WITH EXACT PAGE ALIGNMENT -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 pt-6 z-50 fixed inset-x-0 top-0 pointer-events-none">
+        <!-- RESPONSIVE NAV BAR (Aligned with page width) -->
+        <nav class="bg-[#0e0f14]/95 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 flex items-center justify-between shadow-2xl pointer-events-auto" data-aos="fade-down" data-aos-duration="600">
             <!-- Left: Brand Name -->
             <a href="#" class="font-extrabold text-xs tracking-wider bg-gradient-to-r from-blue-400 via-sky-300 to-amber-400 bg-clip-text text-transparent shrink-0">
                 ARUP KUMAR SAHA
             </a>
 
-            <!-- Middle: Strictly Centered Menu Links -->
-            <div class="hidden lg:flex nav-links text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
+            <!-- Middle: Centered Menu Links -->
+            <div class="hidden lg:flex items-center space-x-3 xl:space-x-4 text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
                 <a href="#about" class="hover:text-blue-400 transition">About</a>
                 <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
                 <a href="#ventures" class="hover:text-blue-400 transition">Ventures</a>
@@ -129,7 +116,7 @@
         </nav>
 
         <!-- Dropdown Menu for Mobile & Smaller Screens -->
-        <div id="mobileMenu" class="hidden w-full bg-[#0e0f14]/95 backdrop-blur-xl border border-white/10 rounded-2xl mt-2 p-4 flex flex-col space-y-2 text-xs font-semibold uppercase tracking-wider text-zinc-300 lg:hidden shadow-2xl">
+        <div id="mobileMenu" class="hidden w-full bg-[#0e0f14]/95 backdrop-blur-xl border border-white/10 rounded-2xl mt-2 p-4 flex flex-col space-y-2 text-xs font-semibold uppercase tracking-wider text-zinc-300 lg:hidden shadow-2xl pointer-events-auto">
             <a href="#about" class="mobile-link hover:text-blue-400 py-1 transition flex items-center space-x-2"><i class="fa-solid fa-user text-blue-400 w-4"></i><span>About</span></a>
             <a href="#experience" class="mobile-link hover:text-blue-400 py-1 transition flex items-center space-x-2"><i class="fa-solid fa-briefcase text-amber-400 w-4"></i><span>Experience</span></a>
             <a href="#ventures" class="mobile-link hover:text-blue-400 py-1 transition flex items-center space-x-2"><i class="fa-solid fa-lightbulb text-emerald-400 w-4"></i><span>Ventures</span></a>
