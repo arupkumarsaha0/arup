@@ -50,6 +50,20 @@
             border-radius: 50%;
             z-index: -1;
         }
+        /* Interconnected Flow Line Background Effect */
+        .interconnected-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, rgba(59, 130, 246, 0.2), rgba(245, 158, 11, 0.2), rgba(168, 85, 247, 0.2), transparent);
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        @media (max-width: 768px) {
+            .interconnected-line { display: none; }
+        }
         /* Slideshow transitions */
         .slide-item, .photo-slide-item {
             display: none;
@@ -133,11 +147,14 @@
         </div>
     </div>
 
-    <!-- MAIN CONTAINER WITH COMFORTABLE VERTICAL SPACING (SPACE-Y-10) -->
-    <main class="max-w-5xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 space-y-10 sm:space-y-12">
+    <!-- MAIN CONTAINER WITH INTER-CONNECTED FLOW -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 space-y-12 sm:space-y-16 relative">
 
-        <!-- HERO SECTION WITH ULTRA-PREMIUM PROFILE CARD -->
-        <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-6" data-aos="fade-up" data-aos-duration="800">
+        <!-- Inter-connected Center Flow Line -->
+        <div class="interconnected-line"></div>
+
+        <!-- 1. HERO SECTION (ZIGZAG: TEXT LEFT, PROFILE RIGHT) -->
+        <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-right" data-aos-duration="800">
             <div class="md:col-span-8 bento-card p-6 sm:p-10 rounded-3xl flex flex-col justify-between space-y-6 relative overflow-hidden">
                 <div class="space-y-4 relative z-10">
                     <span class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-[11px] font-bold uppercase tracking-widest border border-blue-500/20">
@@ -163,7 +180,7 @@
                 </div>
             </div>
             
-            <!-- Ultra-Premium Profile Card Presentation -->
+            <!-- Profile Card -->
             <div class="md:col-span-4 bento-card p-8 rounded-3xl flex flex-col items-center justify-center relative overflow-hidden group shadow-2xl" data-aos="zoom-in" data-aos-duration="800">
                 <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/25 via-indigo-600/10 to-amber-500/20 opacity-90 group-hover:opacity-100 transition duration-700"></div>
                 
@@ -186,15 +203,15 @@
             </div>
         </section>
 
-        <!-- PROFESSIONAL EXPERIENCE -->
-        <section id="experience" class="space-y-4" data-aos="fade-up" data-aos-duration="700">
+        <!-- 2. PROFESSIONAL EXPERIENCE (ZIGZAG: FADE LEFT) -->
+        <section id="experience" class="space-y-4 relative z-10" data-aos="fade-left" data-aos-duration="800">
             <div class="flex items-center justify-between px-2">
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Professional Experience & Projects</h2>
                 <span class="text-[11px] text-blue-400 uppercase tracking-widest font-semibold bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Track Record</span>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
                     <div class="space-y-2.5">
                         <div class="text-[11px] font-bold text-blue-400">Jun 2025 - Sep 2025</div>
                         <h3 class="text-base sm:text-lg font-bold">Intern</h3>
@@ -203,7 +220,7 @@
                     </div>
                     <span class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Corporate Exposure</span>
                 </div>
-                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
                     <div class="space-y-2.5">
                         <div class="text-[11px] font-bold text-amber-400">Jun 2024 - Mar 2025</div>
                         <h3 class="text-base sm:text-lg font-bold">Project Volunteer</h3>
@@ -212,7 +229,7 @@
                     </div>
                     <span class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Operations & Data</span>
                 </div>
-                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between sm:col-span-2 md:col-span-1" data-aos="fade-up" data-aos-delay="300">
+                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between sm:col-span-2 md:col-span-1">
                     <div class="space-y-2.5">
                         <div class="text-[11px] font-bold text-emerald-400">Apr 2023 - May 2024</div>
                         <h3 class="text-base sm:text-lg font-bold">Research Assistant</h3>
@@ -224,8 +241,8 @@
             </div>
         </section>
 
-        <!-- ENTREPRENEURIAL VENTURES -->
-        <section id="ventures" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-up" data-aos-duration="700">
+        <!-- 3. ENTREPRENEURIAL VENTURES (ZIGZAG: FADE RIGHT) -->
+        <section id="ventures" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-right" data-aos-duration="800">
             <div class="flex items-center justify-between px-2">
                 <div>
                     <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Entrepreneurial Ventures</h2>
@@ -235,12 +252,12 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-delay="100">
+                <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-2.5">
                     <div class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Entrepreneurship Fair (2020)</div>
                     <h3 class="font-bold text-base text-white">Stall Co-Partner — Sweets & Snacks Corner</h3>
                     <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Actively participated as a stall co-partner and management lead for "Sweets & Snacks Corner", handling sales strategy and stall operations.</p>
                 </div>
-                <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-delay="200">
+                <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-2.5">
                     <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Strategy & Operations</div>
                     <h3 class="font-bold text-base text-white">Startup & Marketing Coordination</h3>
                     <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Applied academic management principles into commercial activities, retail operations, and product promotion campaigns.</p>
@@ -248,11 +265,11 @@
             </div>
         </section>
 
-        <!-- ACADEMICS (TIMELINE STYLE) & SKILLS -->
-        <section id="academics" class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <!-- 4. ACADEMICS & SKILLS (ZIGZAG: FADE LEFT) -->
+        <section id="academics" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-left" data-aos-duration="800">
             
             <!-- Left: Timeline Education -->
-            <div class="md:col-span-7 bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-right" data-aos-duration="700">
+            <div class="md:col-span-7 bento-card p-6 sm:p-8 rounded-3xl space-y-6">
                 <div class="flex items-center justify-between">
                     <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Educational Background</h2>
                     <span class="text-[11px] font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Timeline</span>
@@ -305,7 +322,7 @@
             </div>
 
             <!-- Right: Skills & Languages -->
-            <div class="md:col-span-5 bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-left" data-aos-duration="700">
+            <div class="md:col-span-5 bento-card p-6 sm:p-8 rounded-3xl space-y-6">
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Skills & Competencies</h2>
                 <div class="space-y-5">
                     <div>
@@ -338,9 +355,9 @@
             </div>
         </section>
 
-        <!-- CERTIFICATES & SERVICES -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-up" data-aos-duration="700">
+        <!-- 5. CERTIFICATES & SERVICES (ZIGZAG: FADE RIGHT) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10" data-aos="fade-right" data-aos-duration="800">
+            <div class="bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Certificates & Trainings</h2>
                 <div class="space-y-4">
                     <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-1.5">
@@ -362,7 +379,7 @@
                 </div>
             </div>
 
-            <div id="services" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-up" data-aos-duration="700">
+            <div id="services" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Professional Services</h2>
                 <div class="space-y-3.5">
                     <div class="bg-zinc-900/60 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5">
@@ -381,8 +398,8 @@
             </div>
         </section>
 
-        <!-- AUTOMATIC SLIDESHOW SHOWCASE SECTION -->
-        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-up" data-aos-duration="700">
+        <!-- 6. AUTOMATIC SLIDESHOW SHOWCASE (ZIGZAG: FADE LEFT) -->
+        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-left" data-aos-duration="800">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2">
                 <div>
                     <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Featured Presentations & Excel Demos</h2>
@@ -436,8 +453,8 @@
             </div>
         </section>
 
-        <!-- RECENT BLOG HIGHLIGHTS SECTION -->
-        <section id="blog-highlights" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-up" data-aos-duration="700">
+        <!-- 7. RECENT BLOG HIGHLIGHTS (ZIGZAG: FADE RIGHT) -->
+        <section id="blog-highlights" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-right" data-aos-duration="800">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2">
                 <div>
                     <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Latest From My Blog</h2>
@@ -482,8 +499,8 @@
             </div>
         </section>
 
-        <!-- VISUAL GALLERY & TRAVELS AUTO-SLIDESHOW SECTION -->
-        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-up" data-aos-duration="700">
+        <!-- 8. VISUAL GALLERY & TRAVELS (ZIGZAG: FADE LEFT) -->
+        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-left" data-aos-duration="800">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2">
                 <div>
                     <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Photography & Travel Highlights</h2>
@@ -540,8 +557,8 @@
             </div>
         </section>
 
-        <!-- NEWSLETTER SECTION -->
-        <section class="bento-card p-6 sm:p-12 rounded-3xl relative overflow-hidden text-center space-y-5" data-aos="fade-up" data-aos-duration="700">
+        <!-- 9. NEWSLETTER SECTION (ZIGZAG: FADE RIGHT) -->
+        <section class="bento-card p-6 sm:p-12 rounded-3xl relative overflow-hidden text-center space-y-5 z-10" data-aos="fade-right" data-aos-duration="800">
             <div class="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -560,8 +577,8 @@
             <p class="text-[11px] text-zinc-500 relative z-10">No spam, unsubscribe at any time.</p>
         </section>
 
-        <!-- CONTACT SECTION & FORM -->
-        <section id="contact" class="grid grid-cols-1 md:grid-cols-12 gap-6" data-aos="fade-up" data-aos-duration="700">
+        <!-- 10. CONTACT SECTION & FORM (ZIGZAG: FADE LEFT) -->
+        <section id="contact" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-left" data-aos-duration="800">
             <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Contact Details</h2>
                 <div class="space-y-4 text-xs sm:text-sm">
@@ -633,7 +650,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         // Smooth AOS Initialization
-        AOS.init({ once: true, offset: 20, duration: 600 });
+        AOS.init({ once: true, offset: 20, duration: 700 });
 
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
