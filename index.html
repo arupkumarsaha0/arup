@@ -82,6 +82,17 @@
             .interconnected-line { display: none; }
             .section-bg-icon { font-size: 80px; right: -10px; bottom: -10px; }
         }
+        /* Typewriter Cursor Blinking */
+        .typed-cursor {
+            display: inline-block;
+            background-color: #3b82f6;
+            width: 2px;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
         /* Slideshow transitions */
         .slide-item, .photo-slide-item {
             display: none;
@@ -153,7 +164,7 @@
             </div>
         </nav>
 
-        <!-- Dropdown Menu for Mobile (With Fixed Showcase Icon) -->
+        <!-- Dropdown Menu for Mobile -->
         <div id="mobileMenu" class="hidden absolute right-3 sm:right-6 w-64 bg-[#0e0f14]/98 backdrop-blur-2xl border border-white/15 rounded-2xl mt-2 p-3.5 flex flex-col space-y-2 text-xs font-semibold uppercase tracking-wider text-zinc-200 lg:hidden shadow-2xl pointer-events-auto z-50">
             <a href="#about" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-user text-blue-400 w-4"></i><span>About</span></a>
             <a href="#experience" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-briefcase text-amber-400 w-4"></i><span>Experience</span></a>
@@ -180,13 +191,14 @@
                 <div class="space-y-4 relative z-10">
                     <span class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-[11px] font-bold uppercase tracking-widest border border-blue-500/20">
                         <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
-                        <span>MBA in HRM | Tech Enthusiast & Researcher</span>
+                        <!-- Typewriter Target Element -->
+                        <span><span id="typewriter"></span><span class="typed-cursor">&nbsp;</span></span>
                     </span>
                     <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
                         Arup Kumar Saha
                     </h1>
                     <p class="text-zinc-300 text-sm sm:text-base font-normal leading-relaxed">
-                        Dedicated postgraduate business professional holding an MBA in Human Resource Management and a BBA from the University of Barishal. Experienced in corporate operations, academic research assistance, student leadership, and tech exploration.
+                        Dedicated postgraduate business professional holding an MBA in Human Resource Management and a BBA from the University of Barishal. Experienced in corporate operations, academic research assistance, student leadership, and entrepreneurial business ventures.
                     </p>
                 </div>
                 <div class="relative z-10 flex flex-wrap gap-3">
@@ -734,6 +746,47 @@
     <script>
         // Smooth AOS Initialization
         AOS.init({ once: true, offset: 20, duration: 700 });
+
+        // TYPEWRITER EFFECT SCRIPT
+        const words = ["MBA in HRM", "Entrepreneur", "Tech Enthusiast", "Researcher"];
+        let i = 0;
+        let timer;
+
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    document.getElementById('typewriter').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return false;
+                }
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    document.getElementById('typewriter').innerHTML = word.join("");
+                } else {
+                    if (words.length > (i + 1)) {
+                        i++;
+                    } else {
+                        i = 0;
+                    }
+                    setTimeout(typingEffect, 500);
+                    return false;
+                }
+                timer = setTimeout(loopDeleting, 50);
+            };
+            loopDeleting();
+        }
+
+        typingEffect();
 
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
