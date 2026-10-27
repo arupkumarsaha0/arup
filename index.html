@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS Animation Library CDN -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -79,26 +79,16 @@
 
     <!-- RESPONSIVE FLOATING GLASS NAV WITH WORKING THREE-DOT/HAMBURGER MENU -->
     <div class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-5xl" data-aos="fade-down" data-aos-duration="600">
-        <nav class="bg-[#0e0f14]/95 backdrop-blur-xl border border-white/10 rounded-3xl md:rounded-full px-4 sm:px-6 py-3 flex flex-col md:flex-row items-center justify-between shadow-2xl">
-            <div class="w-full md:w-auto flex items-center justify-between">
+        <nav class="bg-[#0e0f14]/95 backdrop-blur-xl border border-white/10 rounded-3xl md:rounded-full px-4 sm:px-6 py-3 flex flex-row items-center justify-between shadow-2xl">
+            <!-- Brand Name -->
+            <div class="flex items-center">
                 <a href="#" class="font-extrabold text-xs sm:text-sm tracking-wider bg-gradient-to-r from-blue-400 via-sky-300 to-amber-400 bg-clip-text text-transparent">
                     ARUP KUMAR SAHA
                 </a>
-                
-                <div class="flex items-center space-x-2 md:hidden">
-                    <a href="Arup_Kumar_Saha_CV.pdf" download class="bg-blue-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center space-x-1">
-                        <i class="fa-solid fa-file-pdf"></i>
-                        <span>CV</span>
-                    </a>
-                    <!-- Three-Dot / Hamburger Mobile Button -->
-                    <button id="menuBtn" class="text-zinc-300 hover:text-white focus:outline-none p-2 bg-zinc-900 rounded-xl border border-white/10">
-                        <i class="fa-solid fa-ellipsis-vertical text-base"></i>
-                    </button>
-                </div>
             </div>
             
             <!-- Desktop & Tab Menu Links -->
-            <div class="hidden md:flex items-center space-x-3 lg:space-x-4 text-[10px] lg:text-[11px] font-semibold uppercase tracking-wider text-zinc-400 my-2 md:my-0">
+            <div class="hidden md:flex items-center space-x-3 lg:space-x-5 text-[11px] lg:text-[12px] font-semibold uppercase tracking-wider text-zinc-400">
                 <a href="#about" class="hover:text-blue-400 transition">About</a>
                 <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
                 <a href="#ventures" class="hover:text-blue-400 transition">Ventures</a>
@@ -108,25 +98,39 @@
                 <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
             </div>
 
-            <!-- Mobile Dropdown Menu (Three-dot options) -->
-            <div id="mobileMenu" class="hidden w-full flex flex-col space-y-2.5 pt-3 pb-2 border-t border-white/10 mt-3 text-xs font-semibold uppercase tracking-wider text-zinc-300 md:hidden">
-                <a href="#about" class="mobile-link hover:text-blue-400 py-1 transition flex items-center space-x-2"><i class="fa-solid fa-user text-blue-400 w-4"></i><span>About</span></a>
-                <a href="#experience" class="mobile-link hover:text-blue-400 py-1 transition flex items-center space-x-2"><i class="fa-solid fa-briefcase text-amber-400 w-4"></i><span>Experience</span></a>
-                <a href="#ventures" class="mobile-link hover:text-blue-400 py-1 transition flex items-center space-x-2"><i class="fa-solid fa-lightbulb text-emerald-400 w-4"></i><span>Ventures</span></a>
-                <a href="#academics" class="mobile-link hover:text-blue-400 py-1 transition flex items-center space-x-2"><i class="fa-solid fa-graduation-cap text-purple-400 w-4"></i><span>Academics</span></a>
-                <a href="#services" class="mobile-link hover:text-blue-400 py-1 transition flex items-center space-x-2"><i class="fa-solid fa-handshake text-sky-400 w-4"></i><span>Services</span></a>
-                <a href="#photography" class="mobile-link hover:text-blue-400 py-1 transition flex items-center space-x-2"><i class="fa-solid fa-camera text-pink-400 w-4"></i><span>Gallery</span></a>
-                <a href="#contact" class="mobile-link hover:text-blue-400 py-1 transition flex items-center space-x-2"><i class="fa-solid fa-envelope text-amber-500 w-4"></i><span>Contact</span></a>
-            </div>
+            <!-- Right side controls (CV & Mobile Menu Button) -->
+            <div class="flex items-center space-x-2">
+                <!-- Desktop Download CV Option -->
+                <div class="hidden md:block">
+                    <a href="Arup_Kumar_Saha_CV.pdf" download class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-4 py-2 rounded-full transition shadow-lg shadow-blue-500/20 flex items-center space-x-1.5">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <span>Download CV</span>
+                    </a>
+                </div>
 
-            <!-- Desktop Download CV Option -->
-            <div class="hidden md:block">
-                <a href="Arup_Kumar_Saha_CV.pdf" download class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-4 py-2 rounded-full transition shadow-lg shadow-blue-500/20 flex items-center space-x-1.5">
+                <!-- Mobile Quick CV Button -->
+                <a href="Arup_Kumar_Saha_CV.pdf" download class="md:hidden bg-blue-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center space-x-1">
                     <i class="fa-solid fa-file-pdf"></i>
-                    <span>Download CV</span>
+                    <span>CV</span>
                 </a>
+
+                <!-- Three-Dot / Hamburger Mobile Button -->
+                <button id="menuBtn" class="md:hidden text-zinc-300 hover:text-white focus:outline-none p-2 bg-zinc-900 rounded-xl border border-white/10">
+                    <i class="fa-solid fa-ellipsis-vertical text-base"></i>
+                </button>
             </div>
         </nav>
+
+        <!-- Mobile Dropdown Menu (Three-dot options) -->
+        <div id="mobileMenu" class="hidden w-full bg-[#0e0f14]/95 backdrop-blur-xl border border-white/10 rounded-2xl mt-2 p-4 flex flex-col space-y-2.5 text-xs font-semibold uppercase tracking-wider text-zinc-300 md:hidden shadow-2xl">
+            <a href="#about" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-2"><i class="fa-solid fa-user text-blue-400 w-4"></i><span>About</span></a>
+            <a href="#experience" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-2"><i class="fa-solid fa-briefcase text-amber-400 w-4"></i><span>Experience</span></a>
+            <a href="#ventures" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-2"><i class="fa-solid fa-lightbulb text-emerald-400 w-4"></i><span>Ventures</span></a>
+            <a href="#academics" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-2"><i class="fa-solid fa-graduation-cap text-purple-400 w-4"></i><span>Academics</span></a>
+            <a href="#services" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-2"><i class="fa-solid fa-handshake text-sky-400 w-4"></i><span>Services</span></a>
+            <a href="#photography" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-2"><i class="fa-solid fa-camera text-pink-400 w-4"></i><span>Gallery</span></a>
+            <a href="#contact" class="mobile-link hover:text-blue-400 py-1.5 transition flex items-center space-x-2"><i class="fa-solid fa-envelope text-amber-500 w-4"></i><span>Contact</span></a>
+        </div>
     </div>
 
     <!-- MAIN CONTAINER -->
@@ -406,8 +410,8 @@
         <!-- Mobile Social Links in Footer -->
         <div class="flex lg:hidden items-center justify-center space-x-3 mt-3">
             <a href="https://www.linkedin.com/in/arupkumarsaha0" target="_blank" class="w-7 h-7 rounded-full bg-zinc-900 hover:bg-blue-600 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="LinkedIn"><i class="fa-brands fa-linkedin text-xs"></i></a>
-            <a href="https://github.com/arupkumarsaha" target="_blank" class="w-7 h-7 rounded-full bg-zinc-900 hover:bg-zinc-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="GitHub"><i class="fa-brands fa-github text-xs"></i></a>
-            <a href="https://facebook.com" target="_blank" class="w-7 h-7 rounded-full bg-zinc-900 hover:bg-blue-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="Facebook"><i class="fa-brands fa-facebook text-xs"></i></a>
+            <a href="https://github.com/arupkumarsaha0" target="_blank" class="w-7 h-7 rounded-full bg-zinc-900 hover:bg-zinc-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="GitHub"><i class="fa-brands fa-github text-xs"></i></a>
+            <a href="https://facebook.com/arupkumarsaha0" target="_blank" class="w-7 h-7 rounded-full bg-zinc-900 hover:bg-blue-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="Facebook"><i class="fa-brands fa-facebook text-xs"></i></a>
             <a href="mailto:arup.bu.bd@gmail.com" class="w-7 h-7 rounded-full bg-zinc-900 hover:bg-amber-600 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="Email"><i class="fa-solid fa-envelope text-xs"></i></a>
         </div>
     </footer>
