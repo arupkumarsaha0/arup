@@ -39,14 +39,14 @@
         .bento-card:hover {
             border-color: rgba(59, 130, 246, 0.5);
             transform: translateY(-4px);
-            box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.25);
+            box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
         }
         .blob-glow {
             position: absolute;
-            width: 350px;
-            height: 350px;
+            width: 450px;
+            height: 450px;
             background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(245, 158, 11, 0.08) 60%, transparent 100%);
-            filter: blur(80px);
+            filter: blur(90px);
             border-radius: 50%;
             z-index: -1;
         }
@@ -67,11 +67,11 @@
         ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 3px; }
     </style>
 </head>
-<body class="antialiased selection:bg-blue-500 selection:text-white pb-16 relative">
+<body class="antialiased selection:bg-blue-500 selection:text-white pb-24 relative">
 
     <!-- Background Glows -->
     <div class="blob-glow top-10 left-5"></div>
-    <div class="blob-glow bottom-1/4 right-5"></div>
+    <div class="blob-glow bottom-1/3 right-5"></div>
 
     <!-- LEFT SIDE VERTICAL SOCIAL SIDEBAR (Desktop Only) -->
     <div class="hidden lg:flex flex-col fixed left-6 top-1/2 -translate-y-1/2 z-40 space-y-4 bg-[#0e0f14]/90 py-4 px-2.5 rounded-full border border-white/10 shadow-xl items-center" data-aos="fade-right" data-aos-duration="1000">
@@ -91,7 +91,7 @@
 
     <!-- FIXED RESPONSIVE HEADER CONTAINER -->
     <div class="max-w-5xl mx-auto px-3 sm:px-6 pt-3 z-50 fixed inset-x-0 top-0 pointer-events-none">
-        <nav class="bg-[#0e0f14]/95 border border-white/10 rounded-full px-4 sm:px-5 py-2.5 flex items-center justify-between shadow-xl pointer-events-auto" data-aos="fade-down" data-aos-duration="800">
+        <nav class="bg-[#0e0f14]/95 border border-white/10 rounded-full px-4 sm:px-5 py-3 flex items-center justify-between shadow-xl pointer-events-auto" data-aos="fade-down" data-aos-duration="800">
             <a href="#" class="font-extrabold text-[11px] sm:text-xs tracking-wider bg-gradient-to-r from-blue-400 via-sky-300 to-amber-400 bg-clip-text text-transparent shrink-0">
                 ARUP KUMAR SAHA
             </a>
@@ -108,7 +108,7 @@
                 <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
             </div>
 
-            <!-- Right: CV & Mobile Menu Button (Placed on Right Side) -->
+            <!-- Right: CV & Mobile Menu Button -->
             <div class="flex items-center space-x-2 shrink-0">
                 <a href="Arup_Kumar_Saha_CV.pdf" download class="bg-blue-600 hover:bg-blue-500 text-white text-[10px] sm:text-[11px] font-bold px-3 py-1.5 rounded-full transition shadow-md flex items-center space-x-1">
                     <i class="fa-solid fa-file-pdf"></i>
@@ -120,7 +120,7 @@
             </div>
         </nav>
 
-        <!-- Dropdown Menu for Mobile (Right-aligned professional dropdown) -->
+        <!-- Dropdown Menu for Mobile -->
         <div id="mobileMenu" class="hidden absolute right-3 sm:right-6 w-64 bg-[#0e0f14]/98 backdrop-blur-2xl border border-white/15 rounded-2xl mt-2 p-3.5 flex flex-col space-y-2 text-xs font-semibold uppercase tracking-wider text-zinc-200 lg:hidden shadow-2xl pointer-events-auto z-50">
             <a href="#about" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-user text-blue-400 w-4"></i><span>About</span></a>
             <a href="#experience" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-briefcase text-amber-400 w-4"></i><span>Experience</span></a>
@@ -133,30 +133,30 @@
         </div>
     </div>
 
-    <!-- MAIN CONTAINER -->
-    <main class="max-w-5xl mx-auto px-3 sm:px-6 pt-20 sm:pt-24 space-y-5 sm:space-y-6">
+    <!-- MAIN CONTAINER WITH COMFORTABLE VERTICAL SPACING (SPACE-Y-10) -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 space-y-10 sm:space-y-12">
 
-        <!-- HERO SECTION WITH ULTRA-PREMIUM PROFILE CARD PRESENTATION -->
-        <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6" data-aos="fade-up" data-aos-duration="800">
-            <div class="md:col-span-8 bento-card p-5 sm:p-8 rounded-3xl flex flex-col justify-between space-y-4 relative overflow-hidden">
-                <div class="space-y-3 relative z-10">
-                    <span class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest border border-blue-500/20">
+        <!-- HERO SECTION WITH ULTRA-PREMIUM PROFILE CARD -->
+        <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-6" data-aos="fade-up" data-aos-duration="800">
+            <div class="md:col-span-8 bento-card p-6 sm:p-10 rounded-3xl flex flex-col justify-between space-y-6 relative overflow-hidden">
+                <div class="space-y-4 relative z-10">
+                    <span class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-[11px] font-bold uppercase tracking-widest border border-blue-500/20">
                         <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
                         <span>MBA in HRM | Entrepreneur & Researcher</span>
                     </span>
-                    <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
                         Arup Kumar Saha
                     </h1>
-                    <p class="text-zinc-300 text-xs sm:text-sm font-normal leading-relaxed">
+                    <p class="text-zinc-300 text-sm sm:text-base font-normal leading-relaxed">
                         Dedicated postgraduate business professional holding an MBA in Human Resource Management and a BBA from the University of Barishal. Experienced in corporate operations, academic research assistance, financial management mentoring, and entrepreneurial business ventures.
                     </p>
                 </div>
-                <div class="relative z-10 flex flex-wrap gap-2.5">
-                    <a href="Arup_Kumar_Saha_CV.pdf" download class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2.5 rounded-xl text-xs transition shadow-md inline-flex items-center space-x-2">
+                <div class="relative z-10 flex flex-wrap gap-3">
+                    <a href="Arup_Kumar_Saha_CV.pdf" download class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-5 py-3 rounded-xl text-xs sm:text-sm transition shadow-lg inline-flex items-center space-x-2">
                         <i class="fa-solid fa-download"></i>
                         <span>Download CV (PDF)</span>
                     </a>
-                    <a href="#contact" class="bg-white text-darkBg font-bold px-4 py-2.5 rounded-xl text-xs transition hover:bg-zinc-200 shadow-md inline-flex items-center space-x-2">
+                    <a href="#contact" class="bg-white text-darkBg font-bold px-5 py-3 rounded-xl text-xs sm:text-sm transition hover:bg-zinc-200 shadow-lg inline-flex items-center space-x-2">
                         <span>Get in Touch</span>
                         <i class="fa-solid fa-arrow-right text-[10px]"></i>
                     </a>
@@ -164,26 +164,22 @@
             </div>
             
             <!-- Ultra-Premium Profile Card Presentation -->
-            <div class="md:col-span-4 bento-card p-6 rounded-3xl flex flex-col items-center justify-center relative overflow-hidden group shadow-2xl" data-aos="zoom-in" data-aos-duration="800">
-                <!-- Glowing Ambient Gradient Background -->
+            <div class="md:col-span-4 bento-card p-8 rounded-3xl flex flex-col items-center justify-center relative overflow-hidden group shadow-2xl" data-aos="zoom-in" data-aos-duration="800">
                 <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/25 via-indigo-600/10 to-amber-500/20 opacity-90 group-hover:opacity-100 transition duration-700"></div>
                 
-                <!-- Status Badge -->
                 <div class="absolute top-4 left-4 z-20 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-blue-400 uppercase tracking-widest flex items-center space-x-1.5 shadow-lg">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                     <span>Ready to Hire</span>
                 </div>
 
-                <!-- Profile Image Frame with Neon Glow -->
-                <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-2 border-blue-500/50 relative z-10 shadow-2xl group-hover:border-blue-400 transition duration-500 group-hover:scale-[1.03]">
+                <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden border-2 border-blue-500/50 relative z-10 shadow-2xl group-hover:border-blue-400 transition duration-500 group-hover:scale-[1.03]">
                     <img src="profile.jpg" alt="Arup Kumar Saha" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'">
                 </div>
 
-                <!-- Executive Name & Subtitle -->
-                <div class="mt-4 text-center relative z-10 space-y-0.5">
-                    <h3 class="text-sm font-extrabold text-white tracking-wider">Arup Kumar Saha</h3>
+                <div class="mt-4 text-center relative z-10 space-y-1">
+                    <h3 class="text-sm sm:text-base font-extrabold text-white tracking-wide">Arup Kumar Saha</h3>
                     <p class="text-[11px] text-blue-400 font-semibold">Management & HR Professional</p>
-                    <div class="flex items-center justify-center space-x-2 pt-2 text-[10px] text-zinc-400">
+                    <div class="flex items-center justify-center space-x-2 pt-2 text-[11px] text-zinc-400">
                         <span><i class="fa-solid fa-location-dot text-amber-500 mr-1"></i> Barishal / Jessore</span>
                     </div>
                 </div>
@@ -191,37 +187,37 @@
         </section>
 
         <!-- PROFESSIONAL EXPERIENCE -->
-        <section id="experience" class="space-y-3" data-aos="fade-up" data-aos-duration="700">
+        <section id="experience" class="space-y-4" data-aos="fade-up" data-aos-duration="700">
             <div class="flex items-center justify-between px-2">
-                <h2 class="text-base sm:text-lg font-bold tracking-tight text-zinc-200">Professional Experience & Projects</h2>
-                <span class="text-[10px] text-blue-400 uppercase tracking-widest font-semibold bg-blue-500/10 px-2.5 py-0.5 rounded-full border border-blue-500/20">Track Record</span>
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Professional Experience & Projects</h2>
+                <span class="text-[11px] text-blue-400 uppercase tracking-widest font-semibold bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Track Record</span>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="bento-card p-5 rounded-3xl space-y-3 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
-                    <div class="space-y-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                    <div class="space-y-2.5">
                         <div class="text-[11px] font-bold text-blue-400">Jun 2025 - Sep 2025</div>
-                        <h3 class="text-base font-bold">Intern</h3>
+                        <h3 class="text-base sm:text-lg font-bold">Intern</h3>
                         <p class="text-xs text-amber-400 font-medium">Amrita Consumer Food Products Ltd.</p>
-                        <p class="text-zinc-400 text-xs leading-relaxed">Observed office workflows, employee record-keeping, and administrative routines. Assisted staff with paperwork and sorting.</p>
+                        <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Observed office workflows, employee record-keeping, and administrative routines. Assisted staff with paperwork and sorting.</p>
                     </div>
                     <span class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Corporate Exposure</span>
                 </div>
-                <div class="bento-card p-5 rounded-3xl space-y-3 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
-                    <div class="space-y-2">
+                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                    <div class="space-y-2.5">
                         <div class="text-[11px] font-bold text-amber-400">Jun 2024 - Mar 2025</div>
-                        <h3 class="text-base font-bold">Project Volunteer</h3>
+                        <h3 class="text-base sm:text-lg font-bold">Project Volunteer</h3>
                         <p class="text-xs text-blue-400 font-medium">BRAC | Barishal</p>
-                        <p class="text-zinc-400 text-xs leading-relaxed">Maintained physical registers, communicated with beneficiaries, and entered case details into RMIS with zero backlog.</p>
+                        <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Maintained physical registers, communicated with beneficiaries, and entered case details into RMIS with zero backlog.</p>
                     </div>
                     <span class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Operations & Data</span>
                 </div>
-                <div class="bento-card p-5 rounded-3xl space-y-3 flex flex-col justify-between sm:col-span-2 md:col-span-1" data-aos="fade-up" data-aos-delay="300">
-                    <div class="space-y-2">
+                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between sm:col-span-2 md:col-span-1" data-aos="fade-up" data-aos-delay="300">
+                    <div class="space-y-2.5">
                         <div class="text-[11px] font-bold text-emerald-400">Apr 2023 - May 2024</div>
-                        <h3 class="text-base font-bold">Research Assistant</h3>
+                        <h3 class="text-base sm:text-lg font-bold">Research Assistant</h3>
                         <p class="text-xs text-emerald-400 font-medium">University of Barishal</p>
-                        <p class="text-zinc-400 text-xs leading-relaxed">Conducted survey data collection, tabulation, literature synthesis, and prepared structured summary reports.</p>
+                        <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Conducted survey data collection, tabulation, literature synthesis, and prepared structured summary reports.</p>
                     </div>
                     <span class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Academic Research</span>
                 </div>
@@ -229,79 +225,79 @@
         </section>
 
         <!-- ENTREPRENEURIAL VENTURES -->
-        <section id="ventures" class="bento-card p-5 sm:p-6 rounded-3xl space-y-4" data-aos="fade-up" data-aos-duration="700">
+        <section id="ventures" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-up" data-aos-duration="700">
             <div class="flex items-center justify-between px-2">
                 <div>
-                    <h2 class="text-base sm:text-lg font-bold tracking-tight text-zinc-200">Entrepreneurial Ventures</h2>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Entrepreneurial Ventures</h2>
                     <p class="text-xs text-zinc-400">Business fairs and commercial initiatives.</p>
                 </div>
-                <span class="text-[10px] font-bold text-amber-400 bg-amber-500/10 px-2.5 py-0.5 rounded-full border border-amber-500/20">Business</span>
+                <span class="text-[11px] font-bold text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Business</span>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-zinc-900/60 p-4 rounded-2xl border border-white/5 space-y-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-delay="100">
                     <div class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Entrepreneurship Fair (2020)</div>
-                    <h3 class="font-bold text-sm sm:text-base text-white">Stall Co-Partner — Sweets & Snacks Corner</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">Actively participated as a stall co-partner and management lead for "Sweets & Snacks Corner", handling sales strategy and stall operations.</p>
+                    <h3 class="font-bold text-base text-white">Stall Co-Partner — Sweets & Snacks Corner</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Actively participated as a stall co-partner and management lead for "Sweets & Snacks Corner", handling sales strategy and stall operations.</p>
                 </div>
-                <div class="bg-zinc-900/60 p-4 rounded-2xl border border-white/5 space-y-2" data-aos="zoom-in" data-aos-delay="200">
+                <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-delay="200">
                     <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Strategy & Operations</div>
-                    <h3 class="font-bold text-sm sm:text-base text-white">Startup & Marketing Coordination</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">Applied academic management principles into commercial activities, retail operations, and product promotion campaigns.</p>
+                    <h3 class="font-bold text-base text-white">Startup & Marketing Coordination</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Applied academic management principles into commercial activities, retail operations, and product promotion campaigns.</p>
                 </div>
             </div>
         </section>
 
         <!-- ACADEMICS (TIMELINE STYLE) & SKILLS -->
-        <section id="academics" class="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6">
+        <section id="academics" class="grid grid-cols-1 md:grid-cols-12 gap-6">
             
             <!-- Left: Timeline Education -->
-            <div class="md:col-span-7 bento-card p-5 sm:p-8 rounded-3xl space-y-5" data-aos="fade-right" data-aos-duration="700">
+            <div class="md:col-span-7 bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-right" data-aos-duration="700">
                 <div class="flex items-center justify-between">
-                    <h2 class="text-base sm:text-lg font-bold tracking-tight text-zinc-200">Educational Background</h2>
-                    <span class="text-[10px] font-bold text-blue-400 bg-blue-500/10 px-2.5 py-0.5 rounded-full border border-blue-500/20">Timeline</span>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Educational Background</h2>
+                    <span class="text-[11px] font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Timeline</span>
                 </div>
 
                 <!-- Timeline Wrapper -->
-                <div class="relative border-l-2 border-blue-500/30 ml-3 space-y-6 py-2">
+                <div class="relative border-l-2 border-blue-500/30 ml-3 space-y-8 py-3">
                     
                     <!-- Timeline Item 1 -->
                     <div class="relative pl-6 group">
                         <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-blue-500 ring-4 ring-[#040406] group-hover:scale-125 transition"></div>
-                        <div class="space-y-1">
+                        <div class="space-y-1.5">
                             <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 px-2 py-0.5 rounded">Passing Year: 2023 | CGPA: 3.09 / 4.00</span>
-                            <h3 class="font-bold text-sm sm:text-base text-white pt-1">MBA in Human Resource Management (HRM)</h3>
-                            <p class="text-xs text-zinc-400">University of Barishal</p>
+                            <h3 class="font-bold text-base text-white pt-1">MBA in Human Resource Management (HRM)</h3>
+                            <p class="text-xs sm:text-sm text-zinc-400">University of Barishal</p>
                         </div>
                     </div>
 
                     <!-- Timeline Item 2 -->
                     <div class="relative pl-6 group">
                         <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-amber-500 ring-4 ring-[#040406] group-hover:scale-125 transition"></div>
-                        <div class="space-y-1">
+                        <div class="space-y-1.5">
                             <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2 py-0.5 rounded">Passing Year: 2022 | CGPA: 3.21 / 4.00</span>
-                            <h3 class="font-bold text-sm sm:text-base text-white pt-1">BBA in Management Studies</h3>
-                            <p class="text-xs text-zinc-400">University of Barishal</p>
+                            <h3 class="font-bold text-base text-white pt-1">BBA in Management Studies</h3>
+                            <p class="text-xs sm:text-sm text-zinc-400">University of Barishal</p>
                         </div>
                     </div>
 
                     <!-- Timeline Item 3 -->
                     <div class="relative pl-6 group">
                         <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-emerald-500 ring-4 ring-[#040406] group-hover:scale-125 transition"></div>
-                        <div class="space-y-1">
+                        <div class="space-y-1.5">
                             <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/10 px-2 py-0.5 rounded">Passing Year: 2018 | GPA: 4.33 / 5.00</span>
-                            <h3 class="font-bold text-sm sm:text-base text-white pt-1">HSC (Business Studies)</h3>
-                            <p class="text-xs text-zinc-400">Dr. Abdur Razzak Municipal College, Jashore</p>
+                            <h3 class="font-bold text-base text-white pt-1">HSC (Business Studies)</h3>
+                            <p class="text-xs sm:text-sm text-zinc-400">Dr. Abdur Razzak Municipal College, Jashore</p>
                         </div>
                     </div>
 
                     <!-- Timeline Item 4 -->
                     <div class="relative pl-6 group">
                         <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-purple-500 ring-4 ring-[#040406] group-hover:scale-125 transition"></div>
-                        <div class="space-y-1">
+                        <div class="space-y-1.5">
                             <span class="text-[10px] font-bold text-purple-400 uppercase tracking-widest bg-purple-500/10 px-2 py-0.5 rounded">Passing Year: 2016 | GPA: 4.28 / 5.00</span>
-                            <h3 class="font-bold text-sm sm:text-base text-white pt-1">SSC (Business Studies)</h3>
-                            <p class="text-xs text-zinc-400">Sammilani Institution, Jashore</p>
+                            <h3 class="font-bold text-base text-white pt-1">SSC (Business Studies)</h3>
+                            <p class="text-xs sm:text-sm text-zinc-400">Sammilani Institution, Jashore</p>
                         </div>
                     </div>
 
@@ -309,33 +305,33 @@
             </div>
 
             <!-- Right: Skills & Languages -->
-            <div class="md:col-span-5 bento-card p-5 sm:p-6 rounded-3xl space-y-4" data-aos="fade-left" data-aos-duration="700">
-                <h2 class="text-base sm:text-lg font-bold tracking-tight text-zinc-200">Skills & Competencies</h2>
-                <div class="space-y-3">
+            <div class="md:col-span-5 bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-left" data-aos-duration="700">
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Skills & Competencies</h2>
+                <div class="space-y-5">
                     <div>
-                        <div class="text-[11px] font-semibold text-blue-400 uppercase tracking-wider mb-1.5">Technical & Software</div>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="px-2 py-0.5 rounded-lg bg-zinc-800/80 text-[11px] text-zinc-300">SPSS, AMOS & SmartPLS</span>
-                            <span class="px-2 py-0.5 rounded-lg bg-zinc-800/80 text-[11px] text-zinc-300">MS Office (Word, PPT)</span>
-                            <span class="px-2 py-0.5 rounded-lg bg-zinc-800/80 text-[11px] text-zinc-300">MS Excel</span>
-                            <span class="px-2 py-0.5 rounded-lg bg-zinc-800/80 text-[11px] text-zinc-300">HTML, CSS & Bootstrap</span>
-                            <span class="px-2 py-0.5 rounded-lg bg-zinc-800/80 text-[11px] text-zinc-300">AI Prompting</span>
+                        <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-2">Technical & Software</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">SPSS, AMOS & SmartPLS</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">MS Office (Word, PPT)</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">MS Excel</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">HTML, CSS & Bootstrap</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">AI Prompting</span>
                         </div>
                     </div>
                     <div>
-                        <div class="text-[11px] font-semibold text-amber-400 uppercase tracking-wider mb-1.5">Languages Known</div>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="px-2 py-0.5 rounded-lg bg-zinc-800/80 text-[11px] text-zinc-300">Bangla (Native)</span>
-                            <span class="px-2 py-0.5 rounded-lg bg-zinc-800/80 text-[11px] text-zinc-300">English (Professional)</span>
-                            <span class="px-2 py-0.5 rounded-lg bg-zinc-800/80 text-[11px] text-zinc-300">Hindi (Conversational)</span>
+                        <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-2">Languages Known</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Bangla (Native)</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">English (Professional)</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Hindi (Conversational)</span>
                         </div>
                     </div>
                     <div>
-                        <div class="text-[11px] font-semibold text-emerald-400 uppercase tracking-wider mb-1.5">Admin & Soft Skills</div>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="px-2 py-0.5 rounded-lg bg-zinc-800/80 text-[11px] text-zinc-300">Attendance Records</span>
-                            <span class="px-2 py-0.5 rounded-lg bg-zinc-800/80 text-[11px] text-zinc-300">Office Filing</span>
-                            <span class="px-2 py-0.5 rounded-lg bg-zinc-800/80 text-[11px] text-zinc-300">Communication</span>
+                        <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2">Admin & Soft Skills</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Attendance Records</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Office Filing</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Communication</span>
                         </div>
                     </div>
                 </div>
@@ -343,97 +339,97 @@
         </section>
 
         <!-- CERTIFICATES & SERVICES -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            <div class="bento-card p-5 sm:p-6 rounded-3xl space-y-4" data-aos="fade-up" data-aos-duration="700">
-                <h2 class="text-base sm:text-lg font-bold tracking-tight text-zinc-200">Certificates & Trainings</h2>
-                <div class="space-y-3">
-                    <div class="bg-zinc-900/60 p-4 rounded-2xl border border-white/5 space-y-1">
-                        <div class="flex justify-between text-[10px] font-bold text-blue-400">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-up" data-aos-duration="700">
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Certificates & Trainings</h2>
+                <div class="space-y-4">
+                    <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-1.5">
+                        <div class="flex justify-between text-[11px] font-bold text-blue-400">
                             <span>360 Hours (Jan - Jun, 2024)</span>
                             <span class="text-emerald-400">Grade A+</span>
                         </div>
-                        <h3 class="font-bold text-sm text-white">Computer Office Application</h3>
-                        <p class="text-[11px] text-zinc-400">Urban Social Services Office, Barishal</p>
+                        <h3 class="font-bold text-base text-white">Computer Office Application</h3>
+                        <p class="text-xs text-zinc-400">Urban Social Services Office, Barishal</p>
                     </div>
-                    <div class="bg-zinc-900/60 p-4 rounded-2xl border border-white/5 space-y-1">
-                        <div class="flex justify-between text-[10px] font-bold text-amber-400">
+                    <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-1.5">
+                        <div class="flex justify-between text-[11px] font-bold text-amber-400">
                             <span>Aug - Oct, 2024</span>
                             <span class="text-blue-400">Passed</span>
                         </div>
-                        <h3 class="font-bold text-sm text-white">EDGE: Web Design Training</h3>
-                        <p class="text-[11px] text-zinc-400">Dept. of CSE, University of Barishal & BCC</p>
+                        <h3 class="font-bold text-base text-white">EDGE: Web Design Training</h3>
+                        <p class="text-xs text-zinc-400">Dept. of CSE, University of Barishal & BCC</p>
                     </div>
                 </div>
             </div>
 
-            <div id="services" class="bento-card p-5 sm:p-6 rounded-3xl space-y-4" data-aos="fade-up" data-aos-duration="700">
-                <h2 class="text-base sm:text-lg font-bold tracking-tight text-zinc-200">Professional Services</h2>
-                <div class="space-y-3">
-                    <div class="bg-zinc-900/60 p-3.5 rounded-2xl border border-white/5 flex items-center space-x-3">
-                        <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-calculator text-xs"></i></div>
-                        <div><h4 class="font-bold text-xs text-white">Financial Management Tutoring</h4><p class="text-[11px] text-zinc-400">Capital Budgeting, Cost of Capital & Working Capital.</p></div>
+            <div id="services" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-up" data-aos-duration="700">
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Professional Services</h2>
+                <div class="space-y-3.5">
+                    <div class="bg-zinc-900/60 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-calculator text-sm"></i></div>
+                        <div><h4 class="font-bold text-xs sm:text-sm text-white">Financial Management Tutoring</h4><p class="text-xs text-zinc-400">Capital Budgeting, Cost of Capital & Working Capital.</p></div>
                     </div>
-                    <div class="bg-zinc-900/60 p-3.5 rounded-2xl border border-white/5 flex items-center space-x-3">
-                        <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-book-open text-xs"></i></div>
-                        <div><h4 class="font-bold text-xs text-white">Academic Mentoring</h4><p class="text-[11px] text-zinc-400">English grammar, mathematics, and science tutoring.</p></div>
+                    <div class="bg-zinc-900/60 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-book-open text-sm"></i></div>
+                        <div><h4 class="font-bold text-xs sm:text-sm text-white">Academic Mentoring</h4><p class="text-xs text-zinc-400">English grammar, mathematics, and science tutoring.</p></div>
                     </div>
-                    <div class="bg-zinc-900/60 p-3.5 rounded-2xl border border-white/5 flex items-center space-x-3">
-                        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-chart-line text-xs"></i></div>
-                        <div><h4 class="font-bold text-xs text-white">Research & Data Tabulation</h4><p class="text-[11px] text-zinc-400">Survey data collection and SPSS statistical analysis.</p></div>
+                    <div class="bg-zinc-900/60 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-chart-line text-sm"></i></div>
+                        <div><h4 class="font-bold text-xs sm:text-sm text-white">Research & Data Tabulation</h4><p class="text-xs text-zinc-400">Survey data collection and SPSS statistical analysis.</p></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- AUTOMATIC SLIDESHOW SHOWCASE SECTION -->
-        <section class="bento-card p-5 sm:p-6 rounded-3xl space-y-4" data-aos="fade-up" data-aos-duration="700">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-2">
+        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-up" data-aos-duration="700">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2">
                 <div>
-                    <h2 class="text-base sm:text-lg font-bold tracking-tight text-zinc-200">Featured Presentations & Excel Demos</h2>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Featured Presentations & Excel Demos</h2>
                     <p class="text-xs text-zinc-400">Highlights from my work hub and academic slide decks.</p>
                 </div>
-                <a href="portfolio.html" class="self-start sm:self-auto text-[11px] font-bold text-blue-400 hover:text-blue-300 uppercase tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20 transition flex items-center space-x-1">
+                <a href="portfolio.html" class="self-start sm:self-auto text-[11px] font-bold text-blue-400 hover:text-blue-300 uppercase tracking-widest bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20 transition flex items-center space-x-1.5">
                     <span>View All Hub</span>
-                    <i class="fa-solid fa-arrow-right text-[9px]"></i>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
                 </a>
             </div>
 
-            <div class="relative overflow-hidden rounded-2xl bg-zinc-900/60 border border-white/5 p-4 sm:p-5 min-h-[160px]">
+            <div class="relative overflow-hidden rounded-2xl bg-zinc-900/60 border border-white/5 p-5 sm:p-6 min-h-[180px]">
                 <!-- Slide 1 -->
-                <div class="slide-item active space-y-2">
-                    <div class="flex justify-between text-[10px] font-bold text-blue-400 uppercase tracking-widest">
+                <div class="slide-item active space-y-2.5">
+                    <div class="flex justify-between text-[11px] font-bold text-blue-400 uppercase tracking-widest">
                         <span>Presentation Deck</span>
                         <span>Slides / PDF</span>
                     </div>
-                    <h3 class="font-bold text-sm sm:text-base text-white">HR Practices & Employee Retention Strategy</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">Comprehensive slide deck covering modern recruitment trends, employee motivation theories, and retention frameworks.</p>
-                    <div class="pt-2 flex justify-between items-center">
-                        <a href="portfolio.html" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1">
+                    <h3 class="font-bold text-base sm:text-lg text-white">HR Practices & Employee Retention Strategy</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Comprehensive slide deck covering modern recruitment trends, employee motivation theories, and retention frameworks.</p>
+                    <div class="pt-3 flex justify-between items-center">
+                        <a href="portfolio.html" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1.5">
                             <span>Explore Showcase</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         </a>
-                        <span class="text-[10px] text-zinc-500">Slide 1 of 2</span>
+                        <span class="text-[11px] text-zinc-500">Slide 1 of 2</span>
                     </div>
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="slide-item space-y-2">
-                    <div class="flex justify-between text-[10px] font-bold text-emerald-400 uppercase tracking-widest">
+                <div class="slide-item space-y-2.5">
+                    <div class="flex justify-between text-[11px] font-bold text-emerald-400 uppercase tracking-widest">
                         <span>Excel & Data Model</span>
                         <span>XLSX / Dashboard</span>
                     </div>
-                    <h3 class="font-bold text-sm sm:text-base text-white">Capital Budgeting & Working Capital Model</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">Advanced financial analysis workbook featuring automated NPV, IRR calculations, ratio analysis, and forecasting charts.</p>
-                    <div class="pt-2 flex justify-between items-center">
-                        <a href="portfolio.html" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold inline-flex items-center space-x-1">
+                    <h3 class="font-bold text-base sm:text-lg text-white">Capital Budgeting & Working Capital Model</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Advanced financial analysis workbook featuring automated NPV, IRR calculations, ratio analysis, and forecasting charts.</p>
+                    <div class="pt-3 flex justify-between items-center">
+                        <a href="portfolio.html" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold inline-flex items-center space-x-1.5">
                             <span>Explore Showcase</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         </a>
-                        <span class="text-[10px] text-zinc-500">Slide 2 of 2</span>
+                        <span class="text-[11px] text-zinc-500">Slide 2 of 2</span>
                     </div>
                 </div>
 
-                <div class="flex justify-center space-x-2 mt-4">
+                <div class="flex justify-center space-x-2 mt-5">
                     <button onclick="currentSlide(0)" class="dot w-2 h-2 rounded-full bg-blue-500 transition-all"></button>
                     <button onclick="currentSlide(1)" class="dot w-2 h-2 rounded-full bg-zinc-700 transition-all"></button>
                 </div>
@@ -441,43 +437,43 @@
         </section>
 
         <!-- RECENT BLOG HIGHLIGHTS SECTION -->
-        <section id="blog-highlights" class="bento-card p-5 sm:p-6 rounded-3xl space-y-4" data-aos="fade-up" data-aos-duration="700">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-2">
+        <section id="blog-highlights" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-up" data-aos-duration="700">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2">
                 <div>
-                    <h2 class="text-base sm:text-lg font-bold tracking-tight text-zinc-200">Latest From My Blog</h2>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Latest From My Blog</h2>
                     <p class="text-xs text-zinc-400">Thoughts, insights, and professional writings.</p>
                 </div>
-                <a href="blog.html" class="self-start sm:self-auto text-[11px] font-bold text-blue-400 hover:text-blue-300 uppercase tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20 transition flex items-center space-x-1">
+                <a href="blog.html" class="self-start sm:self-auto text-[11px] font-bold text-blue-400 hover:text-blue-300 uppercase tracking-widest bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20 transition flex items-center space-x-1.5">
                     <span>View All</span>
-                    <i class="fa-solid fa-arrow-right text-[9px]"></i>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
                 </a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-zinc-900/60 p-4 rounded-2xl border border-white/5 space-y-2 hover:border-blue-500/40 transition">
-                    <div class="flex justify-between text-[10px] font-bold text-blue-400 uppercase tracking-widest">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-3 hover:border-blue-500/40 transition">
+                    <div class="flex justify-between text-[11px] font-bold text-blue-400 uppercase tracking-widest">
                         <span>Management</span>
                         <span>Oct 2026</span>
                     </div>
-                    <h3 class="font-bold text-sm sm:text-base text-white hover:text-blue-400 transition cursor-pointer">আপনার প্রথম ব্লগ পোস্টের শিরোনাম এখানে লিখুন</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">এখানে আপনার ব্লগের সংক্ষিপ্ত বিবরণ বা লেখার প্রিভিউ থাকবে...</p>
+                    <h3 class="font-bold text-base text-white hover:text-blue-400 transition cursor-pointer">আপনার প্রথম ব্লগ পোস্টের শিরোনাম এখানে লিখুন</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">এখানে আপনার ব্লগের সংক্ষিপ্ত বিবরণ বা লেখার প্রিভিউ থাকবে...</p>
                     <div class="pt-2">
-                        <a href="blog.html" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1">
+                        <a href="blog.html" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1.5">
                             <span>Read More</span>
                             <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-zinc-900/60 p-4 rounded-2xl border border-white/5 space-y-2 hover:border-blue-500/40 transition">
-                    <div class="flex justify-between text-[10px] font-bold text-amber-400 uppercase tracking-widest">
+                <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-3 hover:border-blue-500/40 transition">
+                    <div class="flex justify-between text-[11px] font-bold text-amber-400 uppercase tracking-widest">
                         <span>Finance</span>
                         <span>Sep 2026</span>
                     </div>
-                    <h3 class="font-bold text-sm sm:text-base text-white hover:text-blue-400 transition cursor-pointer">ফাইন্যান্সিয়াল ম্যানেজমেন্ট ও ক্যাপিটাল বাজেটিং</h3>
-                    <p class="text-xs text-zinc-400 leading-relaxed">শিক্ষকতা এবং প্রাতিষ্ঠানিক অভিজ্ঞতা থেকে ফাইন্যান্সিয়াল ম্যানেজমেন্টের বিভিন্ন কৌশল...</p>
+                    <h3 class="font-bold text-base text-white hover:text-blue-400 transition cursor-pointer">ফাইন্যান্সিয়াল ম্যানেজমেন্ট ও ক্যাপিটাল বাজেটিং</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">শিক্ষকতা এবং প্রাতিষ্ঠানিক অভিজ্ঞতা থেকে ফাইন্যান্সিয়াল ম্যানেজমেন্টের বিভিন্ন কৌশল...</p>
                     <div class="pt-2">
-                        <a href="blog.html" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1">
+                        <a href="blog.html" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1.5">
                             <span>Read More</span>
                             <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </a>
@@ -487,15 +483,15 @@
         </section>
 
         <!-- VISUAL GALLERY & TRAVELS AUTO-SLIDESHOW SECTION -->
-        <section class="bento-card p-5 sm:p-6 rounded-3xl space-y-4" data-aos="fade-up" data-aos-duration="700">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-2">
+        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-up" data-aos-duration="700">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2">
                 <div>
-                    <h2 class="text-base sm:text-lg font-bold tracking-tight text-zinc-200">Photography & Travel Highlights</h2>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Photography & Travel Highlights</h2>
                     <p class="text-xs text-zinc-400">Captured moments and scenic explorations.</p>
                 </div>
-                <a href="gallery.html" class="self-start sm:self-auto text-[11px] font-bold text-amber-400 hover:text-amber-300 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 transition flex items-center space-x-1">
+                <a href="gallery.html" class="self-start sm:self-auto text-[11px] font-bold text-amber-400 hover:text-amber-300 uppercase tracking-widest bg-amber-500/10 px-3 py-1.5 rounded-full border border-amber-500/20 transition flex items-center space-x-1.5">
                     <span>View Full Gallery</span>
-                    <i class="fa-solid fa-arrow-right text-[9px]"></i>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
                 </a>
             </div>
 
@@ -505,10 +501,10 @@
                 <!-- Photo Slide 1 -->
                 <div class="photo-slide-item active absolute inset-0 w-full h-full">
                     <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/90 via-transparent to-transparent flex items-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/95 via-transparent to-transparent flex items-end p-5 sm:p-6">
                         <div>
-                            <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/20 px-2.5 py-0.5 rounded">Photography</span>
-                            <h3 class="text-xs sm:text-base font-bold text-white mt-1">Serene Seashore & Coastal Horizon</h3>
+                            <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/20 px-2.5 py-1 rounded">Photography</span>
+                            <h3 class="text-sm sm:text-base font-bold text-white mt-1.5">Serene Seashore & Coastal Horizon</h3>
                         </div>
                     </div>
                 </div>
@@ -516,10 +512,10 @@
                 <!-- Photo Slide 2 -->
                 <div class="photo-slide-item absolute inset-0 w-full h-full">
                     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/90 via-transparent to-transparent flex items-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/95 via-transparent to-transparent flex items-end p-5 sm:p-6">
                         <div>
-                            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/20 px-2.5 py-0.5 rounded">Tours & Travels</span>
-                            <h3 class="text-xs sm:text-base font-bold text-white mt-1">Mountain Expedition & Scenic Valleys</h3>
+                            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/20 px-2.5 py-1 rounded">Tours & Travels</span>
+                            <h3 class="text-sm sm:text-base font-bold text-white mt-1.5">Mountain Expedition & Scenic Valleys</h3>
                         </div>
                     </div>
                 </div>
@@ -527,16 +523,16 @@
                 <!-- Photo Slide 3 -->
                 <div class="photo-slide-item absolute inset-0 w-full h-full">
                     <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/90 via-transparent to-transparent flex items-end p-4">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/95 via-transparent to-transparent flex items-end p-5 sm:p-6">
                         <div>
-                            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/20 px-2.5 py-0.5 rounded">Travel Diary</span>
-                            <h3 class="text-xs sm:text-base font-bold text-white mt-1">Highway Journey & Open Roads</h3>
+                            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/20 px-2.5 py-1 rounded">Travel Diary</span>
+                            <h3 class="text-sm sm:text-base font-bold text-white mt-1.5">Highway Journey & Open Roads</h3>
                         </div>
                     </div>
                 </div>
 
                 <!-- Photo Navigation Dots -->
-                <div class="absolute bottom-3 right-3 z-10 flex space-x-1.5 bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+                <div class="absolute bottom-4 right-4 z-10 flex space-x-2 bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-full border border-white/10">
                     <button onclick="currentPhotoSlide(0)" class="photo-dot w-2 h-2 rounded-full bg-blue-500 transition-all"></button>
                     <button onclick="currentPhotoSlide(1)" class="photo-dot w-2 h-2 rounded-full bg-zinc-500 transition-all"></button>
                     <button onclick="currentPhotoSlide(2)" class="photo-dot w-2 h-2 rounded-full bg-zinc-500 transition-all"></button>
@@ -545,70 +541,70 @@
         </section>
 
         <!-- NEWSLETTER SECTION -->
-        <section class="bento-card p-5 sm:p-10 rounded-3xl relative overflow-hidden text-center space-y-4" data-aos="fade-up" data-aos-duration="700">
+        <section class="bento-card p-6 sm:p-12 rounded-3xl relative overflow-hidden text-center space-y-5" data-aos="fade-up" data-aos-duration="700">
             <div class="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div class="max-w-xl mx-auto space-y-2 relative z-10">
+            <div class="max-w-xl mx-auto space-y-2.5 relative z-10">
                 <span class="text-[10px] uppercase font-bold text-blue-400 tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Stay Updated</span>
-                <h2 class="text-lg sm:text-2xl font-extrabold tracking-tight text-white">Subscribe to My Newsletter</h2>
+                <h2 class="text-xl sm:text-2xl font-extrabold tracking-tight text-white">Subscribe to My Newsletter</h2>
                 <p class="text-xs sm:text-sm text-zinc-400">Get my latest articles on management, finance insights, and professional updates directly in your inbox.</p>
             </div>
 
-            <form action="https://formspree.io/f/xqppqjbb" method="POST" class="max-w-md mx-auto flex flex-col sm:flex-row gap-2.5 relative z-10 pt-2">
-                <input type="email" name="newsletter_email" required class="flex-grow bg-zinc-900 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-blue-500 transition" placeholder="Enter your email address...">
-                <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3 rounded-xl text-xs transition shadow-md shrink-0">
+            <form action="https://formspree.io/f/xqppqjbb" method="POST" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 relative z-10 pt-2">
+                <input type="email" name="newsletter_email" required class="flex-grow bg-zinc-900 border border-white/10 rounded-xl px-4 py-3.5 text-xs sm:text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="Enter your email address...">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3.5 rounded-xl text-xs transition shadow-lg shrink-0">
                     Subscribe
                 </button>
             </form>
-            <p class="text-[10px] text-zinc-500 relative z-10">No spam, unsubscribe at any time.</p>
+            <p class="text-[11px] text-zinc-500 relative z-10">No spam, unsubscribe at any time.</p>
         </section>
 
         <!-- CONTACT SECTION & FORM -->
-        <section id="contact" class="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6" data-aos="fade-up" data-aos-duration="700">
-            <div class="md:col-span-6 bento-card p-5 sm:p-6 rounded-3xl space-y-4">
-                <h2 class="text-base sm:text-lg font-bold tracking-tight text-zinc-200">Contact Details</h2>
-                <div class="space-y-3 text-xs">
-                    <div class="flex items-center space-x-3 text-zinc-400">
-                        <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center"><i class="fa-solid fa-phone"></i></div>
-                        <div><div class="text-[9px] uppercase font-bold text-zinc-500">Phone</div><span class="text-white font-medium">+880 1646126678</span></div>
+        <section id="contact" class="grid grid-cols-1 md:grid-cols-12 gap-6" data-aos="fade-up" data-aos-duration="700">
+            <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5">
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Contact Details</h2>
+                <div class="space-y-4 text-xs sm:text-sm">
+                    <div class="flex items-center space-x-4 text-zinc-400">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-phone"></i></div>
+                        <div><div class="text-[10px] uppercase font-bold text-zinc-500">Phone</div><span class="text-white font-medium">+880 1646126678</span></div>
                     </div>
-                    <div class="flex items-center space-x-3 text-zinc-400">
-                        <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center"><i class="fa-solid fa-envelope"></i></div>
-                        <div><div class="text-[9px] uppercase font-bold text-zinc-500">Email</div><span class="text-white font-medium">arup.bu.bd@gmail.com</span></div>
+                    <div class="flex items-center space-x-4 text-zinc-400">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-envelope"></i></div>
+                        <div><div class="text-[10px] uppercase font-bold text-zinc-500">Email</div><span class="text-white font-medium">arup.bu.bd@gmail.com</span></div>
                     </div>
-                    <div class="flex items-center space-x-3 text-zinc-400">
-                        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center"><i class="fa-solid fa-location-dot"></i></div>
-                        <div><div class="text-[9px] uppercase font-bold text-zinc-500">Location</div><span class="text-white font-medium text-[11px]">Bijoy 24 Hall, University of Barishal</span></div>
+                    <div class="flex items-center space-x-4 text-zinc-400">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+                        <div><div class="text-[10px] uppercase font-bold text-zinc-500">Location</div><span class="text-white font-medium">Bijoy 24 Hall, University of Barishal</span></div>
                     </div>
                 </div>
 
-                <div class="pt-3 border-t border-white/5 space-y-2">
-                    <h3 class="font-bold text-xs text-white">Professional References</h3>
-                    <div class="text-[11px] space-y-1 text-zinc-400">
+                <div class="pt-4 border-t border-white/5 space-y-2.5">
+                    <h3 class="font-bold text-xs sm:text-sm text-white">Professional References</h3>
+                    <div class="text-xs space-y-1.5 text-zinc-400">
                         <div><strong class="text-white">Surajit Kumar Mondal</strong> (+880 1747399170)</div>
                         <div><strong class="text-white">Ashok Bala</strong> (+880 1688156573)</div>
                     </div>
                 </div>
             </div>
 
-            <div class="md:col-span-6 bento-card p-5 sm:p-6 rounded-3xl space-y-4">
-                <h2 class="text-base sm:text-lg font-bold tracking-tight text-zinc-200">Let’s Connect & Collaborate</h2>
-                <p class="text-xs text-zinc-400">Open for professional opportunities, recruitment, and academic services.</p>
-                <form action="https://formspree.io/f/xqppqjbb" method="POST" class="space-y-3">
+            <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5">
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Let’s Connect & Collaborate</h2>
+                <p class="text-xs sm:text-sm text-zinc-400">Open for professional opportunities, recruitment, and academic services.</p>
+                <form action="https://formspree.io/f/xqppqjbb" method="POST" class="space-y-4">
                     <div>
-                        <label class="block text-[10px] uppercase font-bold text-zinc-400 mb-1">Your Name</label>
-                        <input type="text" name="name" required class="w-full bg-zinc-900 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-blue-500 transition" placeholder="Enter your name">
+                        <label class="block text-[10px] uppercase font-bold text-zinc-400 mb-1.5">Your Name</label>
+                        <input type="text" name="name" required class="w-full bg-zinc-900 border border-white/10 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="Enter your name">
                     </div>
                     <div>
-                        <label class="block text-[10px] uppercase font-bold text-zinc-400 mb-1">Your Email</label>
-                        <input type="email" name="email" required class="w-full bg-zinc-900 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-blue-500 transition" placeholder="Enter your email">
+                        <label class="block text-[10px] uppercase font-bold text-zinc-400 mb-1.5">Your Email</label>
+                        <input type="email" name="email" required class="w-full bg-zinc-900 border border-white/10 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="Enter your email">
                     </div>
                     <div>
-                        <label class="block text-[10px] uppercase font-bold text-zinc-400 mb-1">Message</label>
-                        <textarea name="message" rows="3" required class="w-full bg-zinc-900 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-blue-500 transition" placeholder="Write your message..."></textarea>
+                        <label class="block text-[10px] uppercase font-bold text-zinc-400 mb-1.5">Message</label>
+                        <textarea name="message" rows="3" required class="w-full bg-zinc-900 border border-white/10 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="Write your message..."></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-xl text-xs transition shadow-md">
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-xl text-xs sm:text-sm transition shadow-lg">
                         Send Message
                     </button>
                 </form>
@@ -618,18 +614,18 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="max-w-5xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-white/10 text-center text-xs text-zinc-500" data-aos="fade-in" data-aos-duration="600">
+    <footer class="max-w-5xl mx-auto px-4 sm:px-6 mt-16 pt-8 border-t border-white/10 text-center text-xs text-zinc-500" data-aos="fade-in" data-aos-duration="600">
         <p>&copy; 2026 Arup Kumar Saha. All Rights Reserved.</p>
-        <div class="flex lg:hidden items-center justify-center space-x-3 mt-3">
-            <a href="https://www.linkedin.com/in/arupkumarsaha0" target="_blank" class="w-7 h-7 rounded-full bg-zinc-900 hover:bg-blue-600 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="LinkedIn"><i class="fa-brands fa-linkedin text-xs"></i></a>
-            <a href="https://github.com/arupkumarsaha0" target="_blank" class="w-7 h-7 rounded-full bg-zinc-900 hover:bg-zinc-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="GitHub"><i class="fa-brands fa-github text-xs"></i></a>
-            <a href="https://facebook.com/arupkumarsaha0" target="_blank" class="w-7 h-7 rounded-full bg-zinc-900 hover:bg-blue-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="Facebook"><i class="fa-brands fa-facebook text-xs"></i></a>
-            <a href="mailto:arup.bu.bd@gmail.com" class="w-7 h-7 rounded-full bg-zinc-900 hover:bg-amber-600 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="Email"><i class="fa-solid fa-envelope text-xs"></i></a>
+        <div class="flex lg:hidden items-center justify-center space-x-3.5 mt-4">
+            <a href="https://www.linkedin.com/in/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-blue-600 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="LinkedIn"><i class="fa-brands fa-linkedin text-xs"></i></a>
+            <a href="https://github.com/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-zinc-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="GitHub"><i class="fa-brands fa-github text-xs"></i></a>
+            <a href="https://facebook.com/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-blue-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="Facebook"><i class="fa-brands fa-facebook text-xs"></i></a>
+            <a href="mailto:arup.bu.bd@gmail.com" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-amber-600 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="Email"><i class="fa-solid fa-envelope text-xs"></i></a>
         </div>
     </footer>
 
     <!-- SCROLL TO TOP FLOATING BUTTON -->
-    <a href="#about" id="scrollTopBtn" class="fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-500 text-white shadow-xl flex items-center justify-center transition-all opacity-0 pointer-events-none hover:scale-110">
+    <a href="#about" id="scrollTopBtn" class="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-blue-600 hover:bg-blue-500 text-white shadow-2xl flex items-center justify-center transition-all opacity-0 pointer-events-none hover:scale-110">
         <i class="fa-solid fa-arrow-up text-xs"></i>
     </a>
 
@@ -637,7 +633,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         // Smooth AOS Initialization
-        AOS.init({ once: true, offset: 10, duration: 600 });
+        AOS.init({ once: true, offset: 20, duration: 600 });
 
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
