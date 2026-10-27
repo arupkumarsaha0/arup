@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arup Kumar Saha — Presentations & Excel Demos Showcase</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#040406',
+                        cardBg: '#0e0f14',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #040406; color: #f3f4f6; overflow-x: hidden; }
+        .bento-card {
+            background: rgba(14, 15, 20, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .bento-card:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.2);
+        }
+        .blob-glow {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(245, 158, 11, 0.08) 60%, transparent 100%);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #040406; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 3px; }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-500 selection:text-white pb-20 relative">
+
+    <!-- Background Glows -->
+    <div class="blob-glow top-10 left-5"></div>
+    <div class="blob-glow bottom-1/4 right-5"></div>
+
+    <!-- MAIN CONTAINER WITH EXACT PAGE ALIGNMENT -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 pt-6 z-50 fixed inset-x-0 top-0 pointer-events-none">
+        <nav class="bg-[#0e0f14]/95 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 flex items-center justify-between shadow-2xl pointer-events-auto">
+            <a href="index.html" class="font-extrabold text-xs tracking-wider bg-gradient-to-r from-blue-400 via-sky-300 to-amber-400 bg-clip-text text-transparent shrink-0">
+                &larr; BACK TO HOME
+            </a>
+            <div class="hidden lg:flex items-center space-x-4 text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
+                <span class="text-blue-400">Presentations & Excel Demos Hub</span>
+            </div>
+            <a href="index.html#contact" class="bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-bold px-3.5 py-1.5 rounded-full transition shadow-lg">
+                Get in Touch
+            </a>
+        </nav>
+    </div>
+
+    <!-- MAIN SHOWCASE CONTENT -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 pt-32 sm:pt-28 space-y-6">
+        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-up">
+            <div class="space-y-2">
+                <span class="text-[11px] text-blue-400 font-bold uppercase tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Works Hub</span>
+                <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">Presentations & Excel Demos</h1>
+                <p class="text-xs sm:text-sm text-zinc-400">Explore my academic slide decks, corporate presentations, financial models, and data analysis workbooks.</p>
+            </div>
+
+            <!-- Showcase Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                
+                <!-- PRESENTATION ITEM 1 -->
+                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/10 space-y-4 flex flex-col justify-between hover:border-blue-500/50 transition">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 px-2.5 py-1 rounded-md">Presentation Deck</span>
+                            <i class="fa-solid fa-file-powerpoint text-blue-400 text-base"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-white">HR Practices & Employee Retention Strategy</h3>
+                        <p class="text-xs text-zinc-400 leading-relaxed">A comprehensive slide deck covering modern recruitment trends, employee motivation theories, and retention frameworks.</p>
+                        
+                        <div class="w-full h-36 bg-zinc-950 rounded-xl border border-white/5 flex flex-col items-center justify-center relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                <span class="bg-blue-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg shadow-lg">Preview Slides</span>
+                            </div>
+                            <i class="fa-solid fa-chalkboard-user text-zinc-600 text-3xl mb-2"></i>
+                            <span class="text-[11px] text-zinc-500 font-medium">Interactive Slide View Available</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-3 border-t border-white/5 flex items-center justify-between text-xs">
+                        <span class="text-zinc-500 font-medium">Format: PDF / PPTX</span>
+                        <a href="#" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2 rounded-xl transition inline-flex items-center space-x-1.5 shadow-md">
+                            <span>View Slides</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- EXCEL DEMO ITEM 2 -->
+                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/10 space-y-4 flex flex-col justify-between hover:border-emerald-500/50 transition">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/10 px-2.5 py-1 rounded-md">Excel & Data Model</span>
+                            <i class="fa-solid fa-file-excel text-emerald-400 text-base"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-white">Capital Budgeting & Working Capital Model</h3>
+                        <p class="text-xs text-zinc-400 leading-relaxed">Advanced financial analysis workbook featuring automated NPV, IRR calculations, ratio analysis, and forecasting charts.</p>
+                        
+                        <div class="w-full h-36 bg-zinc-950 rounded-xl border border-white/5 flex flex-col items-center justify-center relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-emerald-600/10 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                <span class="bg-emerald-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg shadow-lg">Explore Demo</span>
+                            </div>
+                            <i class="fa-solid fa-table-cells text-zinc-600 text-3xl mb-2"></i>
+                            <span class="text-[11px] text-zinc-500 font-medium">Interactive Excel / Spreadsheet Demo</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-3 border-t border-white/5 flex items-center justify-between text-xs">
+                        <span class="text-zinc-500 font-medium">Format: XLSX / Dashboard</span>
+                        <a href="#" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-xl transition inline-flex items-center space-x-1.5 shadow-md">
+                            <span>Open Excel Demo</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="max-w-5xl mx-auto px-4 sm:px-6 mt-12 pt-6 border-t border-white/10 text-center text-xs text-zinc-500">
+        <p>&copy; 2026 Arup Kumar Saha. All Rights Reserved.</p>
+    </footer>
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 30, duration: 700 });
+    </script>
+</body>
+</html>
