@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery — Photography & Tours | Arup Kumar Saha</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100% দেবতাদের%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%233b82f6%22/><text x=%2250%25%22 y=%2255%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2260%22 font-weight=%22bold%22 fill=%22%23ffffff%22>A</text></svg>">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -63,43 +65,37 @@
         </nav>
     </div>
 
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 my-auto text-center py-24 z-10" data-aos="zoom-in" data-aos-duration="800">
-        <div class="bento-card p-8 sm:p-14 rounded-3xl space-y-6 shadow-2xl relative overflow-hidden border border-white/10">
-            <div class="absolute -top-20 -right-20 w-40 h-40 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
-            <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 my-auto py-32 z-10 space-y-8" data-aos="fade-up" data-aos-duration="800">
+        <div class="text-center space-y-2">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Photography & Travel Gallery</h1>
+            <p class="text-xs sm:text-sm text-zinc-400">Captured moments, scenic landscapes, and travel diaries.</p>
+        </div>
 
-            <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center text-2xl sm:text-3xl shadow-lg">
-                <i class="fa-solid fa-camera-retro"></i>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+            <div class="bento-card rounded-2xl overflow-hidden group aspect-square">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Seashore" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
             </div>
+            <div class="bento-card rounded-2xl overflow-hidden group aspect-square">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Mountain" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+            <div class="bento-card rounded-2xl overflow-hidden group aspect-square">
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="Road Trip" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+        </div>
 
-            <div class="space-y-3">
-                <span class="inline-block text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
-                    Visual Showcase
-                </span>
-                <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
-                    Gallery & Tours Hub Coming Soon
-                </h1>
-                <p class="text-xs sm:text-sm text-zinc-400 max-w-lg mx-auto leading-relaxed">
-                    আমার ভ্রমণ ডায়েরি এবং ফটোগ্রাফির সেরা মুহূর্তগুলো নিয়ে গ্যালারি পেজটি খুব শীঘ্রই সাজানো হবে।
-                </p>
-            </div>
-
-            <div class="pt-2">
-                <a href="index.html" class="inline-flex items-center space-x-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-200 hover:text-white font-bold px-6 py-3 rounded-xl text-xs border border-white/10 transition shadow-lg">
-                    <i class="fa-solid fa-house"></i>
-                    <span>Return to Homepage</span>
-                </a>
-            </div>
+        <div class="text-center pt-4">
+            <a href="index.html" class="inline-flex items-center space-x-2 bg-zinc-900 hover:bg-zinc-800 text-zinc-200 hover:text-white font-bold px-6 py-3 rounded-xl text-xs border border-white/10 transition shadow-lg">
+                <i class="fa-solid fa-house"></i>
+                <span>Return to Homepage</span>
+            </a>
         </div>
     </main>
 
-    <footer class="max-w-5xl mx-auto px-4 sm:px-6 py-6 border-t border-white/10 text-center text-xs text-zinc-500 z-10" data-aos="fade-in" data-aos-duration="600">
+    <footer class="max-w-5xl mx-auto px-4 sm:px-6 py-6 border-t border-white/10 text-center text-xs text-zinc-500 z-10">
         <p>&copy; 2026 Arup Kumar Saha. All Rights Reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: true, offset: 20, duration: 700 });
-    </script>
+    <script>AOS.init({ once: true, offset: 20, duration: 700 });</script>
 </body>
 </html>
