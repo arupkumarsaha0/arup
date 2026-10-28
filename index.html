@@ -45,7 +45,6 @@
             transform: translateY(-5px);
             box-shadow: 0 30px 60px -15px rgba(59, 130, 246, 0.25);
         }
-        /* Enhanced Eye-Catching Watermark Icons */
         .section-bg-icon {
             position: absolute;
             right: -10px;
@@ -127,6 +126,7 @@
 
             <div class="hidden lg:flex items-center space-x-3 xl:space-x-4 text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
                 <a href="#about" class="hover:text-blue-400 transition">About</a>
+                <a href="#preferences" class="hover:text-blue-400 transition">Career Goal</a>
                 <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
                 <a href="#ventures" class="hover:text-blue-400 transition">Ventures</a>
                 <a href="#co-curricular" class="hover:text-blue-400 transition">Leadership</a>
@@ -151,6 +151,7 @@
         <!-- MOBILE MENU -->
         <div id="mobileMenu" class="hidden absolute right-3 sm:right-6 w-64 bg-[#0e0f14]/98 backdrop-blur-2xl border border-white/15 rounded-2xl mt-2 p-3.5 flex flex-col space-y-2 text-xs font-semibold uppercase tracking-wider text-zinc-200 lg:hidden shadow-2xl pointer-events-auto z-50">
             <a href="#about" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-user text-blue-400 w-4"></i><span>About</span></a>
+            <a href="#preferences" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-bullseye text-amber-400 w-4"></i><span>Career Goal</span></a>
             <a href="#experience" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-briefcase text-amber-400 w-4"></i><span>Experience</span></a>
             <a href="#ventures" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-store text-sky-400 w-4"></i><span>Ventures</span></a>
             <a href="#co-curricular" class="mobile-link hover:text-blue-400 py-2 transition flex items-center space-x-3 border-b border-white/5"><i class="fa-solid fa-trophy text-emerald-400 w-4"></i><span>Leadership & Sports</span></a>
@@ -209,6 +210,51 @@
                     <div class="flex items-center justify-center space-x-2 pt-2 text-[11px] text-zinc-400">
                         <span><i class="fa-solid fa-location-dot text-amber-500 mr-1"></i> Barishal / Jessore</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: CAREER PREFERENCES & JOB GOALS SECTION -->
+        <section id="preferences" class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="900">
+            <!-- Preferred Organization Types -->
+            <div class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative overflow-hidden">
+                <i class="fa-solid fa-building section-bg-icon"></i>
+                <div class="flex items-center justify-between relative z-10">
+                    <h3 class="text-base sm:text-lg font-bold text-white flex items-center space-x-2.5">
+                        <span class="w-8 h-8 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-sm"><i class="fa-solid fa-city"></i></span>
+                        <span>Preferred Organizations</span>
+                    </h3>
+                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 px-2.5 py-1 rounded-full border border-blue-500/20">Work Culture</span>
+                </div>
+                <p class="text-xs sm:text-sm text-zinc-400 relative z-10 leading-relaxed">
+                    Looking forward to contributing in structured corporate environments that value professional ethics, career growth, and employee well-being.
+                </p>
+                <div class="flex flex-wrap gap-2 relative z-10 pt-1">
+                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-blue-400 text-[10px]"></i><span>Multinational Corporations (MNCs)</span></span>
+                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-blue-400 text-[10px]"></i><span>Commercial Banks & Financial Institutions</span></span>
+                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-blue-400 text-[10px]"></i><span>Large Conglomerates & FMCG</span></span>
+                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-blue-400 text-[10px]"></i><span>National NGOs & Development Projects</span></span>
+                </div>
+            </div>
+
+            <!-- Preferred Job Roles -->
+            <div class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative overflow-hidden">
+                <i class="fa-solid fa-bullseye section-bg-icon"></i>
+                <div class="flex items-center justify-between relative z-10">
+                    <h3 class="text-base sm:text-lg font-bold text-white flex items-center space-x-2.5">
+                        <span class="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-sm"><i class="fa-solid fa-briefcase"></i></span>
+                        <span>Preferred Job Roles</span>
+                    </h3>
+                    <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">Career Focus</span>
+                </div>
+                <p class="text-xs sm:text-sm text-zinc-400 relative z-10 leading-relaxed">
+                    Seeking roles aligned with my academic expertise in Human Resource Management, administration, operations, and corporate analysis.
+                </p>
+                <div class="flex flex-wrap gap-2 relative z-10 pt-1">
+                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>HR & Admin Executive / Officer</span></span>
+                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Management Trainee Officer (MTO)</span></span>
+                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Corporate Operations & MIS Analyst</span></span>
+                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Research & Data Associate</span></span>
                 </div>
             </div>
         </section>
