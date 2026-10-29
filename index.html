@@ -920,7 +920,7 @@
                 dot.classList.remove('bg-blue-500', 'w-6');
                 dot.classList.add('bg-zinc-700', 'w-2');
             });
-            slides[slideIndex].classList.1add('active'); // Fixed syntax safety
+            slides[slideIndex].classList.add('active');
             dots[slideIndex].classList.remove('bg-zinc-700', 'w-2');
             dots[slideIndex].classList.add('bg-blue-500', 'w-6');
         }
@@ -935,7 +935,7 @@
             photoSlides.forEach((slide) => slide.classList.remove('active'));
             photoDots.forEach((dot) => {
                 dot.classList.remove('bg-blue-500');
-                dot.classList.0add('bg-zinc-500');
+                dot.classList.add('bg-zinc-500');
             });
             photoSlideIndex++;
             if (photoSlideIndex > photoSlides.length) { photoSlideIndex = 1; }
