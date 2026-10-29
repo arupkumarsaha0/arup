@@ -79,16 +79,20 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
         }
+        /* Smooth & Slow Fade Transition */
         .slide-item, .photo-slide-item {
             display: none;
-            animation: fadeIn 0.6s ease-in-out;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
         .slide-item.active, .photo-slide-item.active {
             display: block;
+            opacity: 1;
+            animation: smoothFade 1s ease-in-out;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.98); }
-            to { opacity: 1; transform: scale(1); }
+        @keyframes smoothFade {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #040406; }
@@ -117,14 +121,13 @@
         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
     </div>
 
-    <!-- CLEAN & ORGANIZED HEADER -->
+    <!-- HEADER -->
     <div class="max-w-5xl mx-auto px-3 sm:px-6 pt-3 z-50 fixed inset-x-0 top-0 pointer-events-none">
         <nav class="bg-[#0e0f14]/95 border border-white/10 rounded-full px-4 sm:px-6 py-3 flex items-center justify-between shadow-xl pointer-events-auto" data-aos="fade-down" data-aos-duration="800">
             <a href="index.html" class="font-extrabold text-xs sm:text-sm tracking-wider bg-gradient-to-r from-blue-400 via-sky-300 to-amber-400 bg-clip-text text-transparent shrink-0">
                 ARUP KUMAR SAHA
             </a>
 
-            <!-- Streamlined Menu Bar -->
             <div class="hidden lg:flex items-center space-x-5 text-xs font-semibold uppercase tracking-wider text-zinc-400">
                 <a href="#about" class="hover:text-blue-400 transition">About</a>
                 <a href="#preferences" class="hover:text-blue-400 transition">Goals</a>
@@ -211,7 +214,6 @@
 
         <!-- CAREER PREFERENCES & SECTORS -->
         <section id="preferences" class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="900">
-            <!-- Preferred Organization Sectors -->
             <div class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative overflow-hidden">
                 <i class="fa-solid fa-building section-bg-icon"></i>
                 <div class="flex items-center justify-between relative z-10">
@@ -233,7 +235,6 @@
                 </div>
             </div>
 
-            <!-- Preferred Job Roles -->
             <div class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative overflow-hidden">
                 <i class="fa-solid fa-bullseye section-bg-icon"></i>
                 <div class="flex items-center justify-between relative z-10">
@@ -543,7 +544,7 @@
             </div>
         </section>
 
-        <!-- 8. RECENT BLOG HIGHLIGHTS (DYNAMIC FROM JS) -->
+        <!-- 8. RECENT BLOG HIGHLIGHTS -->
         <section id="blog-highlights" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-left" data-aos-duration="900">
             <i class="fa-solid fa-blog section-bg-icon"></i>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
@@ -557,9 +558,7 @@
                 </a>
             </div>
 
-            <div id="homeBlogContainer" class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10">
-                <!-- Javascript will automatically load blog posts or coming soon here -->
-            </div>
+            <div id="homeBlogContainer" class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10"></div>
         </section>
 
         <!-- 9. VISUAL GALLERY & TRAVELS -->
@@ -801,7 +800,7 @@
             }
         });
 
-        // SLIDESHOW
+        // SLIDESHOW (Time increased to 6 seconds for comfortable reading)
         let slideIndex = 0;
         const slides = document.querySelectorAll('.slide-item');
         const dots = document.querySelectorAll('.dot');
@@ -829,9 +828,9 @@
             dots[slideIndex].classList.remove('bg-zinc-700', 'w-2');
             dots[slideIndex].classList.add('bg-blue-500', 'w-6');
         }
-        setInterval(showSlides, 4000);
+        setInterval(showSlides, 6000);
 
-        // PHOTO SLIDESHOW
+        // PHOTO SLIDESHOW (Time increased to 6 seconds)
         let photoSlideIndex = 0;
         const photoSlides = document.querySelectorAll('.photo-slide-item');
         const photoDots = document.querySelectorAll('.photo-dot');
@@ -859,7 +858,7 @@
             photoDots[photoSlideIndex].classList.remove('bg-zinc-500');
             photoDots[photoSlideIndex].classList.add('bg-blue-500');
         }
-        setInterval(showPhotoSlides, 5000);
+        setInterval(showPhotoSlides, 6000);
     </script>
 </body>
 </html>
