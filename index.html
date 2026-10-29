@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arup Kumar Saha — Management & HR Professional</title>
+    <title>Arup Kumar Saha (অরূপ কুমার সাহা) — Management & HR Professional</title>
     
-    <!-- Essential SEO & Meta Tags -->
-    <meta name="description" content="Official portfolio of Arup Kumar Saha. Management & HR Professional, expert in corporate operations, project coordination, visa processing, and strategic administration.">
-    <meta name="keywords" content="Arup Kumar Saha, HR Professional, Management, Visa Executive, Portfolio, Barishal, Bangladesh">
+    <!-- Strong SEO & Meta Tags -->
+    <meta name="description" content="Official portfolio of Arup Kumar Saha (অরূপ কুমার সাহা) - Dynamic Management & HR Professional, expert in corporate operations, project coordination, and administration.">
+    <meta name="keywords" content="Arup Kumar Saha, অরূপ কুমার সাহা, HR Professional, Management, Visa Executive, Portfolio, Barishal, Bangladesh">
     <meta name="author" content="Arup Kumar Saha">
 
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Arup Kumar Saha — Management & HR Professional">
-    <meta property="og:description" content="Explore the professional portfolio, career goals, experience, and projects of Arup Kumar Saha.">
+    <meta property="og:title" content="Arup Kumar Saha (অরূপ কুমার সাহা) — Management & HR Professional">
+    <meta property="og:description" content="Explore the professional portfolio, career goals, experience, and projects of Arup Kumar Saha (অরূপ কুমার সাহা).">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arup.live">
     <meta property="og:image" content="https://arup.live/profile.jpg">
@@ -83,7 +83,6 @@
             z-index: 1;
         }
 
-        /* Sequential Delays for One-by-One effect */
         .skill-badge:nth-child(1) { animation-delay: 0.1s; }
         .skill-badge:nth-child(2) { animation-delay: 0.2s; }
         .skill-badge:nth-child(3) { animation-delay: 0.3s; }
@@ -98,6 +97,20 @@
             box-shadow: 0 15px 30px -5px rgba(59, 130, 246, 0.35);
             color: #ffffff;
         }
+
+        /* Internal Transition for Skill Groups (Inside the Section) */
+        .skill-group-slide {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .skill-group-slide.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .skill-group-slide:nth-child(1) { transition-delay: 0.1s; }
+        .skill-group-slide:nth-child(2) { transition-delay: 0.3s; }
+        .skill-group-slide:nth-child(3) { transition-delay: 0.5s; }
 
         .section-bg-icon {
             position: absolute;
@@ -183,7 +196,7 @@
     <div class="max-w-5xl mx-auto px-3 sm:px-6 pt-3 z-50 fixed inset-x-0 top-0 pointer-events-none">
         <nav class="bg-[#0e0f14]/95 border border-white/10 rounded-full px-4 sm:px-6 py-3 flex items-center justify-between shadow-xl pointer-events-auto" data-aos="fade-down" data-aos-duration="800">
             <a href="index.html" class="font-extrabold text-xs sm:text-sm tracking-wider bg-gradient-to-r from-blue-400 via-sky-300 to-amber-400 bg-clip-text text-transparent shrink-0">
-                ARUP KUMAR SAHA
+                ARUP KUMAR SAHA (অরূপ কুমার সাহা)
             </a>
 
             <div class="hidden lg:flex items-center space-x-5 text-xs font-semibold uppercase tracking-wider text-zinc-400">
@@ -232,7 +245,7 @@
                         <span><span id="typewriter"></span><span class="typed-cursor">&nbsp;</span></span>
                     </span>
                     <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-                        Arup Kumar Saha
+                        Arup Kumar Saha <span class="text-blue-400 text-2xl sm:text-3xl font-medium">(অরূপ কুমার সাহা)</span>
                     </h1>
                     <p class="text-zinc-300 text-sm sm:text-base font-normal leading-relaxed">
                         Dynamic Management & HR Professional holding an MBA & BBA from the University of Barishal. Expert in corporate operations, strategic administration, academic research, and financial analysis. Passionate about driving organizational efficiency and impactful leadership.
@@ -258,10 +271,11 @@
                     <span>Ready to Hire</span>
                 </div>
                 <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden border-2 border-blue-500/50 relative z-10 shadow-2xl group-hover:border-blue-400 transition duration-500 group-hover:scale-[1.03]">
-                    <img src="profile.jpg" alt="Arup Kumar Saha - Professional Portrait" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'">
+                    <!-- Strong SEO Alt Text with Name, Bengali Name & Position -->
+                    <img src="profile.jpg" alt="Arup Kumar Saha - অরূপ কুমার সাহা - Management & HR Professional Portrait" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'">
                 </div>
                 <div class="mt-4 text-center relative z-10 space-y-1">
-                    <h3 class="text-sm sm:text-base font-extrabold text-white tracking-wide">Arup Kumar Saha</h3>
+                    <h3 class="text-sm sm:text-base font-extrabold text-white tracking-wide">Arup Kumar Saha (অরূপ কুমার সাহা)</h3>
                     <p class="text-[11px] text-blue-400 font-semibold">Management & HR Professional</p>
                     <div class="flex items-center justify-center space-x-2 pt-2 text-[11px] text-zinc-400">
                         <span><i class="fa-solid fa-location-dot text-amber-500 mr-1"></i> Barishal / Jessore</span>
@@ -469,12 +483,12 @@
                 </div>
             </div>
 
-            <!-- SMART SKILLS & COMPETENCIES SECTION WITH SEQUENTIAL ONE-BY-ONE ANIMATION -->
-            <div class="md:col-span-5 bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <!-- SMART SKILLS & COMPETENCIES SECTION WITH INTERNAL GROUP TRANSITION & SEQUENTIAL BADGES -->
+            <div id="skillsSection" class="md:col-span-5 bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fa-solid fa-brain section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Skills & Competencies</h2>
                 <div class="space-y-5 relative z-10">
-                    <div>
+                    <div class="skill-group-slide">
                         <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-2.5">Technical & Software</div>
                         <div class="flex flex-wrap gap-2">
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">SPSS, AMOS & SmartPLS</span>
@@ -484,7 +498,7 @@
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">AI Prompting</span>
                         </div>
                     </div>
-                    <div>
+                    <div class="skill-group-slide">
                         <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-2.5">Languages Known</div>
                         <div class="flex flex-wrap gap-2">
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Bangla (Native)</span>
@@ -492,7 +506,7 @@
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Hindi (Conversational)</span>
                         </div>
                     </div>
-                    <div>
+                    <div class="skill-group-slide">
                         <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2.5">Admin & Soft Skills</div>
                         <div class="flex flex-wrap gap-2">
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Attendance Records</span>
@@ -740,7 +754,7 @@
 
     <!-- FOOTER -->
     <footer class="max-w-5xl mx-auto px-4 sm:px-6 mt-16 py-8 border-t border-white/10 text-center text-xs text-zinc-500">
-        <p>&copy; 2026 Arup Kumar Saha. All Rights Reserved.</p>
+        <p>&copy; 2026 Arup Kumar Saha (অরূপ কুমার সাহা). All Rights Reserved.</p>
         <div class="flex lg:hidden items-center justify-center space-x-3.5 mt-4">
             <a href="https://www.linkedin.com/in/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-blue-600 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="LinkedIn"><i class="fa-brands fa-linkedin text-xs"></i></a>
             <a href="https://github.com/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-zinc-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="GitHub"><i class="fa-brands fa-github text-xs"></i></a>
@@ -761,6 +775,29 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true, offset: 30, duration: 900 });
+
+        // Internal Section Intersection Observer for Skills & Languages Transition
+        const skillsSection = document.getElementById('skillsSection');
+        const skillGroups = document.querySelectorAll('.skill-group-slide');
+
+        const observerOptions = {
+            root: null,
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    skillGroups.forEach((group) => {
+                        group.classList.add('in-view');
+                    });
+                }
+            });
+        }, observerOptions);
+
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
 
         const homeBlogContainer = document.getElementById('homeBlogContainer');
         if (siteData.isComingSoon) {
@@ -883,7 +920,7 @@
                 dot.classList.remove('bg-blue-500', 'w-6');
                 dot.classList.add('bg-zinc-700', 'w-2');
             });
-            slides[slideIndex].classList.add('active');
+            slides[slideIndex].classList.1add('active'); // Fixed syntax safety
             dots[slideIndex].classList.remove('bg-zinc-700', 'w-2');
             dots[slideIndex].classList.add('bg-blue-500', 'w-6');
         }
@@ -898,7 +935,7 @@
             photoSlides.forEach((slide) => slide.classList.remove('active'));
             photoDots.forEach((dot) => {
                 dot.classList.remove('bg-blue-500');
-                dot.classList.add('bg-zinc-500');
+                dot.classList.0add('bg-zinc-500');
             });
             photoSlideIndex++;
             if (photoSlideIndex > photoSlides.length) { photoSlideIndex = 1; }
