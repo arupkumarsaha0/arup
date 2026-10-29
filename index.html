@@ -271,7 +271,6 @@
                     <span>Ready to Hire</span>
                 </div>
                 <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden border-2 border-blue-500/50 relative z-10 shadow-2xl group-hover:border-blue-400 transition duration-500 group-hover:scale-[1.03]">
-                    <!-- Strong SEO Alt Text with Name, Bengali Name & Position -->
                     <img src="profile.jpg" alt="Arup Kumar Saha - অরূপ কুমার সাহা - Management & HR Professional Portrait" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'">
                 </div>
                 <div class="mt-4 text-center relative z-10 space-y-1">
@@ -768,6 +767,145 @@
         <i class="fa-solid fa-arrow-up text-xs"></i>
     </a>
 
+    <!-- CUSTOM INTERACTIVE AI CHATBOT WIDGET -->
+    <style>
+        #arupChatWidget {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 9999;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        #chatToggleBtn {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        #chatToggleBtn:hover {
+            transform: scale(1.1);
+        }
+        #chatBoxContainer {
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            width: 320px;
+            background: #0e0f14;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            animation: chatPopup 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes chatPopup {
+            from { opacity: 0; transform: translateY(15px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .chat-header {
+            background: linear-gradient(135deg, #0e0f14, #181922);
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .chat-body {
+            padding: 14px;
+            height: 260px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 12px;
+        }
+        .chat-footer {
+            padding: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            background: #090a0e;
+            display: flex;
+            gap: 8px;
+        }
+        .bot-msg {
+            background: rgba(59, 130, 246, 0.12);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: #e2e8f0;
+            padding: 9px 12px;
+            border-radius: 12px;
+            max-width: 85%;
+            line-height: 1.4;
+            align-self: flex-start;
+        }
+        .user-msg {
+            background: #3b82f6;
+            color: #ffffff;
+            padding: 9px 12px;
+            border-radius: 12px;
+            max-width: 85%;
+            line-height: 1.4;
+            align-self: flex-end;
+        }
+        .quick-reply-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #60a5fa;
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+        }
+        .quick-reply-btn:hover {
+            background: rgba(59, 130, 246, 0.2);
+            color: #ffffff;
+        }
+    </style>
+
+    <div id="arupChatWidget">
+        <div id="chatBoxContainer">
+            <div class="chat-header">
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-7 h-7 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs border border-blue-500/30">A</div>
+                    <div>
+                        <h4 class="text-xs font-bold text-white">Arup's Assistant</h4>
+                        <div class="flex items-center space-x-1 text-[9px] text-emerald-400">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span>Online</span>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="toggleChatBox()" class="text-zinc-400 hover:text-white text-xs p-1"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="chatBody" class="chat-body">
+                <div class="bot-msg">
+                    হ্যালো! 👋 আমি অরূপ কুমার সাহা-র এআই অ্যাসিস্ট্যান্ট। কীভাবে আপনাকে সাহায্য করতে পারি বলুন? নিচের অপশনগুলোতে ক্লিক করতে পারেন:
+                </div>
+                <div class="flex flex-col gap-1.5 pt-1">
+                    <button onclick="handleQuickQuery('cv')" class="quick-reply-btn">📄 অরূপের সিভি ডাউনলোড করতে চাই</button>
+                    <button onclick="handleQuickQuery('contact')" class="quick-reply-btn">📞 কন্টাক্ট ইনফরমেশন ও লোকেশন</button>
+                    <button onclick="handleQuickQuery('experience')" class="quick-reply-btn">💼 প্রফেশনাল অভিজ্ঞতা কেমন?</button>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="chatInput" placeholder="এখানে কিছু লিখুন..." class="flex-grow bg-zinc-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500" onkeypress="if(event.key === 'Enter') sendUserMessage()">
+                <button onclick="sendUserMessage()" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 rounded-xl text-xs transition"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <button id="chatToggleBtn" onclick="toggleChatBox()" title="Chat with Arup's Assistant">
+            <i class="fa-solid fa-comments text-base"></i>
+        </button>
+    </div>
+
     <!-- CENTRAL DATA SCRIPT -->
     <script src="blogs-data.js"></script>
 
@@ -775,6 +913,65 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true, offset: 30, duration: 900 });
+
+        // Chatbot Functionality
+        function toggleChatBox() {
+            const box = document.getElementById('chatBoxContainer');
+            if (box.style.display === 'flex') {
+                box.style.display = 'none';
+            } else {
+                box.style.display = 'flex';
+                document.getElementById('chatInput').focus();
+            }
+        }
+
+        function appendMessage(text, sender) {
+            const chatBody = document.getElementById('chatBody');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = sender === 'bot' ? 'bot-msg' : 'user-msg';
+            msgDiv.innerText = text;
+            chatBody.appendChild(msgDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function handleQuickQuery(type) {
+            if (type === 'cv') {
+                appendMessage("অরূপের সিভি ডাউনলোড করতে চাই", "user");
+                setTimeout(() => {
+                    appendMessage("অবশ্যই! নিচের লিঙ্কে ক্লিক করে আপনি অরূপ কুমার সাহার অফিসিয়াল সিভি (PDF) ডাউনলোড করতে পারেন:\n\n👉 Arup_Kumar_Saha_CV.pdf", "bot");
+                }, 500);
+            } else if (type === 'contact') {
+                appendMessage("কন্টাক্ট ইনফরমেশন ও লোকেশন জানতে চাই", "user");
+                setTimeout(() => {
+                    appendMessage("📞 ফোন: +880 1646126678\n📧 ইমেইল: arup.bu.bd@gmail.com\n📍 বর্তমান অবস্থান: বিজয় ২৪ হল, বরিশাল বিশ্ববিদ্যালয়।", "bot");
+                }, 500);
+            } else if (type === 'experience') {
+                appendMessage("প্রফেশনাল অভিজ্ঞতা কেমন?", "user");
+                setTimeout(() => {
+                    appendMessage("অরূপ কুমার সাহা বরিশাল বিশ্ববিদ্যালয় থেকে HRM-এ MBA এবং Management-এ BBA সম্পন্ন করেছেন। তিনি ইতিপূর্বে Amrita Consumer Food Products Ltd.-এ HR & Admin Intern এবং BRAC-এ Project Volunteer হিসেবে সফলভাবে কাজ করেছেন।", "bot");
+                }, 600);
+            }
+        }
+
+        function sendUserMessage() {
+            const input = document.getElementById('chatInput');
+            const text = input.value.trim();
+            if(!text) return;
+            
+            appendMessage(text, "user");
+            input.value = "";
+
+            setTimeout(() => {
+                const lower = text.toLowerCase();
+                if(lower.includes('cv') || lower.includes('resume') || lower.includes('সিভি')) {
+                    appendMessage("আপনি ওপরের হেডার বা এবাউট সেকশন থেকেও এক ক্লিকে অরূপের সিভি ডাউনলোড করে নিতে পারেন!", "bot");
+                } else if(lower.includes('hello') || lower.includes('hi') || lower.includes('হাই')) {
+                    appendMessage("হ্যালো! অরূপ কুমার সাহার পোর্টফোলিওতে আপনাকে স্বাগতম। কীভাবে সাহায্য করতে পারি বলুন?", "bot");
+                } else {
+                    appendMessage("ধন্যবাদ আপনার বার্তার জন্য! আপনার প্রশ্নটি বা তথ্যটি অরূপের কাছে পৌঁছে দেওয়ার জন্য আপনি সরাসরি কন্টাক্ট ফর্ম (Contact Form) ব্যবহার করতে পারেন অথবা ইমেইল করতে পারেন: arup.bu.bd@gmail.com", "bot");
+                }
+            }, 600);
+        }
 
         // Internal Section Intersection Observer for Skills & Languages Transition
         const skillsSection = document.getElementById('skillsSection');
@@ -932,6 +1129,7 @@
         const photoDots = document.querySelectorAll('.photo-dot');
         function showPhotoSlides() {
             if(photoSlides.length === 0) return;
+            photoSlides.fadeOut = false; // safe check
             photoSlides.forEach((slide) => slide.classList.remove('active'));
             photoDots.forEach((dot) => {
                 dot.classList.remove('bg-blue-500');
