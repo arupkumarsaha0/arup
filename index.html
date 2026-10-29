@@ -84,7 +84,6 @@
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        /* When in-view class is added, trigger sequential pop up */
         .skills-active .skill-badge {
             animation: skillPopIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
@@ -754,12 +753,12 @@
         </div>
     </footer>
 
-    <!-- SCROLL TO TOP (POSITIONED ON RIGHT ABOVE CHATBOT) -->
+    <!-- SCROLL TO TOP -->
     <a href="#about" id="scrollTopBtn" class="fixed bottom-36 right-6 z-40 w-10 h-10 rounded-full bg-zinc-900 hover:bg-blue-600 text-zinc-400 hover:text-white border border-white/10 shadow-xl flex items-center justify-center transition-all opacity-0 pointer-events-none hover:scale-110">
         <i class="fa-solid fa-arrow-up text-xs"></i>
     </a>
 
-    <!-- CUSTOM INTERACTIVE FLOATING WIDGETS (WHATSAPP & AUTO-GREETING CHATBOT ON RIGHT) -->
+    <!-- CUSTOM INTERACTIVE FLOATING WIDGETS WITH NOTIFICATION POP-UP -->
     <style>
         .right-floating-container {
             position: fixed;
@@ -785,6 +784,7 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.2);
             text-decoration: none;
+            position: relative;
         }
         .float-btn:hover {
             transform: scale(1.1);
@@ -794,6 +794,29 @@
         }
         #chatToggleBtn {
             background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        }
+        /* Notification Toast Style */
+        #chatNotificationToast {
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+            width: 270px;
+            background: rgba(14, 15, 20, 0.96);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            border-radius: 14px;
+            padding: 12px 14px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            animation: toastSlideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            z-index: 10000;
+        }
+        @keyframes toastSlideIn {
+            from { opacity: 0; transform: translateY(15px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
         }
         #chatBoxContainer {
             position: absolute;
@@ -871,6 +894,17 @@
             background: rgba(59, 130, 246, 0.2);
             color: #ffffff;
         }
+        .notification-badge {
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 14px;
+            height: 14px;
+            background: #ef4444;
+            border-radius: 50%;
+            border: 2px solid #040406;
+            animation: pulse 2s infinite;
+        }
     </style>
 
     <div class="right-floating-container">
@@ -879,8 +913,21 @@
             <i class="fa-brands fa-whatsapp text-2xl"></i>
         </a>
 
-        <!-- Chatbot Widget -->
+        <!-- Chatbot Widget with Notification Popup Toast -->
         <div class="relative">
+            <!-- Small Notification Toast -->
+            <div id="chatNotificationToast" onclick="openChatFromToast()">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-[10px] border border-blue-500/30">A</div>
+                        <span class="text-xs font-bold text-white">Arup's Assistant</span>
+                    </div>
+                    <button onclick="event.stopPropagation(); closeToast()" class="text-zinc-400 hover:text-white text-xs px-1"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <p class="text-[11px] text-zinc-300 leading-snug">হ্যালো! 👋 পোর্টফোলিও ভিজিট করার জন্য ধন্যবাদ। কোনো সহযোগিতার প্রয়োজন আছে কি?</p>
+            </div>
+
+            <!-- Chat Box Container -->
             <div id="chatBoxContainer">
                 <div class="chat-header">
                     <div class="flex items-center space-x-2.5">
@@ -910,8 +957,11 @@
                     <button onclick="sendUserMessage()" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 rounded-xl text-xs transition"><i class="fa-solid fa-paper-plane"></i></button>
                 </div>
             </div>
+
+            <!-- Chat Toggle Button -->
             <button id="chatToggleBtn" class="float-btn" onclick="toggleChatBox()" title="Chat with Arup's Assistant">
                 <i class="fa-solid fa-comments text-lg"></i>
+                <span id="notifBadge" class="notification-badge"></span>
             </button>
         </div>
     </div>
@@ -924,19 +974,34 @@
     <script>
         AOS.init({ once: true, offset: 30, duration: 900 });
 
-        // Auto-Open Chatbot Greeting after 2 Seconds
+        // Show Notification Toast after 2.5 Seconds
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
+                const toast = document.getElementById('chatNotificationToast');
                 const box = document.getElementById('chatBoxContainer');
-                if (box.style.display !== 'flex') {
-                    box.style.display = 'flex';
+                if (box.style.display !== 'flex' && toast) {
+                    toast.style.display = 'flex';
                 }
-            }, 2000);
+            }, 2500);
         });
+
+        function closeToast() {
+            const toast = document.getElementById('chatNotificationToast');
+            if(toast) toast.style.display = 'none';
+        }
+
+        function openChatFromToast() {
+            closeToast();
+            toggleChatBox();
+        }
 
         // Chatbot Functionality
         function toggleChatBox() {
+            closeToast();
             const box = document.getElementById('chatBoxContainer');
+            const badge = document.getElementById('notifBadge');
+            if(badge) badge.style.display = 'none';
+
             if (box.style.display === 'flex') {
                 box.style.display = 'none';
             } else {
