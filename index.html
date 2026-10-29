@@ -758,7 +758,7 @@
         <i class="fa-solid fa-arrow-up text-xs"></i>
     </a>
 
-    <!-- CUSTOM INTERACTIVE FLOATING WIDGETS WITH AUTO-FADE NOTIFICATION -->
+    <!-- CUSTOM SMART CHATBOT SYSTEM -->
     <style>
         .right-floating-container {
             position: fixed;
@@ -829,7 +829,7 @@
             position: absolute;
             bottom: 68px;
             right: 0;
-            width: 320px;
+            width: 330px;
             background: #0e0f14;
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 20px;
@@ -853,7 +853,7 @@
         }
         .chat-body {
             padding: 14px;
-            height: 260px;
+            height: 280px;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
@@ -948,16 +948,17 @@
                 </div>
                 <div id="chatBody" class="chat-body">
                     <div class="bot-msg">
-                        হ্যালো! 👋 আমি অরূপ কুমার সাহা-র এআই অ্যাসিস্ট্যান্ট। কীভাবে আপনাকে সাহায্য করতে পারি বলুন? নিচের অপশনগুলোতে ক্লিক করতে পারেন:
+                        হ্যালো! 👋 আমি অরূপ কুমার সাহা-র এআই অ্যাসিস্ট্যান্ট। অরূপের শিক্ষা, অভিজ্ঞতা বা স্কিল সম্পর্কে যেকোনো কিছু আমাকে জিজ্ঞেস করতে পারেন! নিচের অপশনগুলো থেকেও দেখতে পারেন:
                     </div>
                     <div class="flex flex-col gap-1.5 pt-1">
                         <button onclick="handleQuickQuery('cv')" class="quick-reply-btn">📄 অরূপের সিভি ডাউনলোড করতে চাই</button>
-                        <button onclick="handleQuickQuery('contact')" class="quick-reply-btn">📞 কন্টাক্ট ইনফরমেশন ও লোকেশন</button>
                         <button onclick="handleQuickQuery('experience')" class="quick-reply-btn">💼 প্রফেশনাল অভিজ্ঞতা কেমন?</button>
+                        <button onclick="handleQuickQuery('education')" class="quick-reply-btn">🎓 শিক্ষাগত যোগ্যতা কী?</button>
+                        <button onclick="handleQuickQuery('contact')" class="quick-reply-btn">📞 কন্টাক্ট ইনফরমেশন ও লোকেশন</button>
                     </div>
                 </div>
                 <div class="chat-footer">
-                    <input type="text" id="chatInput" placeholder="এখানে কিছু লিখুন..." class="flex-grow bg-zinc-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500" onkeypress="if(event.key === 'Enter') sendUserMessage()">
+                    <input type="text" id="chatInput" placeholder="এখানে কিছু লিখুন (যেমন: Experience, Education, CV)..." class="flex-grow bg-zinc-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500" onkeypress="if(event.key === 'Enter') sendUserMessage()">
                     <button onclick="sendUserMessage()" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 rounded-xl text-xs transition"><i class="fa-solid fa-paper-plane"></i></button>
                 </div>
             </div>
@@ -1037,19 +1038,67 @@
             if (type === 'cv') {
                 appendMessage("অরূপের সিভি ডাউনলোড করতে চাই", "user");
                 setTimeout(() => {
-                    appendMessage("অবশ্যই! নিচের লিঙ্কে ক্লিক করে আপনি অরূপ কুমার সাহার অফিসিয়াল সিভি (PDF) ডাউনলোড করতে পারেন:\n\n👉 Arup_Kumar_Saha_CV.pdf", "bot");
-                }, 500);
-            } else if (type === 'contact') {
-                appendMessage("কন্টাক্ট ইনফরমেশন ও লোকেশন জানতে চাই", "user");
-                setTimeout(() => {
-                    appendMessage("📞 ফোন: +880 1646126678\n📧 ইমেইল: arup.bu.bd@gmail.com\n📍 বর্তমান অবস্থান: বিজয় ২৪ হল, বরিশাল বিশ্ববিদ্যালয়।", "bot");
+                    appendMessage("অবश्यই! নিচের লিঙ্কে ক্লিক করে আপনি অরূপ কুমার সাহার অফিসিয়াল সিভি (PDF) ডাউনলোড করতে পারেন:\n\n👉 Arup_Kumar_Saha_CV.pdf", "bot");
                 }, 500);
             } else if (type === 'experience') {
                 appendMessage("প্রফেশনাল অভিজ্ঞতা কেমন?", "user");
                 setTimeout(() => {
                     appendMessage("অরূপ কুমার সাহা বরিশাল বিশ্ববিদ্যালয় থেকে HRM-এ MBA এবং Management-এ BBA সম্পন্ন করেছেন। তিনি ইতিপূর্বে Amrita Consumer Food Products Ltd.-এ HR & Admin Intern এবং BRAC-এ Project Volunteer হিসেবে সফলভাবে কাজ করেছেন।", "bot");
                 }, 600);
+            } else if (type === 'education') {
+                appendMessage("শিক্ষাগত যোগ্যতা কী?", "user");
+                setTimeout(() => {
+                    appendMessage("🎓 শিক্ষাগত যোগ্যতা:\n• MBA in HRM (First Class) - Barishal University\n• BBA in Management (First Class) - Barishal University\n• HSC (Grade A) - Dr. Abdur Razzak Municipal College, Jashore\n• SSC (Grade A) - Sammilani Institution, Jashore", "bot");
+                }, 600);
+            } else if (type === 'contact') {
+                appendMessage("কন্টাক্ট ইনফরমেশন ও লোকেশন জানতে চাই", "user");
+                setTimeout(() => {
+                    appendMessage("📞 ফোন: +880 1646126678\n📧 ইমেইল: arup.bu.bd@gmail.com\n📍 বর্তমান অবস্থান: বিজয় ২৪ হল, বরিশাল বিশ্ববিদ্যালয়।", "bot");
+                }, 500);
             }
+        }
+
+        // TRAINED SMART AI INTENT PARSER (Advanced Keyword & Phrase Matching)
+        function getSmartBotResponse(query) {
+            const q = query.toLowerCase().trim();
+
+            // 1. Greeting & Pleasantries
+            if (q.match(/hi|hello|hey|assalamu|salam|namaste|hi there|হ্যালো|হাই/)) {
+                return "হ্যালো! অরূপ কুমার সাহার পোর্টফোলিওতে আপনাকে স্বাগতম। কীভাবে আপনাকে সাহায্য করতে পারি বলুন?";
+            }
+
+            // 2. CV / Resume / Download
+            if (q.match(/cv|resume|download|সিভি|রিজিউম|ডাউনলোড/)) {
+                return "অবশ্যই! আপনি পেজের ওপরের হেডার বা এবাউট সেকশন থেকে এক ক্লিকেই অরূপের অফিশিয়াল সিভি (Arup_Kumar_Saha_CV.pdf) ডাউনলোড করতে পারেন।";
+            }
+
+            // 3. Education / Degree / CGPA / First Class / MBA / BBA / SSC / HSC
+            if (q.match(/education|study|degree|mba|bba|ssc|hsc|university|college|result|class|grade|পড়াশোনা|শিক্ষা|ডিগ্রী|রেজাল্ট|ভার্সিটি|কলেজ|স্কুল/)) {
+                return "🎓 অরূপ কুমার সাহার শিক্ষাগত যোগ্যতা:\n• MBA in HRM: First Class (Barishal University)\n• BBA in Management Studies: First Class (Barishal University)\n• HSC (Business Studies): Grade A (Dr. Abdur Razzak Municipal College, Jashore)\n• SSC (Business Studies): Grade A (Sammilani Institution, Jashore)";
+            }
+
+            // 4. Experience / Job / Career / Internship / Work / BRAC / Amrita
+            if (q.match(/experience|job|work|career|intern|brac|amrita|research|অভিজ্ঞতা|চাকরি|ইন্টার্ন|কাজ/)) {
+                return "💼 প্রফেশনাল অভিজ্ঞতা:\n• HR & Admin Intern at Amrita Consumer Food Products Ltd.\n• Project Volunteer at BRAC (Barishal)\n• Research Assistant at University of Barishal\nএছাড়াও তিনি ব্যাংক, করপোরেট জব এবং NGO সেক্টরে ক্যারিয়ার গড়তে আগ্রহী।";
+            }
+
+            // 5. Contact / Phone / Email / Location / Address / Hall / Barishal / Jessore
+            if (q.match(/contact|phone|email|location|address|hall|barishal|jessore|where|কন্টাক্ট|ফোন|ইমেইল|লোকেশন|ঠিকানা|কোথায়|বরিশাল|যশোর/)) {
+                return "📞 কন্টাক্ট ও লোকেশন তথ্য:\n• ফোন: +880 1646126678\n• ইমেইল: arup.bu.bd@gmail.com\n• বর্তমান অবস্থান: বিজয় ২৪ হল, বরিশাল বিশ্ববিদ্যালয়\n• স্থায়ী ঠিকানা: যশোর";
+            }
+
+            // 6. Skills / Software / SPSS / Excel / Language / স্কিল
+            if (q.match(/skill|software|spss|excel|language|html|css|competency|স্কিল|দক্ষতা|ভাষা|এক্সেল/)) {
+                return "⚙️ স্কিল ও এক্সপার্টিজ:\n• টেকনিক্যাল: SPSS, AMOS, SmartPLS, MS Excel, Word, PPT, HTML, CSS & AI Prompting\n• ভাষা: বাংলা (নেটিভ), ইংরেজি (প্রফেশনাল), হিন্দি (কনভার্সেশনাল)";
+            }
+
+            // 7. Services / Tutoring / Mentoring
+            if (q.match(/service|tutoring|mentoring|teaching|service|টিউটরিং|সেবা|পড়ান/)) {
+                return "🤝 প্রফেশনাল সেবা:\n• ফিন্যান্সিয়াল ম্যানেজমেন্ট টিউরিং (Capital Budgeting, Working Capital)\n• অ্যাকাডেমিক মেন্টরিং (ইংলিশ গ্রামার, গণিত ও সাইন্স)\n• রিসার্চ ও ডাটা টেবুলেশন (SPSS ও সার্ভে ডাটা অ্যানালিসিস)";
+            }
+
+            // 8. Default fallback for unmatched queries
+            return `ধন্যবাদ আপনার বার্তার জন্য! আপনার প্রশ্নটি সম্পর্কে বিস্তারিত জানতে আপনি সরাসরি কন্টাক্ট ফর্ম ব্যবহার করতে পারেন অথবা ইমেইল করতে পারেন: arup.bu.bd@gmail.com`;
         }
 
         function sendUserMessage() {
@@ -1061,14 +1110,8 @@
             input.value = "";
 
             setTimeout(() => {
-                const lower = text.toLowerCase();
-                if(lower.includes('cv') || lower.includes('resume') || lower.includes('সিভি')) {
-                    appendMessage("আপনি ওপরের হেডার বা এবাউট সেকশন থেকেও এক ক্লিকে অরূপের সিভি ডাউনলোড করে নিতে পারেন!", "bot");
-                } else if(lower.includes('hello') || lower.includes('hi') || lower.includes('হাই')) {
-                    appendMessage("হ্যালো! অরূপ কুমার সাহার পোর্টফোলিওতে আপনাকে স্বাগতম। কীভাবে সাহায্য করতে পারি বলুন?", "bot");
-                } else {
-                    appendMessage("ধন্যবাদ আপনার বার্তার জন্য! আপনার প্রশ্নটি বা তথ্যটি অরূপের কাছে পৌঁছে দেওয়ার জন্য আপনি সরাসরি কন্টাক্ট ফর্ম (Contact Form) ব্যবহার করতে পারেন অথবা ইমেইল করতে পারেন: arup.bu.bd@gmail.com", "bot");
-                }
+                const botReply = getSmartBotResponse(text);
+                appendMessage(botReply, "bot");
             }, 600);
         }
 
@@ -1229,7 +1272,7 @@
             if (photoSlideIndex > photoSlides.length) { photoSlideIndex = 1; }
             photoSlides[photoSlideIndex - 1].classList.add('active');
             photoDots[photoSlideIndex - 1].classList.remove('bg-zinc-500');
-            photoDots[photoSlideIndex - 1].classList.add('bg-blue-500');
+            photoDots[photoSlideIndex - 1].classList.add('blue-500');
         }
         function currentPhotoSlide(n) {
             photoSlideIndex = n;
