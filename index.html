@@ -758,7 +758,7 @@
         <i class="fa-solid fa-arrow-up text-xs"></i>
     </a>
 
-    <!-- CUSTOM INTERACTIVE FLOATING WIDGETS WITH NOTIFICATION POP-UP -->
+    <!-- CUSTOM INTERACTIVE FLOATING WIDGETS WITH AUTO-FADE NOTIFICATION -->
     <style>
         .right-floating-container {
             position: fixed;
@@ -811,12 +811,19 @@
             flex-direction: column;
             gap: 6px;
             cursor: pointer;
-            animation: toastSlideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(15px) scale(0.95);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             z-index: 10000;
         }
-        @keyframes toastSlideIn {
-            from { opacity: 0; transform: translateY(15px) scale(0.95); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
+        #chatNotificationToast.show {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        #chatNotificationToast.hide {
+            opacity: 0;
+            transform: translateY(15px) scale(0.95);
         }
         #chatBoxContainer {
             position: absolute;
@@ -913,18 +920,15 @@
             <i class="fa-brands fa-whatsapp text-2xl"></i>
         </a>
 
-        <!-- Chatbot Widget with Notification Popup Toast -->
+        <!-- Chatbot Widget with Auto-Fade Notification Toast -->
         <div class="relative">
-            <!-- Small Notification Toast -->
+            <!-- Small Auto-Disappearing Notification Toast -->
             <div id="chatNotificationToast" onclick="openChatFromToast()">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-[10px] border border-blue-500/30">A</div>
-                        <span class="text-xs font-bold text-white">Arup's Assistant</span>
-                    </div>
-                    <button onclick="event.stopPropagation(); closeToast()" class="text-zinc-400 hover:text-white text-xs px-1"><i class="fa-solid fa-xmark"></i></button>
+                <div class="flex items-center space-x-2">
+                    <div class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-[10px] border border-blue-500/30">A</div>
+                    <span class="text-xs font-bold text-white">Arup's Assistant</span>
                 </div>
-                <p class="text-[11px] text-zinc-300 leading-snug">হ্যালো! 👋 পোর্টফোলিও ভিজিট করার জন্য ধন্যবাদ। কোনো সহযোগিতার প্রয়োজন আছে কি?</p>
+                <p class="text-[11px] text-zinc-300 leading-snug pt-1">হ্যালো! 👋 পোর্টফোলিও ভিজিট করার জন্য ধন্যবাদ। কোনো সহযোগিতার প্রয়োজন আছে কি?</p>
             </div>
 
             <!-- Chat Box Container -->
@@ -974,30 +978,40 @@
     <script>
         AOS.init({ once: true, offset: 30, duration: 900 });
 
-        // Show Notification Toast after 2.5 Seconds
+        // Show Notification Toast after 2.5 Seconds and Auto-Hide after 5 Seconds
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const toast = document.getElementById('chatNotificationToast');
                 const box = document.getElementById('chatBoxContainer');
                 if (box.style.display !== 'flex' && toast) {
-                    toast.style.display = 'flex';
+                    toast.classList.add('show');
+                    
+                    // Auto hide after 5 seconds
+                    setTimeout(() => {
+                        toast.classList.remove('show');
+                        toast.classList.add('hide');
+                    }, 5000);
                 }
             }, 2500);
         });
 
-        function closeToast() {
-            const toast = document.getElementById('chatNotificationToast');
-            if(toast) toast.style.display = 'none';
-        }
-
         function openChatFromToast() {
-            closeToast();
+            const toast = document.getElementById('chatNotificationToast');
+            if(toast) {
+                toast.classList.remove('show');
+                toast.classList.add('hide');
+            }
             toggleChatBox();
         }
 
         // Chatbot Functionality
         function toggleChatBox() {
-            closeToast();
+            const toast = document.getElementById('chatNotificationToast');
+            if(toast) {
+                toast.classList.remove('show');
+                toast.classList.add('hide');
+            }
+
             const box = document.getElementById('chatBoxContainer');
             const badge = document.getElementById('notifBadge');
             if(badge) badge.style.display = 'none';
