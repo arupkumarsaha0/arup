@@ -10,7 +10,7 @@
     <meta name="keywords" content="Arup Kumar Saha, HR Professional, Management, Visa Executive, Portfolio, Barishal, Bangladesh">
     <meta name="author" content="Arup Kumar Saha">
 
-    <!-- Open Graph / Social Media Meta Tags (Facebook, LinkedIn, etc.) -->
+    <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Arup Kumar Saha — Management & HR Professional">
     <meta property="og:description" content="Explore the professional portfolio, career goals, experience, and projects of Arup Kumar Saha.">
     <meta property="og:type" content="website">
@@ -49,14 +49,25 @@
             background: rgba(14, 15, 20, 0.92);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
             overflow: hidden;
         }
         .bento-card:hover {
             border-color: rgba(59, 130, 246, 0.6);
-            transform: translateY(-5px);
-            box-shadow: 0 30px 60px -15px rgba(59, 130, 246, 0.25);
+            transform: translateY(-6px);
+            box-shadow: 0 35px 70px -15px rgba(59, 130, 246, 0.28);
+        }
+        /* Smart Skill Badge Hover Effect */
+        .skill-badge {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .skill-badge:hover {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.3);
         }
         .section-bg-icon {
             position: absolute;
@@ -92,6 +103,7 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
         }
+        /* Smooth & Slow Fade Transition for Slides */
         .slide-item, .photo-slide-item {
             display: none;
             opacity: 0;
@@ -177,8 +189,8 @@
     <main class="max-w-5xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 space-y-10 sm:space-y-12 relative">
 
         <!-- 1. HERO SECTION -->
-        <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-right" data-aos-duration="900">
-            <div class="md:col-span-8 bento-card p-6 sm:p-10 rounded-3xl flex flex-col justify-between space-y-6 relative overflow-hidden" data-aos="fade-up" data-aos-duration="700">
+        <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
+            <div class="md:col-span-8 bento-card p-6 sm:p-10 rounded-3xl flex flex-col justify-between space-y-6 relative overflow-hidden">
                 <i class="fa-solid fa-user-tie section-bg-icon"></i>
                 <div class="space-y-4 relative z-10">
                     <span class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-[11px] font-bold uppercase tracking-widest border border-blue-500/20">
@@ -204,7 +216,7 @@
                 </div>
             </div>
             
-            <div class="md:col-span-4 bento-card p-8 rounded-3xl flex flex-col items-center justify-center relative overflow-hidden group shadow-2xl" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="200">
+            <div class="md:col-span-4 bento-card p-8 rounded-3xl flex flex-col items-center justify-center relative overflow-hidden group shadow-2xl" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fa-solid fa-id-badge section-bg-icon"></i>
                 <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/25 via-indigo-600/10 to-amber-500/20 opacity-90 group-hover:opacity-100 transition duration-700"></div>
                 <div class="absolute top-4 left-4 z-20 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[9px] font-bold text-blue-400 uppercase tracking-widest flex items-center space-x-1.5 shadow-lg">
@@ -225,7 +237,7 @@
         </section>
 
         <!-- CAREER PREFERENCES & SECTORS -->
-        <section id="preferences" class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="900">
+        <section id="preferences" class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <div class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative overflow-hidden">
                 <i class="fa-solid fa-building section-bg-icon"></i>
                 <div class="flex items-center justify-between relative z-10">
@@ -239,11 +251,11 @@
                     Open to contributing in structured environments across international development, financial sectors, corporate industries, and visa/travel consultancies.
                 </p>
                 <div class="flex flex-wrap gap-2 relative z-10 pt-1">
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-globe text-blue-400 text-[10px]"></i><span>International NGOs & Development Agencies</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-building-columns text-blue-400 text-[10px]"></i><span>Commercial Banks & Financial Institutions</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-passport text-blue-400 text-[10px]"></i><span>Visa Consultancy, Travel & Tourism</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-shirt text-blue-400 text-[10px]"></i><span>Garments & Textile Conglomerates</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-briefcase text-blue-400 text-[10px]"></i><span>Multinational Corporations & FMCG</span></span>
+                    <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-globe text-blue-400 text-[10px]"></i><span>International NGOs & Development Agencies</span></span>
+                    <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-building-columns text-blue-400 text-[10px]"></i><span>Commercial Banks & Financial Institutions</span></span>
+                    <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-passport text-blue-400 text-[10px]"></i><span>Visa Consultancy, Travel & Tourism</span></span>
+                    <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-shirt text-blue-400 text-[10px]"></i><span>Garments & Textile Conglomerates</span></span>
+                    <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-briefcase text-blue-400 text-[10px]"></i><span>Multinational Corporations & FMCG</span></span>
                 </div>
             </div>
 
@@ -260,24 +272,24 @@
                     Seeking impactful roles aligned with my academic expertise in Human Resource Management, visa processing, project coordination, and administration.
                 </p>
                 <div class="flex flex-wrap gap-2 relative z-10 pt-1">
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>HR & Admin Officer / Executive</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Visa Executive & Documentation Specialist</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Project Coordinator & Programme Associate</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Management Trainee Officer (MTO / Bank Trainee)</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 border border-white/5 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Corporate Operations & MIS Analyst</span></span>
+                    <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>HR & Admin Officer / Executive</span></span>
+                    <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Visa Executive & Documentation Specialist</span></span>
+                    <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Project Coordinator & Programme Associate</span></span>
+                    <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Management Trainee Officer (MTO / Bank Trainee)</span></span>
+                    <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Corporate Operations & MIS Analyst</span></span>
                 </div>
             </div>
         </section>
 
         <!-- 2. PROFESSIONAL EXPERIENCE -->
-        <section id="experience" class="space-y-4 relative z-10" data-aos="fade-left" data-aos-duration="900">
-            <div class="flex items-center justify-between px-2" data-aos="fade-down" data-aos-duration="600">
+        <section id="experience" class="space-y-4 relative z-10" data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex items-center justify-between px-2">
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Professional Experience & Projects</h2>
                 <span class="text-[11px] text-blue-400 uppercase tracking-widest font-semibold bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Track Record</span>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <i class="fa-solid fa-briefcase section-bg-icon"></i>
                     <div class="space-y-2.5 relative z-10">
                         <div class="text-[11px] font-bold text-blue-400">Jun 2025 - Sep 2025</div>
@@ -287,7 +299,7 @@
                     </div>
                     <span class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider relative z-10">Corporate Exposure</span>
                 </div>
-                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <i class="fa-solid fa-hands-holding-child section-bg-icon"></i>
                     <div class="space-y-2.5 relative z-10">
                         <div class="text-[11px] font-bold text-amber-400">Jun 2024 - Mar 2025</div>
@@ -297,7 +309,7 @@
                     </div>
                     <span class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider relative z-10">Operations & Data</span>
                 </div>
-                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between sm:col-span-2 md:col-span-1" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between sm:col-span-2 md:col-span-1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <i class="fa-solid fa-microscope section-bg-icon"></i>
                     <div class="space-y-2.5 relative z-10">
                         <div class="text-[11px] font-bold text-emerald-400">Apr 2023 - May 2024</div>
@@ -311,7 +323,7 @@
         </section>
 
         <!-- 3. ENTREPRENEURIAL VENTURES -->
-        <section id="ventures" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-right" data-aos-duration="900">
+        <section id="ventures" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <i class="fa-solid fa-store section-bg-icon"></i>
             <div class="flex items-center justify-between px-2 relative z-10">
                 <div>
@@ -322,12 +334,12 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10">
-                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
                     <div class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Entrepreneurship Fair (2020)</div>
                     <h3 class="font-bold text-base text-white">Stall Co-Partner — Sweets & Snacks Corner</h3>
                     <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Actively co-managed stall operations, customer relationship management, and sales promotion strategies for commercial success.</p>
                 </div>
-                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
                     <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Strategy & Operations</div>
                     <h3 class="font-bold text-base text-white">Startup & Marketing Coordination</h3>
                     <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Translated theoretical management principles into retail marketing execution and customer acquisition campaigns.</p>
@@ -336,7 +348,7 @@
         </section>
 
         <!-- 4. CO-CURRICULAR & SPORTS -->
-        <section id="co-curricular" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-left" data-aos-duration="900">
+        <section id="co-curricular" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <i class="fa-solid fa-trophy section-bg-icon"></i>
             <div class="flex items-center justify-between px-2 relative z-10">
                 <div>
@@ -347,7 +359,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10">
-                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
                     <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest"><i class="fa-solid fa-users-rectangle mr-1.5"></i> Club Leadership</div>
                     <h3 class="font-bold text-base text-white">University Affiliations</h3>
                     <ul class="text-xs sm:text-sm text-zinc-300 space-y-2 list-disc pl-4">
@@ -359,7 +371,7 @@
                     </ul>
                 </div>
 
-                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
                     <div class="text-[10px] font-bold text-amber-400 uppercase tracking-widest"><i class="fa-solid fa-futbol mr-1.5"></i> Sports & Athletics</div>
                     <h3 class="font-bold text-base text-white">Recreational & Competitive Sports</h3>
                     <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
@@ -368,11 +380,11 @@
                     <div class="pt-1">
                         <div class="text-[11px] font-bold text-zinc-300 mb-1">Favorite Sports:</div>
                         <div class="flex flex-wrap gap-1.5">
-                            <span class="px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300">Badminton</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300">Table Tennis</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300">Chess</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300">Football</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300">Cricket</span>
+                            <span class="skill-badge px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300">Badminton</span>
+                            <span class="skill-badge px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300">Table Tennis</span>
+                            <span class="skill-badge px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300">Chess</span>
+                            <span class="skill-badge px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300">Football</span>
+                            <span class="skill-badge px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300">Cricket</span>
                         </div>
                     </div>
                 </div>
@@ -380,7 +392,7 @@
         </section>
 
         <!-- 5. ACADEMICS & SKILLS -->
-        <section id="academics" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-right" data-aos-duration="900">
+        <section id="academics" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <div class="md:col-span-7 bento-card p-6 sm:p-8 rounded-3xl space-y-6">
                 <i class="fa-solid fa-graduation-cap section-bg-icon"></i>
                 <div class="flex items-center justify-between relative z-10">
@@ -423,34 +435,35 @@
                 </div>
             </div>
 
-            <div class="md:col-span-5 bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+            <!-- SMART SKILLS & COMPETENCIES SECTION WITH HOVER EFFECTS -->
+            <div class="md:col-span-5 bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fa-solid fa-brain section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Skills & Competencies</h2>
                 <div class="space-y-5 relative z-10">
                     <div>
-                        <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-2">Technical & Software</div>
+                        <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-2.5">Technical & Software</div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">SPSS, AMOS & SmartPLS</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">MS Office (Word, PPT)</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">MS Excel</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">HTML, CSS & Bootstrap</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">AI Prompting</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">SPSS, AMOS & SmartPLS</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">MS Office (Word, PPT)</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">MS Excel</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">HTML, CSS & Bootstrap</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">AI Prompting</span>
                         </div>
                     </div>
                     <div>
-                        <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-2">Languages Known</div>
+                        <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-2.5">Languages Known</div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Bangla (Native)</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">English (Professional)</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Hindi (Conversational)</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Bangla (Native)</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">English (Professional)</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Hindi (Conversational)</span>
                         </div>
                     </div>
                     <div>
-                        <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2">Admin & Soft Skills</div>
+                        <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2.5">Admin & Soft Skills</div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Attendance Records</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Office Filing</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300">Communication</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Attendance Records</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Office Filing</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Communication</span>
                         </div>
                     </div>
                 </div>
@@ -458,12 +471,12 @@
         </section>
 
         <!-- 6. CERTIFICATES & SERVICES -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10" data-aos="fade-left" data-aos-duration="900">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <div class="bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <i class="fa-solid fa-certificate section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Certificates & Trainings</h2>
                 <div class="space-y-4 relative z-10">
-                    <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-1.5">
+                    <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-1.5 hover:border-blue-500/40 transition">
                         <div class="flex justify-between text-[11px] font-bold text-blue-400">
                             <span>360 Hours (Jan - Jun, 2024)</span>
                             <span class="text-emerald-400">Grade A+</span>
@@ -471,7 +484,7 @@
                         <h3 class="font-bold text-base text-white">Computer Office Application</h3>
                         <p class="text-xs text-zinc-400">Urban Social Services Office, Barishal</p>
                     </div>
-                    <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-1.5">
+                    <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-1.5 hover:border-blue-500/40 transition">
                         <div class="flex justify-between text-[11px] font-bold text-amber-400">
                             <span>Aug - Oct, 2024</span>
                             <span class="text-blue-400">Passed</span>
@@ -486,15 +499,15 @@
                 <i class="fa-solid fa-handshake section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Professional Services</h2>
                 <div class="space-y-3.5 relative z-10">
-                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5">
+                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
                         <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-calculator text-sm"></i></div>
                         <div><h4 class="font-bold text-xs sm:text-sm text-white">Financial Management Tutoring</h4><p class="text-xs text-zinc-400">Capital Budgeting, Cost of Capital & Working Capital.</p></div>
                     </div>
-                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5">
+                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
                         <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-book-open text-sm"></i></div>
                         <div><h4 class="font-bold text-xs sm:text-sm text-white">Academic Mentoring</h4><p class="text-xs text-zinc-400">English grammar, mathematics, and science tutoring.</p></div>
                     </div>
-                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5">
+                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
                         <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-chart-line text-sm"></i></div>
                         <div><h4 class="font-bold text-xs sm:text-sm text-white">Research & Data Tabulation</h4><p class="text-xs text-zinc-400">Survey data collection and SPSS statistical analysis.</p></div>
                     </div>
@@ -503,7 +516,7 @@
         </section>
 
         <!-- 7. AUTOMATIC SLIDESHOW SHOWCASE -->
-        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-right" data-aos-duration="900">
+        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <i class="fa-solid fa-laptop-code section-bg-icon"></i>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
                 <div>
@@ -557,7 +570,7 @@
         </section>
 
         <!-- 8. RECENT BLOG HIGHLIGHTS -->
-        <section id="blog-highlights" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-left" data-aos-duration="900">
+        <section id="blog-highlights" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <i class="fa-solid fa-blog section-bg-icon"></i>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
                 <div>
@@ -574,7 +587,7 @@
         </section>
 
         <!-- 9. VISUAL GALLERY & TRAVELS -->
-        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-right" data-aos-duration="900">
+        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <i class="fa-solid fa-camera-retro section-bg-icon"></i>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
                 <div>
@@ -624,7 +637,7 @@
         </section>
 
         <!-- 10. NEWSLETTER SECTION -->
-        <section class="bento-card p-6 sm:p-12 rounded-3xl relative overflow-hidden text-center space-y-5 z-10" data-aos="fade-left" data-aos-duration="900">
+        <section class="bento-card p-6 sm:p-12 rounded-3xl relative overflow-hidden text-center space-y-5 z-10" data-aos="fade-up" data-aos-duration="1000">
             <i class="fa-regular fa-paper-plane section-bg-icon"></i>
             <div class="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
             <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -645,8 +658,8 @@
         </section>
 
         <!-- 11. CONTACT SECTION & FORM -->
-        <section id="contact" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-right" data-aos-duration="900">
-            <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-right" data-aos-duration="700">
+        <section id="contact" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
+            <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <i class="fa-solid fa-address-book section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Contact Details</h2>
                 <div class="space-y-4 text-xs sm:text-sm relative z-10">
@@ -665,7 +678,7 @@
                 </div>
             </div>
 
-            <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5" data-aos="fade-left" data-aos-duration="700">
+            <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <i class="fa-solid fa-paper-plane section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Let’s Connect & Collaborate</h2>
                 <p class="text-xs sm:text-sm text-zinc-400 relative z-10">Open for professional opportunities, recruitment, and academic services.</p>
@@ -713,7 +726,7 @@
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ once: true, offset: 20, duration: 700 });
+        AOS.init({ once: true, offset: 30, duration: 900 });
 
         const homeBlogContainer = document.getElementById('homeBlogContainer');
         if (siteData.isComingSoon) {
