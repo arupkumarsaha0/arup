@@ -77,20 +77,19 @@
 
         .skill-badge {
             opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            animation: skillPopIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
             z-index: 1;
         }
 
-        /* When the parent card/section comes into view, trigger one-by-one delays */
-        .skills-card-inview .skill-badge:nth-child(1) { animation: skillPopIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; }
-        .skills-card-inview .skill-badge:nth-child(2) { animation: skillPopIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; }
-        .skills-card-inview .skill-badge:nth-child(3) { animation: skillPopIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; }
-        .skills-card-inview .skill-badge:nth-child(4) { animation: skillPopIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards; }
-        .skills-card-inview .skill-badge:nth-child(5) { animation: skillPopIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards; }
-        .skills-card-inview .skill-badge:nth-child(6) { animation: skillPopIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards; }
+        /* Sequential Staggered Delays for One-by-One Pop Up */
+        .skill-badge:nth-child(1) { animation-delay: 0.1s; }
+        .skill-badge:nth-child(2) { animation-delay: 0.2s; }
+        .skill-badge:nth-child(3) { animation-delay: 0.3s; }
+        .skill-badge:nth-child(4) { animation-delay: 0.4s; }
+        .skill-badge:nth-child(5) { animation-delay: 0.5s; }
+        .skill-badge:nth-child(6) { animation-delay: 0.6s; }
 
         .skill-badge:hover {
             background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(245, 158, 11, 0.15));
@@ -369,12 +368,12 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10">
-                <div class="bento-card p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
                     <div class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Entrepreneurship Fair (2020)</div>
                     <h3 class="font-bold text-base text-white">Stall Co-Partner — Sweets & Snacks Corner</h3>
                     <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Actively co-managed stall operations, customer relationship management, and sales promotion strategies for commercial success.</p>
                 </div>
-                <div class="bento-card p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
                     <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Strategy & Operations</div>
                     <h3 class="font-bold text-base text-white">Startup & Marketing Coordination</h3>
                     <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Translated theoretical management principles into retail marketing execution and customer acquisition campaigns.</p>
@@ -394,7 +393,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10">
-                <div class="bento-card p-5 rounded-2xl border border-white/5 space-y-3" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
                     <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest"><i class="fa-solid fa-users-rectangle mr-1.5"></i> Club Leadership</div>
                     <h3 class="font-bold text-base text-white">University Affiliations</h3>
                     <ul class="text-xs sm:text-sm text-zinc-300 space-y-2 list-disc pl-4">
@@ -406,7 +405,7 @@
                     </ul>
                 </div>
 
-                <div id="sportsCard" class="bento-card p-5 rounded-2xl border border-white/5 space-y-3" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
                     <div class="text-[10px] font-bold text-amber-400 uppercase tracking-widest"><i class="fa-solid fa-futbol mr-1.5"></i> Sports & Athletics</div>
                     <h3 class="font-bold text-base text-white">Recreational & Competitive Sports</h3>
                     <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
@@ -414,7 +413,7 @@
                     </p>
                     <div class="pt-1">
                         <div class="text-[11px] font-bold text-zinc-300 mb-1">Favorite Sports:</div>
-                        <div class="flex flex-wrap gap-1.5 sports-badge-container">
+                        <div class="flex flex-wrap gap-1.5">
                             <span class="skill-badge px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300">Badminton</span>
                             <span class="skill-badge px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300">Table Tennis</span>
                             <span class="skill-badge px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300">Chess</span>
@@ -470,14 +469,14 @@
                 </div>
             </div>
 
-            <!-- SMART SKILLS & COMPETENCIES SECTION WITH ONE-BY-ONE POP-UP ANIMATION -->
+            <!-- SMART SKILLS & COMPETENCIES SECTION WITH SEQUENTIAL POP-UP ANIMATION -->
             <div id="skillsSection" class="md:col-span-5 bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fa-solid fa-brain section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Skills & Competencies</h2>
                 <div class="space-y-5 relative z-10">
                     <div>
                         <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-2.5">Technical & Software</div>
-                        <div class="flex flex-wrap gap-2 skills-container">
+                        <div class="flex flex-wrap gap-2">
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">SPSS, AMOS & SmartPLS</span>
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">MS Office (Word, PPT)</span>
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">MS Excel</span>
@@ -487,7 +486,7 @@
                     </div>
                     <div>
                         <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-2.5">Languages Known</div>
-                        <div class="flex flex-wrap gap-2 skills-container">
+                        <div class="flex flex-wrap gap-2">
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Bangla (Native)</span>
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">English (Professional)</span>
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Hindi (Conversational)</span>
@@ -495,7 +494,7 @@
                     </div>
                     <div>
                         <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2.5">Admin & Soft Skills</div>
-                        <div class="flex flex-wrap gap-2 skills-container">
+                        <div class="flex flex-wrap gap-2">
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Attendance Records</span>
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Office Filing</span>
                             <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Communication</span>
@@ -511,7 +510,7 @@
                 <i class="fa-solid fa-certificate section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Certificates & Trainings</h2>
                 <div class="space-y-4 relative z-10">
-                    <div class="bento-card p-5 rounded-2xl border border-white/5 space-y-1.5 hover:border-blue-500/40 transition">
+                    <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-1.5 hover:border-blue-500/40 transition">
                         <div class="flex justify-between text-[11px] font-bold text-blue-400">
                             <span>360 Hours (Jan - Jun, 2024)</span>
                             <span class="text-emerald-400">Grade A+</span>
@@ -519,7 +518,7 @@
                         <h3 class="font-bold text-base text-white">Computer Office Application</h3>
                         <p class="text-xs text-zinc-400">Urban Social Services Office, Barishal</p>
                     </div>
-                    <div class="bento-card p-5 rounded-2xl border border-white/5 space-y-1.5 hover:border-blue-500/40 transition">
+                    <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-1.5 hover:border-blue-500/40 transition">
                         <div class="flex justify-between text-[11px] font-bold text-amber-400">
                             <span>Aug - Oct, 2024</span>
                             <span class="text-blue-400">Passed</span>
@@ -534,15 +533,15 @@
                 <i class="fa-solid fa-handshake section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Professional Services</h2>
                 <div class="space-y-3.5 relative z-10">
-                    <div class="bento-card p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
+                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
                         <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-calculator text-sm"></i></div>
                         <div><h4 class="font-bold text-xs sm:text-sm text-white">Financial Management Tutoring</h4><p class="text-xs text-zinc-400">Capital Budgeting, Cost of Capital & Working Capital.</p></div>
                     </div>
-                    <div class="bento-card p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
+                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
                         <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-book-open text-sm"></i></div>
                         <div><h4 class="font-bold text-xs sm:text-sm text-white">Academic Mentoring</h4><p class="text-xs text-zinc-400">English grammar, mathematics, and science tutoring.</p></div>
                     </div>
-                    <div class="bento-card p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
+                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
                         <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-chart-line text-sm"></i></div>
                         <div><h4 class="font-bold text-xs sm:text-sm text-white">Research & Data Tabulation</h4><p class="text-xs text-zinc-400">Survey data collection and SPSS statistical analysis.</p></div>
                     </div>
@@ -649,4 +648,492 @@
                     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Mountain" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-darkBg/95 via-transparent to-transparent flex items-end p-5 sm:p-6">
                         <div>
-                            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-
+                            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/20 px-2.5 py-1 rounded">Tours & Travels</span>
+                            <h3 class="text-sm sm:text-base font-bold text-white mt-1.5">Mountain Expedition & Scenic Valleys</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-slide-item absolute inset-0 w-full h-full">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80" alt="Road" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/95 via-transparent to-transparent flex items-end p-5 sm:p-6">
+                        <div>
+                            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/20 px-2.5 py-1 rounded">Travel Diary</span>
+                            <h3 class="text-sm sm:text-base font-bold text-white mt-1.5">Highway Journey & Open Roads</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute bottom-4 right-4 z-10 flex space-x-2 bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-full border border-white/10">
+                    <button onclick="currentPhotoSlide(0)" class="photo-dot w-2 h-2 rounded-full bg-blue-500 transition-all"></button>
+                    <button onclick="currentPhotoSlide(1)" class="photo-dot w-2 h-2 rounded-full bg-zinc-500 transition-all"></button>
+                    <button onclick="currentPhotoSlide(2)" class="photo-dot w-2 h-2 rounded-full bg-zinc-500 transition-all"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. NEWSLETTER SECTION -->
+        <section class="bento-card p-6 sm:p-12 rounded-3xl relative overflow-hidden text-center space-y-5 z-10" data-aos="fade-up" data-aos-duration="1000">
+            <i class="fa-regular fa-paper-plane section-bg-icon"></i>
+            <div class="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-xl mx-auto space-y-2.5 relative z-10">
+                <span class="text-[10px] uppercase font-bold text-blue-400 tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Stay Updated</span>
+                <h2 class="text-xl sm:text-2xl font-extrabold tracking-tight text-white">Subscribe to My Newsletter</h2>
+                <p class="text-xs sm:text-sm text-zinc-400">Get my latest articles on management, finance insights, and professional updates directly in your inbox.</p>
+            </div>
+
+            <form action="https://formspree.io/f/xqppqjbb" method="POST" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 relative z-10 pt-2">
+                <input type="email" name="newsletter_email" required class="flex-grow bg-zinc-900 border border-white/10 rounded-xl px-4 py-3.5 text-xs sm:text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="Enter your email address...">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3.5 rounded-xl text-xs transition shadow-lg shrink-0">
+                    Subscribe
+                </button>
+            </form>
+            <p class="text-[11px] text-zinc-500 relative z-10">No spam, unsubscribe at any time.</p>
+        </section>
+
+        <!-- 11. CONTACT SECTION & FORM -->
+        <section id="contact" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
+            <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5">
+                <i class="fa-solid fa-address-book section-bg-icon"></i>
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Contact Details</h2>
+                <div class="space-y-4 text-xs sm:text-sm relative z-10">
+                    <div class="flex items-center space-x-4 text-zinc-400">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-phone"></i></div>
+                        <div><div class="text-[10px] uppercase font-bold text-zinc-500">Phone</div><span class="text-white font-medium">+880 1646126678</span></div>
+                    </div>
+                    <div class="flex items-center space-x-4 text-zinc-400">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-envelope"></i></div>
+                        <div><div class="text-[10px] uppercase font-bold text-zinc-500">Email</div><span class="text-white font-medium">arup.bu.bd@gmail.com</span></div>
+                    </div>
+                    <div class="flex items-center space-x-4 text-zinc-400">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+                        <div><div class="text-[10px] uppercase font-bold text-zinc-500">Location</div><span class="text-white font-medium">Bijoy 24 Hall, University of Barishal</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5">
+                <i class="fa-solid fa-paper-plane section-bg-icon"></i>
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Let’s Connect & Collaborate</h2>
+                <p class="text-xs sm:text-sm text-zinc-400 relative z-10">Open for professional opportunities, recruitment, and academic services.</p>
+                <form action="https://formspree.io/f/xqppqjbb" method="POST" class="space-y-4 relative z-10">
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-zinc-400 mb-1.5">Your Name</label>
+                        <input type="text" name="name" required class="w-full bg-zinc-900 border border-white/10 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-zinc-400 mb-1.5">Your Email</label>
+                        <input type="email" name="email" required class="w-full bg-zinc-900 border border-white/10 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="Enter your email">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase font-bold text-zinc-400 mb-1.5">Message</label>
+                        <textarea name="message" rows="3" required class="w-full bg-zinc-900 border border-white/10 rounded-xl px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="Write your message..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-xl text-xs sm:text-sm transition shadow-lg">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="max-w-5xl mx-auto px-4 sm:px-6 mt-16 py-8 border-t border-white/10 text-center text-xs text-zinc-500">
+        <p>&copy; 2026 Arup Kumar Saha (অরূপ কুমার সাহা). All Rights Reserved.</p>
+        <div class="flex lg:hidden items-center justify-center space-x-3.5 mt-4">
+            <a href="https://www.linkedin.com/in/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-blue-600 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="LinkedIn"><i class="fa-brands fa-linkedin text-xs"></i></a>
+            <a href="https://github.com/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-zinc-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="GitHub"><i class="fa-brands fa-github text-xs"></i></a>
+            <a href="https://facebook.com/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-blue-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="Facebook"><i class="fa-brands fa-facebook text-xs"></i></a>
+            <a href="mailto:arup.bu.bd@gmail.com" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-amber-600 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="Email"><i class="fa-solid fa-envelope text-xs"></i></a>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <a href="#about" id="scrollTopBtn" class="fixed bottom-6 left-6 z-50 w-11 h-11 rounded-full bg-blue-600 hover:bg-blue-500 text-white shadow-2xl flex items-center justify-center transition-all opacity-0 pointer-events-none hover:scale-110">
+        <i class="fa-solid fa-arrow-up text-xs"></i>
+    </a>
+
+    <!-- CUSTOM INTERACTIVE FLOATING WIDGETS (WHATSAPP & CHATBOT ON RIGHT) -->
+    <style>
+        .right-floating-container {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .float-btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+        .float-btn:hover {
+            transform: scale(1.1);
+        }
+        #whatsappFloatBtn {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+        #chatToggleBtn {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        }
+        #chatBoxContainer {
+            position: absolute;
+            bottom: 68px;
+            right: 0;
+            width: 320px;
+            background: #0e0f14;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            animation: chatPopup 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes chatPopup {
+            from { opacity: 0; transform: translateY(15px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .chat-header {
+            background: linear-gradient(135deg, #0e0f14, #181922);
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .chat-body {
+            padding: 14px;
+            height: 260px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 12px;
+        }
+        .chat-footer {
+            padding: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            background: #090a0e;
+            display: flex;
+            gap: 8px;
+        }
+        .bot-msg {
+            background: rgba(59, 130, 246, 0.12);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: #e2e8f0;
+            padding: 9px 12px;
+            border-radius: 12px;
+            max-width: 85%;
+            line-height: 1.4;
+            align-self: flex-start;
+        }
+        .user-msg {
+            background: #3b82f6;
+            color: #ffffff;
+            padding: 9px 12px;
+            border-radius: 12px;
+            max-width: 85%;
+            line-height: 1.4;
+            align-self: flex-end;
+        }
+        .quick-reply-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #60a5fa;
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+        }
+        .quick-reply-btn:hover {
+            background: rgba(59, 130, 246, 0.2);
+            color: #ffffff;
+        }
+    </style>
+
+    <div class="right-floating-container">
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/8801646126678?text=Hello%20Arup,%20I%20visited%20your%20portfolio!" target="_blank" id="whatsappFloatBtn" class="float-btn" title="Chat on WhatsApp (@arupkumarsaha0)">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+        </a>
+
+        <!-- Chatbot Widget -->
+        <div class="relative">
+            <div id="chatBoxContainer">
+                <div class="chat-header">
+                    <div class="flex items-center space-x-2.5">
+                        <div class="w-7 h-7 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs border border-blue-500/30">A</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white">Arup's Assistant</h4>
+                            <div class="flex items-center space-x-1 text-[9px] text-emerald-400">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span>Online</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="toggleChatBox()" class="text-zinc-400 hover:text-white text-xs p-1"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div id="chatBody" class="chat-body">
+                    <div class="bot-msg">
+                        হ্যালো! 👋 আমি অরূপ কুমার সাহা-র এআই অ্যাসিস্ট্যান্ট। কীভাবে আপনাকে সাহায্য করতে পারি বলুন? নিচের অপশনগুলোতে ক্লিক করতে পারেন:
+                    </div>
+                    <div class="flex flex-col gap-1.5 pt-1">
+                        <button onclick="handleQuickQuery('cv')" class="quick-reply-btn">📄 অরূপের সিভি ডাউনলোড করতে চাই</button>
+                        <button onclick="handleQuickQuery('contact')" class="quick-reply-btn">📞 কন্টাক্ট ইনফরমেশন ও লোকেশন</button>
+                        <button onclick="handleQuickQuery('experience')" class="quick-reply-btn">💼 প্রফেশনাল অভিজ্ঞতা কেমন?</button>
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="chatInput" placeholder="এখানে কিছু লিখুন..." class="flex-grow bg-zinc-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500" onkeypress="if(event.key === 'Enter') sendUserMessage()">
+                    <button onclick="sendUserMessage()" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 rounded-xl text-xs transition"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+            <button id="chatToggleBtn" class="float-btn" onclick="toggleChatBox()" title="Chat with Arup's Assistant">
+                <i class="fa-solid fa-comments text-lg"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- CENTRAL DATA SCRIPT -->
+    <script src="blogs-data.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 30, duration: 900 });
+
+        // Chatbot Functionality
+        function toggleChatBox() {
+            const box = document.getElementById('chatBoxContainer');
+            if (box.style.display === 'flex') {
+                box.style.display = 'none';
+            } else {
+                box.style.display = 'flex';
+                document.getElementById('chatInput').focus();
+            }
+        }
+
+        function appendMessage(text, sender) {
+            const chatBody = document.getElementById('chatBody');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = sender === 'bot' ? 'bot-msg' : 'user-msg';
+            msgDiv.innerText = text;
+            chatBody.appendChild(msgDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function handleQuickQuery(type) {
+            if (type === 'cv') {
+                appendMessage("অরূপের সিভি ডাউনলোড করতে চাই", "user");
+                setTimeout(() => {
+                    appendMessage("অবশ্যই! নিচের লিঙ্কে ক্লিক করে আপনি অরূপ কুমার সাহার অফিসিয়াল সিভি (PDF) ডাউনলোড করতে পারেন:\n\n👉 Arup_Kumar_Saha_CV.pdf", "bot");
+                }, 500);
+            } else if (type === 'contact') {
+                appendMessage("কন্টাক্ট ইনফরমেশন ও লোকেশন জানতে চাই", "user");
+                setTimeout(() => {
+                    appendMessage("📞 ফোন: +880 1646126678\n📧 ইমেইল: arup.bu.bd@gmail.com\n📍 বর্তমান অবস্থান: বিজয় ২৪ হল, বরিশাল বিশ্ববিদ্যালয়।", "bot");
+                }, 500);
+            } else if (type === 'experience') {
+                appendMessage("প্রফেশনাল অভিজ্ঞতা কেমন?", "user");
+                setTimeout(() => {
+                    appendMessage("অরূপ কুমার সাহা বরিশাল বিশ্ববিদ্যালয় থেকে HRM-এ MBA এবং Management-এ BBA সম্পন্ন করেছেন। তিনি ইতিপূর্বে Amrita Consumer Food Products Ltd.-এ HR & Admin Intern এবং BRAC-এ Project Volunteer হিসেবে সফলভাবে কাজ করেছেন।", "bot");
+                }, 600);
+            }
+        }
+
+        function sendUserMessage() {
+            const input = document.getElementById('chatInput');
+            const text = input.value.trim();
+            if(!text) return;
+            
+            appendMessage(text, "user");
+            input.value = "";
+
+            setTimeout(() => {
+                const lower = text.toLowerCase();
+                if(lower.includes('cv') || lower.includes('resume') || lower.includes('সিভি')) {
+                    appendMessage("আপনি ওপরের হেডার বা এবাউট সেকশন থেকেও এক ক্লিকে অরূপের সিভি ডাউনলোড করে নিতে পারেন!", "bot");
+                } else if(lower.includes('hello') || lower.includes('hi') || lower.includes('হাই')) {
+                    appendMessage("হ্যালো! অরূপ কুমার সাহার পোর্টফোলিওতে আপনাকে স্বাগতম। কীভাবে সাহায্য করতে পারি বলুন?", "bot");
+                } else {
+                    appendMessage("ধন্যবাদ আপনার বার্তার জন্য! আপনার প্রশ্নটি বা তথ্যটি অরূপের কাছে পৌঁছে দেওয়ার জন্য আপনি সরাসরি কন্টাক্ট ফর্ম (Contact Form) ব্যবহার করতে পারেন অথবা ইমেইল করতে পারেন: arup.bu.bd@gmail.com", "bot");
+                }
+            }, 600);
+        }
+
+        const homeBlogContainer = document.getElementById('homeBlogContainer');
+        if (siteData.isComingSoon) {
+            homeBlogContainer.innerHTML = `
+                <div class="col-span-full bg-zinc-900/60 p-6 rounded-2xl border border-white/5 text-center space-y-3">
+                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Notice</span>
+                    <h3 class="font-bold text-base text-white">Blog Hub is Coming Soon</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 max-w-md mx-auto">${siteData.comingSoonMessage}</p>
+                    <div class="pt-2">
+                        <a href="blog.html" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1.5">
+                            <span>Visit Blog Page</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+        } else {
+            let postsHTML = '';
+            siteData.posts.forEach(post => {
+                postsHTML += `
+                    <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-3 hover:border-blue-500/40 transition">
+                        <div class="flex justify-between text-[11px] font-bold text-blue-400 uppercase tracking-widest">
+                            <span>${post.category}</span>
+                            <span>${post.date}</span>
+                        </div>
+                        <h3 class="font-bold text-base text-white hover:text-blue-400 transition cursor-pointer">${post.title}</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">${post.excerpt}</p>
+                        <div class="pt-2">
+                            <a href="${post.link}" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1.5">
+                                <span>Read More</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+            homeBlogContainer.innerHTML = postsHTML;
+        }
+
+        // TYPEWRITER SCRIPT
+        const words = ["MBA in HRM", "Corporate HR & Admin", "Visa & Documentation", "Strategic Planner"];
+        let i = 0;
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    document.getElementById('typewriter').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return false;
+                }
+                setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    document.getElementById('typewriter').innerHTML = word.join("");
+                } else {
+                    i = (words.length > (i + 1)) ? i + 1 : 0;
+                    setTimeout(typingEffect, 500);
+                    return false;
+                }
+                setTimeout(loopDeleting, 50);
+            };
+            loopDeleting();
+        }
+        typingEffect();
+
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+        });
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
+        });
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+
+        // SLIDESHOW (6 seconds interval)
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide-item');
+        const dots = document.querySelectorAll('.dot');
+        function showSlides() {
+            if(slides.length === 0) return;
+            slides.forEach((slide) => slide.classList.remove('active'));
+            dots.forEach((dot) => {
+                dot.classList.remove('bg-blue-500', 'w-6');
+                dot.classList.add('bg-zinc-700', 'w-2');
+            });
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].classList.add('active');
+            dots[slideIndex - 1].classList.remove('bg-zinc-700', 'w-2');
+            dots[slideIndex - 1].classList.add('bg-blue-500', 'w-6');
+        }
+        function currentSlide(n) {
+            slideIndex = n;
+            slides.forEach((slide) => slide.classList.remove('active'));
+            dots.forEach((dot) => {
+                dot.classList.remove('bg-blue-500', 'w-6');
+                dot.classList.add('bg-zinc-700', 'w-2');
+            });
+            slides[slideIndex].classList.add('active');
+            dots[slideIndex].classList.remove('bg-zinc-700', 'w-2');
+            dots[slideIndex].classList.add('bg-blue-500', 'w-6');
+        }
+        setInterval(showSlides, 6000);
+
+        // PHOTO SLIDESHOW (6 seconds interval)
+        let photoSlideIndex = 0;
+        const photoSlides = document.querySelectorAll('.photo-slide-item');
+        const photoDots = document.querySelectorAll('.photo-dot');
+        function showPhotoSlides() {
+            if(photoSlides.length === 0) return;
+            photoSlides.forEach((slide) => slide.classList.remove('active'));
+            photoDots.forEach((dot) => {
+                dot.classList.remove('bg-blue-500');
+                dot.classList.add('bg-zinc-500');
+            });
+            photoSlideIndex++;
+            if (photoSlideIndex > photoSlides.length) { photoSlideIndex = 1; }
+            photoSlides[photoSlideIndex - 1].classList.add('active');
+            photoDots[photoSlideIndex - 1].classList.remove('bg-zinc-500');
+            photoDots[photoSlideIndex - 1].classList.add('bg-blue-500');
+        }
+        function currentPhotoSlide(n) {
+            photoSlideIndex = n;
+            photoSlides.forEach((slide) => slide.classList.remove('active'));
+            photoDots.forEach((dot) => {
+                dot.classList.remove('bg-blue-500');
+                dot.classList.add('bg-zinc-500');
+            });
+            photoSlides[photoSlideIndex].classList.add('active');
+            photoDots[photoSlideIndex].classList.remove('bg-zinc-500');
+            photoDots[photoSlideIndex].classList.add('bg-blue-500');
+        }
+        setInterval(showPhotoSlides, 6000);
+    </script>
+</body>
+</html>
