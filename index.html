@@ -7,7 +7,7 @@
     
     <!-- Strong SEO & Meta Tags (Bangla included for backend SEO) -->
     <meta name="description" content="Official portfolio of Arup Kumar Saha (অরূপ কুমার সাহা) - Dynamic Management & HR Professional, expert in corporate operations, project coordination, and administration.">
-    <meta name="keywords" content="Arup Kumar Saha, অরূপ কুমার সাহা, HR Professional, Management, Visa Executive, Portfolio, Barishal, Bangladesh">
+    <meta name="keywords" content="Arup Kumar Saha, অরূপ কুমার সাহা, HR Professional, Management, Tourism, Portfolio, Barishal, Bangladesh">
     <meta name="author" content="Arup Kumar Saha">
 
     <!-- Open Graph / Social Media Meta Tags -->
@@ -295,12 +295,12 @@
                     <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 px-2.5 py-1 rounded-full border border-blue-500/20">Work Culture</span>
                 </div>
                 <p class="text-xs sm:text-sm text-zinc-400 relative z-10 leading-relaxed">
-                    Open to contributing in structured environments across international development, financial sectors, corporate industries, and visa/travel consultancies.
+                    Open to contributing in structured environments across international development, financial sectors, corporate industries, and tourism.
                 </p>
                 <div class="flex flex-wrap gap-2 relative z-10 pt-1">
                     <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-briefcase text-blue-400 text-[10px]"></i><span>International NGOs & Development Agencies</span></span>
                     <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-building-columns text-blue-400 text-[10px]"></i><span>Commercial Banks & Financial Institutions</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-passport text-blue-400 text-[10px]"></i><span>Visa Consultancy, Travel & Tourism</span></span>
+                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-plane-departure text-blue-400 text-[10px]"></i><span>Tourism & Travel Industry</span></span>
                     <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-shirt text-blue-400 text-[10px]"></i><span>Garments & Textile Conglomerates</span></span>
                     <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-briefcase text-blue-400 text-[10px]"></i><span>Multinational Corporations & FMCG</span></span>
                 </div>
@@ -316,11 +316,10 @@
                     <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">Career Focus</span>
                 </div>
                 <p class="text-xs sm:text-sm text-zinc-400 relative z-10 leading-relaxed">
-                    Seeking impactful roles aligned with my academic expertise in Human Resource Management, visa processing, project coordination, and administration.
+                    Seeking impactful roles aligned with my academic expertise in Human Resource Management, project coordination, and administration.
                 </p>
                 <div class="flex flex-wrap gap-2 relative z-10 pt-1">
                     <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>HR & Admin Officer / Executive</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Visa Executive & Documentation Specialist</span></span>
                     <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Project Coordinator & Programme Associate</span></span>
                     <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Management Trainee Officer (MTO / Bank Trainee)</span></span>
                     <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Corporate Operations & MIS Analyst</span></span>
@@ -767,7 +766,7 @@
         <i class="fa-solid fa-arrow-up text-xs"></i>
     </a>
 
-    <!-- CUSTOM SMART CHATBOT SYSTEM -->
+    <!-- CUSTOM SMART CHATBOT SYSTEM WITH WAVE EFFECT -->
     <style>
         .right-floating-container {
             position: fixed;
@@ -801,9 +800,27 @@
         #whatsappFloatBtn {
             background: linear-gradient(135deg, #25D366, #128C7E);
         }
+        
+        /* Live Chat Button with Wave / Ripple Ring Effect */
         #chatToggleBtn {
             background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            position: relative;
         }
+        #chatToggleBtn::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.5);
+            animation: wavePulse 2.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+            z-index: -1;
+        }
+        @keyframes wavePulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.35); opacity: 0; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+
         /* Notification Toast Style */
         #chatNotificationToast {
             position: absolute;
@@ -929,7 +946,7 @@
             <i class="fa-brands fa-whatsapp text-2xl"></i>
         </a>
 
-        <!-- Chatbot Widget with Auto-Fade Notification Toast -->
+        <!-- Chatbot Widget with Wave Effect & Auto-Fade Toast -->
         <div class="relative">
             <!-- Small Auto-Disappearing Notification Toast -->
             <div id="chatNotificationToast" onclick="openChatFromToast()">
@@ -940,7 +957,7 @@
                 <p class="text-[11px] text-zinc-300 leading-snug pt-1">Hello! 👋 Thanks for visiting. Feel free to ask anything about my professional background!</p>
             </div>
 
-            <!-- Chat Box Container -->
+            <!-- Chat Box Container (with exactly two quick action items on opening) -->
             <div id="chatBoxContainer">
                 <div class="chat-header">
                     <div class="flex items-center space-x-2.5">
@@ -949,7 +966,7 @@
                             <h4 class="text-xs font-bold text-white">Arup's Assistant</h4>
                             <div class="flex items-center space-x-1 text-[9px] text-emerald-400">
                                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                                <span>Online</span>
+                                <span class="text-emerald-400 font-semibold">Online</span>
                             </div>
                         </div>
                     </div>
@@ -957,22 +974,26 @@
                 </div>
                 <div id="chatBody" class="chat-body">
                     <div class="bot-msg">
-                        Hello! 👋 I am Arup's AI Assistant. Feel free to ask me anything about Arup's education, experience, or skills! Or click below:
+                        Hello! 👋 I am Arup's AI Assistant. How can I help you today? Choose from below:
                     </div>
-                    <div class="flex flex-col gap-1.5 pt-1">
-                        <button onclick="handleQuickQuery('cv')" class="quick-reply-btn">📄 Download Official CV (PDF)</button>
-                        <button onclick="handleQuickQuery('experience')" class="quick-reply-btn">💼 Professional Experience</button>
-                        <button onclick="handleQuickQuery('education')" class="quick-reply-btn">🎓 Educational Background</button>
-                        <button onclick="handleQuickQuery('contact')" class="quick-reply-btn">📞 Contact Information & Location</button>
+                    <div class="flex flex-col gap-2 pt-1">
+                        <button onclick="handleQuickQuery('cv')" class="quick-reply-btn flex items-center space-x-2">
+                            <i class="fa-solid fa-file-pdf text-blue-400"></i>
+                            <span>📄 Download Official CV (PDF)</span>
+                        </button>
+                        <button onclick="handleQuickQuery('contact')" class="quick-reply-btn flex items-center space-x-2">
+                            <i class="fa-solid fa-address-book text-amber-400"></i>
+                            <span>📞 Contact Information & Location</span>
+                        </button>
                     </div>
                 </div>
                 <div class="chat-footer">
-                    <input type="text" id="chatInput" placeholder="Type a message (e.g., Experience, CV)..." class="flex-grow bg-zinc-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500" onkeypress="if(event.key === 'Enter') sendUserMessage()">
+                    <input type="text" id="chatInput" placeholder="Type a message..." class="flex-grow bg-zinc-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500" onkeypress="if(event.key === 'Enter') sendUserMessage()">
                     <button onclick="sendUserMessage()" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 rounded-xl text-xs transition"><i class="fa-solid fa-paper-plane"></i></button>
                 </div>
             </div>
 
-            <!-- Chat Toggle Button -->
+            <!-- Chat Toggle Button with Wave Effect -->
             <button id="chatToggleBtn" class="float-btn" onclick="toggleChatBox()" title="Chat with Arup's Assistant">
                 <i class="fa-solid fa-comments text-lg"></i>
                 <span id="notifBadge" class="notification-badge"></span>
@@ -1049,16 +1070,6 @@
                 setTimeout(() => {
                     appendMessage("Certainly! You can download Arup Kumar Saha's official CV (PDF) by clicking the link below:\n\n👉 Arup_Kumar_Saha_CV.pdf", "bot");
                 }, 500);
-            } else if (type === 'experience') {
-                appendMessage("What is your professional experience?", "user");
-                setTimeout(() => {
-                    appendMessage("Arup Kumar Saha holds an MBA in HRM and BBA in Management from the University of Barishal. He has previously worked as an HR & Admin Intern at Amrita Consumer Food Products Ltd. and as a Project Volunteer at BRAC.", "bot");
-                }, 600);
-            } else if (type === 'education') {
-                appendMessage("What is your educational background?", "user");
-                setTimeout(() => {
-                    appendMessage("🎓 Educational Background:\n• MBA in HRM (First Class) - University of Barishal\n• BBA in Management Studies (First Class) - University of Barishal\n• HSC (Grade A) - Dr. Abdur Razzak Municipal College, Jashore\n• SSC (Grade A) - Sammilani Institution, Jashore", "bot");
-                }, 600);
             } else if (type === 'contact') {
                 appendMessage("What is your contact info and location?", "user");
                 setTimeout(() => {
@@ -1067,47 +1078,30 @@
             }
         }
 
-        // TRAINED SMART AI INTENT PARSER (Advanced Keyword & Phrase Matching)
+        // TRAINED SMART AI INTENT PARSER
         function getSmartBotResponse(query) {
             const q = query.toLowerCase().trim();
 
-            // 1. Greeting & Pleasantries
-            if (q.match(/hi|hello|hey|assalamu|salam|namaste|hi there/)) {
+            if (q.match(/hi|hello|hey|assalamu|salam|namaste/)) {
                 return "Hello! Welcome to Arup Kumar Saha's professional portfolio. How can I assist you today?";
             }
-
-            // 2. CV / Resume / Download
-            if (q.match(/cv|resume|download|সিভি|রিজিউম/)) {
+            if (q.match(/cv|resume|download|সিভি/)) {
                 return "Certainly! You can download Arup's official CV (PDF) directly from the header or about section.";
             }
-
-            // 3. Education / Degree / CGPA / First Class / MBA / BBA / SSC / HSC
-            if (q.match(/education|study|degree|mba|bba|ssc|hsc|university|college|result|class|grade|পড়াশোনা/)) {
-                return "🎓 Educational Background:\n• MBA in HRM: First Class (Barishal University)\n• BBA in Management Studies: First Class (Barishal University)\n• HSC (Business Studies): Grade A (Dr. Abdur Razzak Municipal College, Jashore)\n• SSC (Business Studies): Grade A (Sammilani Institution, Jashore)";
+            if (q.match(/education|study|degree|mba|bba|ssc|hsc/)) {
+                return "🎓 Educational Background:\n• MBA in HRM: First Class (Barishal University)\n• BBA in Management Studies: First Class (Barishal University)\n• HSC: Grade A (Dr. Abdur Razzak Municipal College, Jashore)\n• SSC: Grade A (Sammilani Institution, Jashore)";
+            }
+            if (q.match(/experience|job|work|career|intern|brac|amrita/)) {
+                return "💼 Professional Experience:\n• HR & Admin Intern at Amrita Consumer Food Products Ltd.\n• Project Volunteer at BRAC (Barishal)\n• Research Assistant at University of Barishal";
+            }
+            if (q.match(/contact|phone|email|location|address/)) {
+                return "📞 Contact Details:\n• Phone: +880 1646126678\n• Email: arup.bu.bd@gmail.com\n• Location: Bijoy 24 Hall, University of Barishal";
+            }
+            if (q.match(/skill|software|spss|excel/)) {
+                return "⚙️ Skills: SPSS, AMOS, SmartPLS, MS Excel, Word, PowerPoint, HTML, CSS & AI Prompting.";
             }
 
-            // 4. Experience / Job / Career / Internship / Work / BRAC / Amrita
-            if (q.match(/experience|job|work|career|intern|brac|amrita|research|অভিজ্ঞতা|চাকরি/)) {
-                return "💼 Professional Experience:\n• HR & Admin Intern at Amrita Consumer Food Products Ltd.\n• Project Volunteer at BRAC (Barishal)\n• Research Assistant at University of Barishal\nOpen to corporate, banking, and NGO opportunities.";
-            }
-
-            // 5. Contact / Phone / Email / Location / Address / Hall / Barishal / Jessore
-            if (q.match(/contact|phone|email|location|address|hall|barishal|jessore|where|কন্টাক্ট/)) {
-                return "📞 Contact & Location Details:\n• Phone: +880 1646126678\n• Email: arup.bu.bd@gmail.com\n• Current Location: Bijoy 24 Hall, University of Barishal\n• Permanent: Jessore";
-            }
-
-            // 6. Skills / Software / SPSS / Excel / Language
-            if (q.match(/skill|software|spss|excel|language|html|css|competency|স্কিল/)) {
-                return "⚙️ Skills & Competencies:\n• Technical: SPSS, AMOS, SmartPLS, MS Excel, Word, PPT, HTML, CSS & AI Prompting\n• Languages: Bangla (Native), English (Professional), Hindi (Conversational)";
-            }
-
-            // 7. Services / Tutoring / Mentoring
-            if (q.match(/service|tutoring|mentoring|teaching|টিউটরিং/)) {
-                return "🤝 Professional Services:\n• Financial Management Tutoring (Capital Budgeting, Working Capital)\n• Academic Mentoring (English grammar, mathematics, and science)\n• Research & Data Tabulation (SPSS & survey analysis)";
-            }
-
-            // 8. Default fallback for unmatched queries
-            return `Thank you for your message! To get in touch with Arup directly regarding this, please use the contact form below or email at: arup.bu.bd@gmail.com`;
+            return `Thank you for your message! To get in touch with Arup directly, please email at: arup.bu.bd@gmail.com`;
         }
 
         function sendUserMessage() {
@@ -1177,8 +1171,8 @@
             homeBlogContainer.innerHTML = postsHTML;
         }
 
-        // TYPEWRITER SCRIPT
-        const words = ["MBA in HRM", "Corporate HR & Admin", "Visa & Documentation", "Strategic Planner"];
+        // CONCISE TYPEWRITER SCRIPT
+        const words = ["HR Professional", "Management Expert", "Strategic Planner", "HR & Admin Officer"];
         let i = 0;
         function typingEffect() {
             let word = words[i].split("");
@@ -1189,7 +1183,7 @@
                     setTimeout(deletingEffect, 2000);
                     return false;
                 }
-                setTimeout(loopTyping, 100);
+                setTimeout(loopTyping, 90);
             };
             loopTyping();
         }
@@ -1201,10 +1195,10 @@
                     document.getElementById('typewriter').innerHTML = word.join("");
                 } else {
                     i = (words.length > (i + 1)) ? i + 1 : 0;
-                    setTimeout(typingEffect, 500);
+                    setTimeout(typingEffect, 400);
                     return false;
                 }
-                setTimeout(loopDeleting, 50);
+                setTimeout(loopDeleting, 45);
             };
             loopDeleting();
         }
