@@ -91,12 +91,23 @@
             width: 100%;
         }
 
-        /* INTERACTIVE POP-UP ANIMATION FOR BADGES */
+        /* HIGHLY VISIBLE & INTERACTIVE SKILL & PREFERENCE POP-UP ANIMATION */
         @keyframes bouncePopEffect {
-            0% { opacity: 0; transform: translateY(35px) scale(0.75); }
-            60% { opacity: 1; transform: translateY(-5px) scale(1.03); }
-            80% { transform: translateY(2px) scale(0.99); }
-            100% { opacity: 1; transform: translateY(0) scale(1); }
+            0% {
+                opacity: 0;
+                transform: translateY(35px) scale(0.75);
+            }
+            60% {
+                opacity: 1;
+                transform: translateY(-5px) scale(1.03);
+            }
+            80% {
+                transform: translateY(2px) scale(0.99);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
 
         .animated-badge {
@@ -112,6 +123,7 @@
             align-items: center;
             gap: 8px;
         }
+
         .active-animation .animated-badge {
             animation: bouncePopEffect 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
         }
@@ -804,7 +816,7 @@
     <script>
         AOS.init({ once: true, offset: 50, duration: 900 });
 
-        // INTERSECTION OBSERVER FOR ANIMATED BADGES & SECTIONS
+        // INTERSECTION OBSERVER FOR ALL ANIMATED SECTIONS AND PREFERENCES
         const observerOptions = { root: null, threshold: 0.15 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -862,7 +874,6 @@
         // SLIDESHOW SCRIPT
         let slideIndex = 0;
         const slides = document.querySelectorAll('.slide-item');
-        const dots = document.querySelectorAll('.dot');
         function showSlides() {
             if(slides.length === 0) return;
             slides.forEach((slide) => slide.classList.remove('active'));
