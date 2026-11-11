@@ -91,61 +91,35 @@
             width: 100%;
         }
 
-        /* HIGHLY VISIBLE & INTERACTIVE SKILL POP-UP ANIMATION */
-        @keyframes skillBouncePop {
-            0% {
-                opacity: 0;
-                transform: translateY(35px) scale(0.7);
-            }
-            60% {
-                opacity: 1;
-                transform: translateY(-6px) scale(1.05);
-            }
-            80% {
-                transform: translateY(2px) scale(0.98);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
+        @keyframes skillPopIn {
+            0% { opacity: 0; transform: translateY(20px) scale(0.85); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
         }
 
         .skill-badge {
             opacity: 0;
-            transform: translateY(30px) scale(0.75);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(24, 25, 35, 0.85);
+            transform: translateY(20px) scale(0.85);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
             z-index: 1;
-            cursor: pointer;
-            transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
-
-        /* Sequential Bouncing Animation Trigger */
         .skills-active .skill-badge {
-            animation: skillBouncePop 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation: skillPopIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
-        .skills-active .skill-badge:nth-child(1) { animation-delay: 0.08s; }
-        .skills-active .skill-badge:nth-child(2) { animation-delay: 0.16s; }
-        .skills-active .skill-badge:nth-child(3) { animation-delay: 0.24s; }
-        .skills-active .skill-badge:nth-child(4) { animation-delay: 0.32s; }
-        .skills-active .skill-badge:nth-child(5) { animation-delay: 0.40s; }
-        .skills-active .skill-badge:nth-child(6) { animation-delay: 0.48s; }
+        .skills-active .skill-badge:nth-child(1) { animation-delay: 0.1s; }
+        .skills-active .skill-badge:nth-child(2) { animation-delay: 0.2s; }
+        .skills-active .skill-badge:nth-child(3) { animation-delay: 0.3s; }
+        .skills-active .skill-badge:nth-child(4) { animation-delay: 0.4s; }
+        .skills-active .skill-badge:nth-child(5) { animation-delay: 0.5s; }
+        .skills-active .skill-badge:nth-child(6) { animation-delay: 0.6s; }
 
-        /* Highly Interactive Hover Effects */
         .skill-badge:hover {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(245, 158, 11, 0.25));
-            border-color: rgba(59, 130, 246, 0.8);
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 12px 25px -4px rgba(59, 130, 246, 0.5), 0 0 15px rgba(59, 130, 246, 0.3);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(245, 158, 11, 0.15));
+            border-color: rgba(59, 130, 246, 0.6);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 30px -5px rgba(59, 130, 246, 0.35);
             color: #ffffff;
-        }
-        .skill-badge:hover i {
-            transform: rotate(12deg) scale(1.2);
-            color: #60a5fa;
         }
 
         .section-bg-icon {
@@ -454,7 +428,82 @@
             </div>
         </section>
 
-        <!-- 4. ACADEMICS & HIGHLY INTERACTIVE SKILLS SECTION -->
+        <!-- 4. TESTIMONIALS / FEEDBACK SECTION -->
+        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
+            <i class="fa-solid fa-quote-left section-bg-icon"></i>
+            <div class="flex items-center justify-between px-2 relative z-10">
+                <div>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Colleague & Mentor Remarks</h2>
+                    <p class="text-xs text-zinc-400">Feedback from academic and professional collaborations.</p>
+                </div>
+                <span class="text-[11px] font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Testimonials</span>
+            </div>
+
+            <div class="relative overflow-hidden rounded-2xl bg-zinc-900/80 border border-white/5 p-6 relative z-10 min-h-[140px] flex items-center">
+                <div class="testimonial-item active space-y-3 w-full">
+                    <p class="text-xs sm:text-sm text-zinc-300 italic leading-relaxed">"Arup demonstrated exceptional dedication during his research and academic assistance tasks. His precision in data handling and professional management approach are truly commendable."</p>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <div class="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs border border-blue-500/30">BU</div>
+                        <div>
+                            <div class="text-xs font-bold text-white">Faculty Supervisor</div>
+                            <div class="text-[10px] text-zinc-400">Department of Management Studies, University of Barishal</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-item space-y-3 w-full">
+                    <p class="text-xs sm:text-sm text-zinc-300 italic leading-relaxed">"A proactive and energetic team member. His problem-solving abilities and presentation slide designs significantly elevated our project deliverables."</p>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs border border-amber-500/30">AM</div>
+                        <div>
+                            <div class="text-xs font-bold text-white">Project Coordinator</div>
+                            <div class="text-[10px] text-zinc-400">BRAC Initiative Partner</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FREE DOWNLOADABLE RESOURCES CORNER -->
+        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10">
+            <i class="fa-solid fa-cloud-arrow-down section-bg-icon"></i>
+            <div class="flex items-center justify-between px-2 relative z-10">
+                <div>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Free Professional Resources</h2>
+                    <p class="text-xs text-zinc-400">Templates and guides for peers and professionals.</p>
+                </div>
+                <span class="text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Freebies</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
+                <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 space-y-2">
+                    <div class="text-[10px] font-bold text-blue-400 uppercase">PDF Template</div>
+                    <h4 class="font-bold text-xs sm:text-sm text-white">Standard Cover Letter Guide</h4>
+                    <p class="text-xs text-zinc-400">A professional framework for job applications.</p>
+                    <a href="Arup_Kumar_Saha_CV.pdf" download class="inline-flex items-center space-x-1.5 text-xs text-blue-400 hover:text-blue-300 font-bold pt-1">
+                        <i class="fa-solid fa-download text-[10px]"></i><span>Download PDF</span>
+                    </a>
+                </div>
+                <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 space-y-2">
+                    <div class="text-[10px] font-bold text-amber-400 uppercase">PPTX Structure</div>
+                    <h4 class="font-bold text-xs sm:text-sm text-white">Pitch Deck Blueprint</h4>
+                    <p class="text-xs text-zinc-400">Clean slide layouts for business presentations.</p>
+                    <a href="portfolio.html" class="inline-flex items-center space-x-1.5 text-xs text-amber-400 hover:text-amber-300 font-bold pt-1">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i><span>View in Hub</span>
+                    </a>
+                </div>
+                <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 space-y-2">
+                    <div class="text-[10px] font-bold text-emerald-400 uppercase">Excel Model</div>
+                    <h4 class="font-bold text-xs sm:text-sm text-white">Financial Ratio Analysis Sheet</h4>
+                    <p class="text-xs text-zinc-400">Automated calculation template for finance.</p>
+                    <a href="portfolio.html" class="inline-flex items-center space-x-1.5 text-xs text-emerald-400 hover:text-emerald-300 font-bold pt-1">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i><span>Explore Hub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. ACADEMICS & SKILLS -->
         <section id="academics" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <div class="md:col-span-7 bento-card p-6 sm:p-8 rounded-3xl space-y-6">
                 <i class="fa-solid fa-graduation-cap section-bg-icon"></i>
@@ -498,45 +547,42 @@
                 </div>
             </div>
 
-            <!-- SMART SKILLS & COMPETENCIES SECTION WITH ENHANCED INTERACTIVE POP-UP BADGES -->
+            <!-- SMART SKILLS & COMPETENCIES SECTION -->
             <div id="skillsSection" class="md:col-span-5 bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fa-solid fa-brain section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Skills & Competencies</h2>
                 <div class="space-y-5 relative z-10">
                     <div>
-                        <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-2.5 flex items-center justify-between">
-                            <span>Technical & Software</span>
-                            <span class="text-[9px] text-zinc-500 lowercase">(hover to interact)</span>
-                        </div>
-                        <div class="flex flex-wrap gap-2.5">
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-chart-pie text-blue-400 text-xs"></i> SPSS, AMOS & SmartPLS</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-file-powerpoint text-amber-400 text-xs"></i> MS Office & PPT</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-file-excel text-emerald-400 text-xs"></i> Advanced MS Excel</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-code text-sky-400 text-xs"></i> HTML, CSS & Bootstrap</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-robot text-purple-400 text-xs"></i> AI Prompting</span>
+                        <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-2.5">Technical & Software</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">SPSS, AMOS & SmartPLS</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">MS Office (Word, PPT)</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">MS Excel</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">HTML, CSS & Bootstrap</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">AI Prompting</span>
                         </div>
                     </div>
                     <div>
                         <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-2.5">Languages Known</div>
-                        <div class="flex flex-wrap gap-2.5">
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-language text-amber-400 text-xs"></i> Bangla (Native)</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-globe text-blue-400 text-xs"></i> English (Professional)</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-comments text-emerald-400 text-xs"></i> Hindi (Conversational)</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Bangla (Native)</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">English (Professional)</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Hindi (Conversational)</span>
                         </div>
                     </div>
                     <div>
                         <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2.5">Admin & Soft Skills</div>
-                        <div class="flex flex-wrap gap-2.5">
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-clipboard-user text-emerald-400 text-xs"></i> Attendance Records</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-folder-open text-amber-400 text-xs"></i> Office Filing</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-users text-blue-400 text-xs"></i> Strategic Communication</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Attendance Records</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Office Filing</span>
+                            <span class="skill-badge px-3 py-1.5 rounded-xl bg-zinc-800/80 text-xs text-zinc-300 font-medium">Communication</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. PROFESSIONAL SERVICES -->
+        <!-- 7. PROFESSIONAL SERVICES -->
         <section id="services" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10">
             <i class="fa-solid fa-handshake section-bg-icon"></i>
             <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Professional Services</h2>
@@ -563,7 +609,7 @@
             </div>
         </section>
 
-        <!-- 6. AUTOMATIC SLIDESHOW SHOWCASE -->
+        <!-- 8. AUTOMATIC SLIDESHOW SHOWCASE -->
         <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <i class="fa-solid fa-laptop-code section-bg-icon"></i>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
@@ -617,7 +663,7 @@
             </div>
         </section>
 
-        <!-- 7. RECENT BLOG HIGHLIGHTS -->
+        <!-- 9. RECENT BLOG HIGHLIGHTS -->
         <section id="blog-highlights" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <i class="fa-solid fa-blog section-bg-icon"></i>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
@@ -634,7 +680,7 @@
             <div id="homeBlogContainer" class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10"></div>
         </section>
 
-        <!-- 8. CONTACT SECTION & FORM -->
+        <!-- 10. CONTACT SECTION & FORM -->
         <section id="contact" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <i class="fa-solid fa-address-book section-bg-icon"></i>
@@ -1112,9 +1158,8 @@
             }, 600);
         }
 
-        /* REFINED INTERSECTION OBSERVER FOR HIGH VISIBILITY POP-UP */
         const skillsSection = document.getElementById('skillsSection');
-        const observerOptions = { root: null, threshold: 0.15 };
+        const observerOptions = { root: null, threshold: 0.2 };
         const skillsObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
