@@ -91,23 +91,12 @@
             width: 100%;
         }
 
-        /* HIGHLY VISIBLE & INTERACTIVE SKILL & PREFERENCE POP-UP ANIMATION */
+        /* INTERACTIVE POP-UP ANIMATION FOR BADGES */
         @keyframes bouncePopEffect {
-            0% {
-                opacity: 0;
-                transform: translateY(35px) scale(0.75);
-            }
-            60% {
-                opacity: 1;
-                transform: translateY(-5px) scale(1.03);
-            }
-            80% {
-                transform: translateY(2px) scale(0.99);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
+            0% { opacity: 0; transform: translateY(35px) scale(0.75); }
+            60% { opacity: 1; transform: translateY(-5px) scale(1.03); }
+            80% { transform: translateY(2px) scale(0.99); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
         }
 
         .animated-badge {
@@ -123,7 +112,6 @@
             align-items: center;
             gap: 8px;
         }
-
         .active-animation .animated-badge {
             animation: bouncePopEffect 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
         }
@@ -154,7 +142,6 @@
         .bento-card:hover .section-bg-icon {
             transform: scale(1.15) rotate(-8deg);
             color: rgba(59, 130, 246, 0.09);
-            text-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
         }
 
         .blob-glow {
@@ -179,12 +166,12 @@
             50% { opacity: 0; }
         }
 
-        .slide-item, .photo-slide-item, .testimonial-item {
+        .slide-item, .testimonial-item {
             display: none;
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
-        .slide-item.active, .photo-slide-item.active, .testimonial-item.active {
+        .slide-item.active, .testimonial-item.active {
             display: block;
             opacity: 1;
             animation: smoothFade 1s ease-in-out;
@@ -337,7 +324,7 @@
             </div>
         </section>
 
-        <!-- CAREER PREFERENCES & SECTORS WITH ANIMATED BADGES -->
+        <!-- CAREER PREFERENCES & SECTORS -->
         <section id="preferences" data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
             <div id="prefSection1" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative overflow-hidden">
                 <i class="fa-solid fa-building section-bg-icon"></i>
@@ -447,7 +434,43 @@
             </div>
         </section>
 
-        <!-- 4. ACADEMICS & SKILLS -->
+        <!-- 4. TESTIMONIALS -->
+        <section data-aos="fade-up" data-aos-duration="1000" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10">
+            <i class="fa-solid fa-quote-left section-bg-icon"></i>
+            <div class="flex items-center justify-between px-2 relative z-10">
+                <div>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Colleague & Mentor Remarks</h2>
+                    <p class="text-xs text-zinc-400">Feedback from academic and professional collaborations.</p>
+                </div>
+                <span class="text-[11px] font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Testimonials</span>
+            </div>
+
+            <div class="relative overflow-hidden rounded-2xl bg-zinc-900/80 border border-white/5 p-6 relative z-10 min-h-[140px] flex items-center">
+                <div class="testimonial-item active space-y-3 w-full">
+                    <p class="text-xs sm:text-sm text-zinc-300 italic leading-relaxed">"Arup demonstrated exceptional dedication during his research and academic assistance tasks. His precision in data handling and professional management approach are truly commendable."</p>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <div class="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs border border-blue-500/30">BU</div>
+                        <div>
+                            <div class="text-xs font-bold text-white">Faculty Supervisor</div>
+                            <div class="text-[10px] text-zinc-400">Department of Management Studies, University of Barishal</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-item space-y-3 w-full">
+                    <p class="text-xs sm:text-sm text-zinc-300 italic leading-relaxed">"A proactive and energetic team member. His problem-solving abilities and presentation slide designs significantly elevated our project deliverables."</p>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs border border-amber-500/30">AM</div>
+                        <div>
+                            <div class="text-xs font-bold text-white">Project Coordinator</div>
+                            <div class="text-[10px] text-zinc-400">BRAC Initiative Partner</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ACADEMICS & SKILLS -->
         <section id="academics" data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10">
             <div class="md:col-span-7 bento-card p-6 sm:p-8 rounded-3xl space-y-6">
                 <i class="fa-solid fa-graduation-cap section-bg-icon"></i>
@@ -470,6 +493,14 @@
                             <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2 py-0.5 rounded">Passing Year: 2022 | Result: First Class</span>
                             <h3 class="font-bold text-base text-white pt-1">BBA in Management Studies</h3>
                             <p class="text-xs sm:text-sm text-zinc-400">University of Barishal</p>
+                        </div>
+                    </div>
+                    <div class="relative pl-6 group">
+                        <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-emerald-500 ring-4 ring-[#040406]"></div>
+                        <div class="space-y-1.5">
+                            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/10 px-2 py-0.5 rounded">Passing Year: 2018 | Result: Grade A</span>
+                            <h3 class="font-bold text-base text-white pt-1">HSC (Business Studies)</h3>
+                            <p class="text-xs sm:text-sm text-zinc-400">Dr. Abdur Razzak Municipal College, Jashore</p>
                         </div>
                     </div>
                 </div>
@@ -502,7 +533,7 @@
             </div>
         </section>
 
-        <!-- 5. PROFESSIONAL SERVICES -->
+        <!-- 6. PROFESSIONAL SERVICES -->
         <section id="services" data-aos="fade-up" data-aos-duration="1000" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10">
             <i class="fa-solid fa-handshake section-bg-icon"></i>
             <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Professional Services</h2>
@@ -529,7 +560,78 @@
             </div>
         </section>
 
-        <!-- 6. CONTACT SECTION -->
+        <!-- 7. SLIDESHOW SHOWCASE -->
+        <section data-aos="fade-up" data-aos-duration="1000" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10">
+            <i class="fa-solid fa-laptop-code section-bg-icon"></i>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
+                <div>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Featured Presentations & Excel Demos</h2>
+                    <p class="text-xs text-zinc-400">Highlights from my work hub and academic slide decks.</p>
+                </div>
+                <a href="portfolio.html" class="self-start sm:self-auto text-[11px] font-bold text-blue-400 hover:text-blue-300 uppercase tracking-widest bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20 transition flex items-center space-x-1.5">
+                    <span>View All Hub</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <div class="relative overflow-hidden rounded-2xl bg-zinc-900/80 border border-white/5 p-5 sm:p-6 min-h-[190px] relative z-10">
+                <div class="slide-item active space-y-3">
+                    <div class="flex justify-between items-center text-[11px] font-bold text-blue-400 uppercase tracking-widest">
+                        <span class="flex items-center space-x-2"><i class="fa-solid fa-file-powerpoint text-base"></i><span>Presentation Deck</span></span>
+                        <span>Slides / PDF</span>
+                    </div>
+                    <h3 class="font-bold text-base sm:text-lg text-white">HR Practices & Employee Retention Strategy</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Comprehensive slide deck covering modern recruitment trends, employee motivation theories, and retention frameworks.</p>
+                    <div class="pt-2 flex justify-between items-center">
+                        <a href="portfolio.html" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1.5">
+                            <span>Explore Showcase</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                        <span class="text-[11px] text-zinc-500">Slide 1 of 2</span>
+                    </div>
+                </div>
+
+                <div class="slide-item space-y-3">
+                    <div class="flex justify-between items-center text-[11px] font-bold text-emerald-400 uppercase tracking-widest">
+                        <span class="flex items-center space-x-2"><i class="fa-solid fa-file-excel text-base"></i><span>Excel & Data Model</span></span>
+                        <span>XLSX / Dashboard</span>
+                    </div>
+                    <h3 class="font-bold text-base sm:text-lg text-white">Capital Budgeting & Working Capital Model</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Advanced financial analysis workbook featuring automated NPV, IRR calculations, ratio analysis, and forecasting charts.</p>
+                    <div class="pt-2 flex justify-between items-center">
+                        <a href="portfolio.html" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold inline-flex items-center space-x-1.5">
+                            <span>Explore Showcase</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                        <span class="text-[11px] text-zinc-500">Slide 2 of 2</span>
+                    </div>
+                </div>
+
+                <div class="flex justify-center space-x-2 mt-5">
+                    <button onclick="currentSlide(0)" class="dot w-2 h-2 rounded-full bg-blue-500 transition-all"></button>
+                    <button onclick="currentSlide(1)" class="dot w-2 h-2 rounded-full bg-zinc-700 transition-all"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. RECENT BLOG HIGHLIGHTS -->
+        <section id="blog-highlights" data-aos="fade-up" data-aos-duration="1000" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10">
+            <i class="fa-solid fa-blog section-bg-icon"></i>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
+                <div>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Latest From My Blog</h2>
+                    <p class="text-xs text-zinc-400">Thoughts, insights, and professional writings.</p>
+                </div>
+                <a href="blog.html" class="self-start sm:self-auto text-[11px] font-bold text-blue-400 hover:text-blue-300 uppercase tracking-widest bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20 transition flex items-center space-x-1.5">
+                    <span>View All Blog</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <div id="homeBlogContainer" class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10"></div>
+        </section>
+
+        <!-- 9. CONTACT SECTION & FORM -->
         <section id="contact" data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10">
             <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <i class="fa-solid fa-address-book section-bg-icon"></i>
@@ -579,6 +681,12 @@
     <!-- FOOTER -->
     <footer class="max-w-5xl mx-auto px-4 sm:px-6 mt-16 py-8 border-t border-white/10 text-center text-xs text-zinc-500">
         <p>&copy; 2026 Arup Kumar Saha. All Rights Reserved.</p>
+        <div class="flex lg:hidden items-center justify-center space-x-3.5 mt-4">
+            <a href="https://www.linkedin.com/in/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-blue-600 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="LinkedIn"><i class="fa-brands fa-linkedin text-xs"></i></a>
+            <a href="https://github.com/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-zinc-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="GitHub"><i class="fa-brands fa-github text-xs"></i></a>
+            <a href="https://facebook.com/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-blue-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="Facebook"><i class="fa-brands fa-facebook text-xs"></i></a>
+            <a href="mailto:arup.bu.bd@gmail.com" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-amber-600 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="Email"><i class="fa-solid fa-envelope text-xs"></i></a>
+        </div>
     </footer>
 
     <!-- SCROLL TO TOP -->
@@ -696,9 +804,9 @@
     <script>
         AOS.init({ once: true, offset: 50, duration: 900 });
 
-        // INTERSECTION OBSERVER FOR ALL ANIMATED SECTIONS AND PREFERENCES
+        // INTERSECTION OBSERVER FOR ANIMATED BADGES & SECTIONS
         const observerOptions = { root: null, threshold: 0.15 };
-        const observer = new IntersectionObserver((entries, observer) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active-animation');
@@ -710,6 +818,73 @@
             if(el) observer.observe(el);
         });
 
+        // BLOG RENDER SCRIPT
+        const homeBlogContainer = document.getElementById('homeBlogContainer');
+        if (typeof siteData !== 'undefined' && homeBlogContainer) {
+            if (siteData.isComingSoon) {
+                homeBlogContainer.innerHTML = `
+                    <div class="col-span-full bg-zinc-900/60 p-6 rounded-2xl border border-white/5 text-center space-y-3">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Notice</span>
+                        <h3 class="font-bold text-base text-white">Blog Hub is Coming Soon</h3>
+                        <p class="text-xs sm:text-sm text-zinc-400 max-w-md mx-auto">${siteData.comingSoonMessage}</p>
+                        <div class="pt-2">
+                            <a href="blog.html" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1.5">
+                                <span>Visit Blog Page</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            } else {
+                let postsHTML = '';
+                siteData.posts.forEach(post => {
+                    postsHTML += `
+                        <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-3 hover:border-blue-500/40 transition">
+                            <div class="flex justify-between text-[11px] font-bold text-blue-400 uppercase tracking-widest">
+                                <span>${post.category}</span>
+                                <span>${post.date}</span>
+                            </div>
+                            <h3 class="font-bold text-base text-white hover:text-blue-400 transition cursor-pointer">${post.title}</h3>
+                            <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">${post.excerpt}</p>
+                            <div class="pt-2">
+                                <a href="${post.link}" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1.5">
+                                    <span>Read More</span>
+                                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                });
+                homeBlogContainer.innerHTML = postsHTML;
+            }
+        }
+
+        // SLIDESHOW SCRIPT
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide-item');
+        const dots = document.querySelectorAll('.dot');
+        function showSlides() {
+            if(slides.length === 0) return;
+            slides.forEach((slide) => slide.classList.remove('active'));
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].classList.add('active');
+        }
+        setInterval(showSlides, 6000);
+
+        // TESTIMONIALS SLIDESHOW
+        let testimonialIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial-item');
+        function showTestimonials() {
+            if(testimonials.length === 0) return;
+            testimonials.forEach((item) => item.classList.remove('active'));
+            testimonialIndex++;
+            if (testimonialIndex > testimonials.length) { testimonialIndex = 1; }
+            testimonials[testimonialIndex - 1].classList.add('active');
+        }
+        setInterval(showTestimonials, 5500);
+
+        // CHAT FUNCTIONS
         function toggleSubChatButtons() {
             const waBtn = document.getElementById('whatsappFloatBtn');
             const aiBtn = document.getElementById('aiChatFloatBtn');
