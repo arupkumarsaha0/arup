@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arup Kumar Saha (অরূপ কুমার সাহা) — Management & HR Professional</title>
     
-    <!-- Strong SEO & Meta Tags (Bangla included for backend SEO) -->
+    <!-- Strong SEO & Meta Tags -->
     <meta name="description" content="Official portfolio of Arup Kumar Saha (অরূপ কুমার সাহা) - Dynamic Management & HR Professional, expert in corporate operations, project coordination, and administration.">
     <meta name="keywords" content="Arup Kumar Saha, অরূপ কুমার সাহা, HR Professional, Management, Tourism, Portfolio, Barishal, Bangladesh">
     <meta name="author" content="Arup Kumar Saha">
@@ -17,7 +17,7 @@
     <meta property="og:url" content="https://arup.live">
     <meta property="og:image" content="https://arup.live/profile.jpg">
 
-    <!-- Fixed Favicon: Professional Blue 'A' Watermark Icon -->
+    <!-- Fixed Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%233b82f6'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='60' font-weight='bold' fill='%23ffffff'>A</text></svg>">
 
     <!-- Tailwind CSS -->
@@ -45,7 +45,6 @@
         }
     </script>
     <style>
-        /* Prevent horizontal overflow on mobile devices */
         html, body {
             background-color: #040406;
             color: #f3f4f6;
@@ -69,7 +68,29 @@
             box-shadow: 0 35px 70px -15px rgba(59, 130, 246, 0.28);
         }
 
-        /* Sequential / One-by-One Skill Badge Pop-up Animation */
+        /* SMART ANIMATED SECTION HEADINGS */
+        .section-heading {
+            background: linear-gradient(135deg, #ffffff 30%, #93c5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+            transition: all 0.4s ease;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #f59e0b);
+            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .bento-card:hover .section-heading::after, section:hover .section-heading::after {
+            width: 100%;
+        }
+
         @keyframes skillPopIn {
             0% { opacity: 0; transform: translateY(20px) scale(0.85); }
             100% { opacity: 1; transform: translateY(0) scale(1); }
@@ -83,11 +104,9 @@
             z-index: 1;
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
-
         .skills-active .skill-badge {
             animation: skillPopIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
-
         .skills-active .skill-badge:nth-child(1) { animation-delay: 0.1s; }
         .skills-active .skill-badge:nth-child(2) { animation-delay: 0.2s; }
         .skills-active .skill-badge:nth-child(3) { animation-delay: 0.3s; }
@@ -236,7 +255,7 @@
                         <span><span id="typewriter"></span><span class="typed-cursor">&nbsp;</span></span>
                     </span>
                     <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight flex items-center gap-3">
-                        <span>Arup Kumar Saha</span>
+                        <span class="section-heading">Arup Kumar Saha</span>
                         <!-- Verified Blue Badge -->
                         <span class="inline-flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 bg-blue-600 text-white rounded-full text-xs shadow-lg shrink-0" title="Verified Professional">
                             <i class="fa-solid fa-check text-[11px]"></i>
@@ -290,7 +309,7 @@
                 <div class="flex items-center justify-between relative z-10">
                     <h3 class="text-base sm:text-lg font-bold text-white flex items-center space-x-2.5">
                         <span class="w-8 h-8 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-sm"><i class="fa-solid fa-city"></i></span>
-                        <span>Preferred Sectors</span>
+                        <span class="section-heading">Preferred Sectors</span>
                     </h3>
                     <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 px-2.5 py-1 rounded-full border border-blue-500/20">Work Culture</span>
                 </div>
@@ -311,7 +330,7 @@
                 <div class="flex items-center justify-between relative z-10">
                     <h3 class="text-base sm:text-lg font-bold text-white flex items-center space-x-2.5">
                         <span class="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-sm"><i class="fa-solid fa-briefcase"></i></span>
-                        <span>Preferred Job Roles</span>
+                        <span class="section-heading">Preferred Job Roles</span>
                     </h3>
                     <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">Career Focus</span>
                 </div>
@@ -330,7 +349,7 @@
         <!-- 2. PROFESSIONAL EXPERIENCE -->
         <section id="experience" class="space-y-4 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <div class="flex items-center justify-between px-2">
-                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Professional Experience & Projects</h2>
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Professional Experience & Projects</h2>
                 <span class="text-[11px] text-blue-400 uppercase tracking-widest font-semibold bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Track Record</span>
             </div>
 
@@ -339,7 +358,7 @@
                     <i class="fa-solid fa-briefcase section-bg-icon"></i>
                     <div class="space-y-2.5 relative z-10">
                         <div class="text-[11px] font-bold text-blue-400">Jun 2025 - Sep 2025</div>
-                        <h3 class="text-base sm:text-lg font-bold">HR & Admin Intern</h3>
+                        <h3 class="text-base sm:text-lg font-bold text-white">HR & Admin Intern</h3>
                         <p class="text-xs text-amber-400 font-medium">Amrita Consumer Food Products Ltd.</p>
                         <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Streamlined office administration workflows, managed employee record-keeping, and optimized documentation routines.</p>
                     </div>
@@ -349,7 +368,7 @@
                     <i class="fa-solid fa-hands-holding-child section-bg-icon"></i>
                     <div class="space-y-2.5 relative z-10">
                         <div class="text-[11px] font-bold text-amber-400">Jun 2024 - Mar 2025</div>
-                        <h3 class="text-base sm:text-lg font-bold">Project Volunteer</h3>
+                        <h3 class="text-base sm:text-lg font-bold text-white">Project Volunteer</h3>
                         <p class="text-xs text-blue-400 font-medium">BRAC | Barishal</p>
                         <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Maintained physical registers, coordinated stakeholder communications, and managed RMIS database entries with zero backlog.</p>
                     </div>
@@ -359,7 +378,7 @@
                     <i class="fa-solid fa-microscope section-bg-icon"></i>
                     <div class="space-y-2.5 relative z-10">
                         <div class="text-[11px] font-bold text-emerald-400">Apr 2023 - May 2024</div>
-                        <h3 class="text-base sm:text-lg font-bold">Research Assistant</h3>
+                        <h3 class="text-base sm:text-lg font-bold text-white">Research Assistant</h3>
                         <p class="text-xs text-emerald-400 font-medium">University of Barishal</p>
                         <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">Conducted empirical survey data collection, statistical tabulation, literature synthesis, and prepared executive summary reports.</p>
                     </div>
@@ -373,7 +392,7 @@
             <i class="fa-solid fa-store section-bg-icon"></i>
             <div class="flex items-center justify-between px-2 relative z-10">
                 <div>
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Entrepreneurial Ventures</h2>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Entrepreneurial Ventures</h2>
                     <p class="text-xs text-zinc-400">Business fairs and commercial initiatives.</p>
                 </div>
                 <span class="text-[11px] font-bold text-sky-400 bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">Business</span>
@@ -398,7 +417,7 @@
             <i class="fa-solid fa-trophy section-bg-icon"></i>
             <div class="flex items-center justify-between px-2 relative z-10">
                 <div>
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Leadership & Extracurriculars</h2>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Leadership & Extracurriculars</h2>
                     <p class="text-xs text-zinc-400">Club involvements, leadership roles & athletic pursuits.</p>
                 </div>
                 <span class="text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Leadership & Sports</span>
@@ -442,7 +461,7 @@
             <div class="md:col-span-7 bento-card p-6 sm:p-8 rounded-3xl space-y-6">
                 <i class="fa-solid fa-graduation-cap section-bg-icon"></i>
                 <div class="flex items-center justify-between relative z-10">
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Educational Background</h2>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Educational Background</h2>
                     <span class="text-[11px] font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Timeline</span>
                 </div>
                 <div class="relative border-l-2 border-blue-500/30 ml-3 space-y-8 py-3 relative z-10">
@@ -481,10 +500,10 @@
                 </div>
             </div>
 
-            <!-- SMART SKILLS & COMPETENCIES SECTION WITH ONE-BY-ONE STAGGERED POP UP -->
+            <!-- SMART SKILLS & COMPETENCIES SECTION -->
             <div id="skillsSection" class="md:col-span-5 bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fa-solid fa-brain section-bg-icon"></i>
-                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Skills & Competencies</h2>
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Skills & Competencies</h2>
                 <div class="space-y-5 relative z-10">
                     <div>
                         <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-2.5">Technical & Software</div>
@@ -520,7 +539,7 @@
         <section class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <div class="bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <i class="fa-solid fa-certificate section-bg-icon"></i>
-                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Certificates & Trainings</h2>
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Certificates & Trainings</h2>
                 <div class="space-y-4 relative z-10">
                     <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-1.5 hover:border-blue-500/40 transition">
                         <div class="flex justify-between text-[11px] font-bold text-blue-400">
@@ -543,7 +562,7 @@
 
             <div id="services" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <i class="fa-solid fa-handshake section-bg-icon"></i>
-                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Professional Services</h2>
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Professional Services</h2>
                 <div class="space-y-3.5 relative z-10">
                     <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
                         <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-calculator text-sm"></i></div>
@@ -566,7 +585,7 @@
             <i class="fa-solid fa-laptop-code section-bg-icon"></i>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
                 <div>
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Featured Presentations & Excel Demos</h2>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Featured Presentations & Excel Demos</h2>
                     <p class="text-xs text-zinc-400">Highlights from my work hub and academic slide decks.</p>
                 </div>
                 <a href="portfolio.html" class="self-start sm:self-auto text-[11px] font-bold text-blue-400 hover:text-blue-300 uppercase tracking-widest bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20 transition flex items-center space-x-1.5">
@@ -620,7 +639,7 @@
             <i class="fa-solid fa-blog section-bg-icon"></i>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
                 <div>
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Latest From My Blog</h2>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Latest From My Blog</h2>
                     <p class="text-xs text-zinc-400">Thoughts, insights, and professional writings.</p>
                 </div>
                 <a href="blog.html" class="self-start sm:self-auto text-[11px] font-bold text-blue-400 hover:text-blue-300 uppercase tracking-widest bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20 transition flex items-center space-x-1.5">
@@ -637,7 +656,7 @@
             <i class="fa-solid fa-camera-retro section-bg-icon"></i>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
                 <div>
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200">Photography & Travel Highlights</h2>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Photography & Travel Highlights</h2>
                     <p class="text-xs text-zinc-400">Captured moments and scenic explorations.</p>
                 </div>
                 <a href="gallery.html" class="self-start sm:self-auto text-[11px] font-bold text-amber-400 hover:text-amber-300 uppercase tracking-widest bg-amber-500/10 px-3 py-1.5 rounded-full border border-amber-500/20 transition flex items-center space-x-1.5">
@@ -690,7 +709,7 @@
 
             <div class="max-w-xl mx-auto space-y-2.5 relative z-10">
                 <span class="text-[10px] uppercase font-bold text-blue-400 tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Stay Updated</span>
-                <h2 class="text-xl sm:text-2xl font-extrabold tracking-tight text-white">Subscribe to My Newsletter</h2>
+                <h2 class="text-xl sm:text-2xl font-extrabold tracking-tight text-white section-heading">Subscribe to My Newsletter</h2>
                 <p class="text-xs sm:text-sm text-zinc-400">Get my latest articles on management, finance insights, and professional updates directly in your inbox.</p>
             </div>
 
@@ -707,7 +726,7 @@
         <section id="contact" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <i class="fa-solid fa-address-book section-bg-icon"></i>
-                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Contact Details</h2>
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Contact Details</h2>
                 <div class="space-y-4 text-xs sm:text-sm relative z-10">
                     <div class="flex items-center space-x-4 text-zinc-400">
                         <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-phone"></i></div>
@@ -726,7 +745,7 @@
 
             <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <i class="fa-solid fa-paper-plane section-bg-icon"></i>
-                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 relative z-10">Let’s Connect & Collaborate</h2>
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Let’s Connect & Collaborate</h2>
                 <p class="text-xs sm:text-sm text-zinc-400 relative z-10">Open for professional opportunities, recruitment, and academic services.</p>
                 <form action="https://formspree.io/f/xqppqjbb" method="POST" class="space-y-4 relative z-10">
                     <div>
@@ -766,7 +785,7 @@
         <i class="fa-solid fa-arrow-up text-xs"></i>
     </a>
 
-    <!-- CUSTOM SMART CHATBOT SYSTEM WITH WAVE EFFECT -->
+    <!-- UNIFIED FLOATING CHAT WIDGET WITH WAVE EFFECT & DUAL CHOOSE OPTIONS -->
     <style>
         .right-floating-container {
             position: fixed;
@@ -797,11 +816,8 @@
         .float-btn:hover {
             transform: scale(1.1);
         }
-        #whatsappFloatBtn {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-        }
         
-        /* Live Chat Button with Wave / Ripple Ring Effect */
+        /* Unified Trigger Button with Wave / Ripple Ring Effect */
         #chatToggleBtn {
             background: linear-gradient(135deg, #3b82f6, #1d4ed8);
             position: relative;
@@ -824,7 +840,7 @@
         /* Notification Toast Style */
         #chatNotificationToast {
             position: absolute;
-            bottom: 60px;
+            bottom: 65px;
             right: 0;
             width: 270px;
             background: rgba(14, 15, 20, 0.96);
@@ -851,6 +867,31 @@
             opacity: 0;
             transform: translateY(15px) scale(0.95);
         }
+
+        /* Popup Menu Selection Box when clicking the Wave Button */
+        #chatOptionsPopup {
+            position: absolute;
+            bottom: 68px;
+            right: 0;
+            width: 280px;
+            background: #0e0f14;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            padding: 14px;
+            gap: 10px;
+            animation: chatPopup 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            z-index: 10001;
+        }
+        @keyframes chatPopup {
+            from { opacity: 0; transform: translateY(15px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* Full Chat Interface Container */
         #chatBoxContainer {
             position: absolute;
             bottom: 68px;
@@ -864,10 +905,7 @@
             display: none;
             flex-direction: column;
             animation: chatPopup 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        @keyframes chatPopup {
-            from { opacity: 0; transform: translateY(15px) scale(0.95); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
+            z-index: 10002;
         }
         .chat-header {
             background: linear-gradient(135deg, #0e0f14, #181922);
@@ -912,20 +950,23 @@
             line-height: 1.4;
             align-self: flex-end;
         }
-        .quick-reply-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            color: #60a5fa;
-            padding: 6px 10px;
-            border-radius: 8px;
-            font-size: 11px;
+        .option-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 11px 13px;
+            display: flex;
+            align-items: center;
+            space-x: 12px;
             cursor: pointer;
-            transition: all 0.2s;
-            text-align: left;
-        }
-        .quick-reply-btn:hover {
-            background: rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
             color: #ffffff;
+        }
+        .option-card:hover {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-2px);
         }
         .notification-badge {
             position: absolute;
@@ -941,64 +982,89 @@
     </style>
 
     <div class="right-floating-container">
-        <!-- WhatsApp Floating Button -->
-        <a href="https://wa.me/8801646126678?text=Hello%20Arup,%20I%20visited%20your%20portfolio!" target="_blank" id="whatsappFloatBtn" class="float-btn" title="Chat on WhatsApp (@arupkumarsaha0)">
-            <i class="fa-brands fa-whatsapp text-2xl"></i>
-        </a>
+        <!-- Notification Toast -->
+        <div id="chatNotificationToast" onclick="openChatFromToast()">
+            <div class="flex items-center space-x-2">
+                <div class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-[10px] border border-blue-500/30">A</div>
+                <span class="text-xs font-bold text-white">Arup's Assistant</span>
+            </div>
+            <p class="text-[11px] text-zinc-300 leading-snug pt-1">Hello! 👋 Click here to chat with me or connect via WhatsApp!</p>
+        </div>
 
-        <!-- Chatbot Widget with Wave Effect & Auto-Fade Toast -->
-        <div class="relative">
-            <!-- Small Auto-Disappearing Notification Toast -->
-            <div id="chatNotificationToast" onclick="openChatFromToast()">
+        <!-- 1. POPUP MENU WITH TWO OPTIONS (Appears on clicking wave button) -->
+        <div id="chatOptionsPopup">
+            <div class="flex items-center justify-between pb-2 border-b border-white/10">
                 <div class="flex items-center space-x-2">
                     <div class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-[10px] border border-blue-500/30">A</div>
-                    <span class="text-xs font-bold text-white">Arup's Assistant</span>
+                    <span class="text-xs font-bold text-white">Choose Chat Channel</span>
                 </div>
-                <p class="text-[11px] text-zinc-300 leading-snug pt-1">Hello! 👋 Thanks for visiting. Feel free to ask anything about my professional background!</p>
+                <button onclick="toggleChatPopup()" class="text-zinc-400 hover:text-white text-xs p-1"><i class="fa-solid fa-xmark"></i></button>
             </div>
+            
+            <div class="flex flex-col gap-2 pt-1">
+                <!-- Option 1: WhatsApp Chat -->
+                <a href="https://wa.me/8801646126678?text=Hello%20Arup,%20I%20visited%20your%20portfolio!" target="_blank" class="option-card flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/30">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-white">WhatsApp Chat</div>
+                        <div class="text-[10px] text-zinc-400">Direct message on WhatsApp</div>
+                    </div>
+                </a>
 
-            <!-- Chat Box Container (with exactly two quick action items on opening) -->
-            <div id="chatBoxContainer">
-                <div class="chat-header">
-                    <div class="flex items-center space-x-2.5">
-                        <div class="w-7 h-7 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs border border-blue-500/30">A</div>
-                        <div>
-                            <h4 class="text-xs font-bold text-white">Arup's Assistant</h4>
-                            <div class="flex items-center space-x-1 text-[9px] text-emerald-400">
-                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                                <span class="text-emerald-400 font-semibold">Online</span>
-                            </div>
+                <!-- Option 2: Live AI Assistant Chat -->
+                <button onclick="openLiveChatBox()" class="option-card flex items-center gap-3 text-left w-full">
+                    <div class="w-9 h-9 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/30">
+                        <i class="fa-solid fa-comments text-sm"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-white">Live AI Assistant</div>
+                        <div class="text-[10px] text-zinc-400">Instant answers about Arup</div>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- 2. FULL LIVE CHAT BOX CONTAINER -->
+        <div id="chatBoxContainer">
+            <div class="chat-header">
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-7 h-7 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs border border-blue-500/30">A</div>
+                    <div>
+                        <h4 class="text-xs font-bold text-white">Arup's Assistant</h4>
+                        <div class="flex items-center space-x-1 text-[9px] text-emerald-400">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span class="text-emerald-400 font-semibold">Online</span>
                         </div>
                     </div>
-                    <button onclick="toggleChatBox()" class="text-zinc-400 hover:text-white text-xs p-1"><i class="fa-solid fa-xmark"></i></button>
                 </div>
-                <div id="chatBody" class="chat-body">
-                    <div class="bot-msg">
-                        Hello! 👋 I am Arup's AI Assistant. How can I help you today? Choose from below:
-                    </div>
-                    <div class="flex flex-col gap-2 pt-1">
-                        <button onclick="handleQuickQuery('cv')" class="quick-reply-btn flex items-center space-x-2">
-                            <i class="fa-solid fa-file-pdf text-blue-400"></i>
-                            <span>📄 Download Official CV (PDF)</span>
-                        </button>
-                        <button onclick="handleQuickQuery('contact')" class="quick-reply-btn flex items-center space-x-2">
-                            <i class="fa-solid fa-address-book text-amber-400"></i>
-                            <span>📞 Contact Information & Location</span>
-                        </button>
-                    </div>
+                <button onclick="toggleLiveChatBox()" class="text-zinc-400 hover:text-white text-xs p-1"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="chatBody" class="chat-body">
+                <div class="bot-msg">
+                    Hello! 👋 I am Arup's AI Assistant. How can I help you today? Choose from below:
                 </div>
-                <div class="chat-footer">
-                    <input type="text" id="chatInput" placeholder="Type a message..." class="flex-grow bg-zinc-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500" onkeypress="if(event.key === 'Enter') sendUserMessage()">
-                    <button onclick="sendUserMessage()" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 rounded-xl text-xs transition"><i class="fa-solid fa-paper-plane"></i></button>
+                <div class="flex flex-col gap-2 pt-1">
+                    <button onclick="handleQuickQuery('cv')" class="option-card py-2 px-3 text-left text-xs font-semibold text-blue-400 border border-blue-500/30">
+                        📄 Download Official CV (PDF)
+                    </button>
+                    <button onclick="handleQuickQuery('contact')" class="option-card py-2 px-3 text-left text-xs font-semibold text-amber-400 border border-amber-500/30">
+                        📞 Contact Information & Location
+                    </button>
                 </div>
             </div>
-
-            <!-- Chat Toggle Button with Wave Effect -->
-            <button id="chatToggleBtn" class="float-btn" onclick="toggleChatBox()" title="Chat with Arup's Assistant">
-                <i class="fa-solid fa-comments text-lg"></i>
-                <span id="notifBadge" class="notification-badge"></span>
-            </button>
+            <div class="chat-footer">
+                <input type="text" id="chatInput" placeholder="Type a message..." class="flex-grow bg-zinc-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500" onkeypress="if(event.key === 'Enter') sendUserMessage()">
+                <button onclick="sendUserMessage()" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 rounded-xl text-xs transition"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
         </div>
+
+        <!-- 3. UNIFIED FLOATING TRIGGER BUTTON WITH WAVE EFFECT -->
+        <button id="chatToggleBtn" class="float-btn" onclick="toggleChatPopup()" title="Chat with Arup">
+            <i class="fa-solid fa-comments text-lg"></i>
+            <span id="notifBadge" class="notification-badge"></span>
+        </button>
     </div>
 
     <!-- CENTRAL DATA SCRIPT -->
@@ -1013,11 +1079,11 @@
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const toast = document.getElementById('chatNotificationToast');
+                const popup = document.getElementById('chatOptionsPopup');
                 const box = document.getElementById('chatBoxContainer');
-                if (box.style.display !== 'flex' && toast) {
+                if (popup.style.display !== 'flex' && box.style.display !== 'flex' && toast) {
                     toast.classList.add('show');
                     
-                    // Auto hide after 5 seconds
                     setTimeout(() => {
                         toast.classList.remove('show');
                         toast.classList.add('hide');
@@ -1032,27 +1098,43 @@
                 toast.classList.remove('show');
                 toast.classList.add('hide');
             }
-            toggleChatBox();
+            toggleChatPopup();
         }
 
-        // Chatbot Functionality
-        function toggleChatBox() {
+        // Toggle Popup Menu with two options
+        function toggleChatPopup() {
             const toast = document.getElementById('chatNotificationToast');
             if(toast) {
                 toast.classList.remove('show');
                 toast.classList.add('hide');
             }
 
+            const popup = document.getElementById('chatOptionsPopup');
             const box = document.getElementById('chatBoxContainer');
             const badge = document.getElementById('notifBadge');
             if(badge) badge.style.display = 'none';
 
-            if (box.style.display === 'flex') {
-                box.style.display = 'none';
+            // Close full chat if open
+            box.style.display = 'none';
+
+            if (popup.style.display === 'flex') {
+                popup.style.display = 'none';
             } else {
-                box.style.display = 'flex';
-                document.getElementById('chatInput').focus();
+                popup.style.display = 'flex';
             }
+        }
+
+        // Open Full Live Chat Box from Popup option
+        function openLiveChatBox() {
+            document.getElementById('chatOptionsPopup').style.display = 'none';
+            const box = document.getElementById('chatBoxContainer');
+            box.style.display = 'flex';
+            document.getElementById('chatInput').focus();
+        }
+
+        function toggleLiveChatBox() {
+            const box = document.getElementById('chatBoxContainer');
+            box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
         }
 
         function appendMessage(text, sender) {
@@ -1078,7 +1160,7 @@
             }
         }
 
-        // TRAINED SMART AI INTENT PARSER
+        // Smart Bot Response Parser
         function getSmartBotResponse(query) {
             const q = query.toLowerCase().trim();
 
@@ -1230,7 +1312,7 @@
             }
         });
 
-        // SLIDESHOW (6 seconds interval)
+        // SLIDESHOW
         let slideIndex = 0;
         const slides = document.querySelectorAll('.slide-item');
         const dots = document.querySelectorAll('.dot');
@@ -1260,7 +1342,7 @@
         }
         setInterval(showSlides, 6000);
 
-        // PHOTO SLIDESHOW (6 seconds interval)
+        // PHOTO SLIDESHOW
         let photoSlideIndex = 0;
         const photoSlides = document.querySelectorAll('.photo-slide-item');
         const photoDots = document.querySelectorAll('.photo-dot');
