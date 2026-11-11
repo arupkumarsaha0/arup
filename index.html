@@ -560,18 +560,32 @@
                 </div>
             </div>
 
+            <!-- FIXED & REDESIGNED PROFESSIONAL SERVICES SECTION (Especially First Item) -->
             <div id="services" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <i class="fa-solid fa-handshake section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Professional Services</h2>
                 <div class="space-y-3.5 relative z-10">
-                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
-                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-calculator text-sm"></i></div>
-                        <div><h4 class="font-bold text-xs sm:text-sm text-white">Financial Management Tutoring</h4><p class="text-xs text-zinc-400">Capital Budgeting, Cost of Capital & Working Capital.</p></div>
+                    <!-- First Service: Financial Management Tutoring (Completely Refined & Highlighted) -->
+                    <div class="bg-gradient-to-r from-blue-600/15 via-zinc-900 to-zinc-900 p-4 rounded-2xl border border-blue-500/30 flex items-center space-x-4 hover:border-blue-500 transition duration-300 shadow-lg group">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-calculator text-base"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-extrabold text-xs sm:text-sm text-white">Financial Management Tutoring</h4>
+                                <span class="text-[9px] font-bold text-blue-400 bg-blue-500/20 px-2 py-0.5 rounded-full border border-blue-500/30">Expert</span>
+                            </div>
+                            <p class="text-xs text-zinc-300 mt-0.5">Capital Budgeting, Cost of Capital, Working Capital & Ratio Analysis.</p>
+                        </div>
                     </div>
+
+                    <!-- Second Service -->
                     <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
                         <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-book-open text-sm"></i></div>
                         <div><h4 class="font-bold text-xs sm:text-sm text-white">Academic Mentoring</h4><p class="text-xs text-zinc-400">English grammar, mathematics, and science tutoring.</p></div>
                     </div>
+
+                    <!-- Third Service -->
                     <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
                         <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-chart-line text-sm"></i></div>
                         <div><h4 class="font-bold text-xs sm:text-sm text-white">Research & Data Tabulation</h4><p class="text-xs text-zinc-400">Survey data collection and SPSS statistical analysis.</p></div>
@@ -785,7 +799,7 @@
         <i class="fa-solid fa-arrow-up text-xs"></i>
     </a>
 
-    <!-- UNIFIED FLOATING CHAT WIDGET WITH WAVE EFFECT & DUAL CHOOSE OPTIONS -->
+    <!-- UNIFIED FLOATING CHAT WIDGET WITH WAVE EFFECT & TWO POPUP OPTIONS -->
     <style>
         .right-floating-container {
             position: fixed;
@@ -868,12 +882,12 @@
             transform: translateY(15px) scale(0.95);
         }
 
-        /* Popup Menu Selection Box when clicking the Wave Button */
+        /* Popup Menu Box showing the two classic options */
         #chatOptionsPopup {
             position: absolute;
             bottom: 68px;
             right: 0;
-            width: 280px;
+            width: 290px;
             background: #0e0f14;
             border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 20px;
@@ -891,7 +905,7 @@
             to { opacity: 1; transform: translateY(0) scale(1); }
         }
 
-        /* Full Chat Interface Container */
+        /* Full Live Chat Box Container */
         #chatBoxContainer {
             position: absolute;
             bottom: 68px;
@@ -950,20 +964,22 @@
             line-height: 1.4;
             align-self: flex-end;
         }
-        .option-card {
+        .popup-option-btn {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 12px;
-            padding: 11px 13px;
+            padding: 12px 14px;
             display: flex;
             align-items: center;
-            space-x: 12px;
+            gap: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
             color: #ffffff;
+            width: 100%;
+            text-align: left;
         }
-        .option-card:hover {
+        .popup-option-btn:hover {
             background: rgba(59, 130, 246, 0.15);
             border-color: rgba(59, 130, 246, 0.5);
             transform: translateY(-2px);
@@ -991,19 +1007,19 @@
             <p class="text-[11px] text-zinc-300 leading-snug pt-1">Hello! 👋 Click here to chat with me or connect via WhatsApp!</p>
         </div>
 
-        <!-- 1. POPUP MENU WITH TWO OPTIONS (Appears on clicking wave button) -->
+        <!-- 1. POPUP MENU WITH TWO OPTIONS (As requested: two classic buttons, not a long list) -->
         <div id="chatOptionsPopup">
             <div class="flex items-center justify-between pb-2 border-b border-white/10">
                 <div class="flex items-center space-x-2">
                     <div class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-[10px] border border-blue-500/30">A</div>
-                    <span class="text-xs font-bold text-white">Choose Chat Channel</span>
+                    <span class="text-xs font-bold text-white">Choose Chat Option</span>
                 </div>
                 <button onclick="toggleChatPopup()" class="text-zinc-400 hover:text-white text-xs p-1"><i class="fa-solid fa-xmark"></i></button>
             </div>
             
-            <div class="flex flex-col gap-2 pt-1">
+            <div class="flex flex-col gap-2.5 pt-1">
                 <!-- Option 1: WhatsApp Chat -->
-                <a href="https://wa.me/8801646126678?text=Hello%20Arup,%20I%20visited%20your%20portfolio!" target="_blank" class="option-card flex items-center gap-3">
+                <a href="https://wa.me/8801646126678?text=Hello%20Arup,%20I%20visited%20your%20portfolio!" target="_blank" class="popup-option-btn">
                     <div class="w-9 h-9 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/30">
                         <i class="fa-brands fa-whatsapp text-base"></i>
                     </div>
@@ -1014,7 +1030,7 @@
                 </a>
 
                 <!-- Option 2: Live AI Assistant Chat -->
-                <button onclick="openLiveChatBox()" class="option-card flex items-center gap-3 text-left w-full">
+                <button onclick="openLiveChatBox()" class="popup-option-btn">
                     <div class="w-9 h-9 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/30">
                         <i class="fa-solid fa-comments text-sm"></i>
                     </div>
@@ -1046,10 +1062,10 @@
                     Hello! 👋 I am Arup's AI Assistant. How can I help you today? Choose from below:
                 </div>
                 <div class="flex flex-col gap-2 pt-1">
-                    <button onclick="handleQuickQuery('cv')" class="option-card py-2 px-3 text-left text-xs font-semibold text-blue-400 border border-blue-500/30">
+                    <button onclick="handleQuickQuery('cv')" class="popup-option-btn py-2 px-3 text-left text-xs font-semibold text-blue-400 border border-blue-500/30">
                         📄 Download Official CV (PDF)
                     </button>
-                    <button onclick="handleQuickQuery('contact')" class="option-card py-2 px-3 text-left text-xs font-semibold text-amber-400 border border-amber-500/30">
+                    <button onclick="handleQuickQuery('contact')" class="popup-option-btn py-2 px-3 text-left text-xs font-semibold text-amber-400 border border-amber-500/30">
                         📞 Contact Information & Location
                     </button>
                 </div>
@@ -1101,7 +1117,7 @@
             toggleChatPopup();
         }
 
-        // Toggle Popup Menu with two options
+        // Toggle Popup Menu with two distinct buttons
         function toggleChatPopup() {
             const toast = document.getElementById('chatNotificationToast');
             if(toast) {
