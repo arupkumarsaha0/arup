@@ -160,12 +160,12 @@
             50% { opacity: 0; }
         }
 
-        .slide-item, .photo-slide-item {
+        .slide-item, .photo-slide-item, .testimonial-item {
             display: none;
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
-        .slide-item.active, .photo-slide-item.active {
+        .slide-item.active, .photo-slide-item.active, .testimonial-item.active {
             display: block;
             opacity: 1;
             animation: smoothFade 1s ease-in-out;
@@ -264,6 +264,23 @@
                         Dynamic Management & HR Professional holding an MBA & BBA from the University of Barishal. Expert in corporate operations, strategic administration, academic research, and financial analysis. Passionate about driving organizational efficiency and impactful leadership.
                     </p>
                 </div>
+                
+                <!-- STATS COUNTER BAR -->
+                <div class="grid grid-cols-3 gap-2 py-2 border-y border-white/10 relative z-10">
+                    <div>
+                        <div class="text-lg sm:text-2xl font-extrabold text-white">03+</div>
+                        <div class="text-[10px] text-zinc-400 uppercase tracking-wider">Years Experience</div>
+                    </div>
+                    <div>
+                        <div class="text-lg sm:text-2xl font-extrabold text-blue-400">15+</div>
+                        <div class="text-[10px] text-zinc-400 uppercase tracking-wider">Projects & Reports</div>
+                    </div>
+                    <div>
+                        <div class="text-lg sm:text-2xl font-extrabold text-amber-400">100%</div>
+                        <div class="text-[10px] text-zinc-400 uppercase tracking-wider">Commitment</div>
+                    </div>
+                </div>
+
                 <div class="relative z-10 flex flex-wrap gap-3">
                     <a href="Arup_Kumar_Saha_CV.pdf" download class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-5 py-3 rounded-xl text-xs sm:text-sm transition shadow-lg inline-flex items-center space-x-2">
                         <i class="fa-solid fa-download"></i>
@@ -386,76 +403,43 @@
             </div>
         </section>
 
-        <!-- 3. ENTREPRENEURIAL VENTURES -->
-        <section id="ventures" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
-            <i class="fa-solid fa-store section-bg-icon"></i>
+        <!-- 3. TESTIMONIALS / FEEDBACK SECTION -->
+        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
+            <i class="fa-solid fa-quote-left section-bg-icon"></i>
             <div class="flex items-center justify-between px-2 relative z-10">
                 <div>
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Entrepreneurial Ventures</h2>
-                    <p class="text-xs text-zinc-400">Business fairs and commercial initiatives.</p>
+                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Colleague & Mentor Remarks</h2>
+                    <p class="text-xs text-zinc-400">Feedback from academic and professional collaborations.</p>
                 </div>
-                <span class="text-[11px] font-bold text-sky-400 bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">Business</span>
+                <span class="text-[11px] font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Testimonials</span>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10">
-                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-                    <div class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Entrepreneurship Fair (2020)</div>
-                    <h3 class="font-bold text-base text-white">Stall Co-Partner — Sweets & Snacks Corner</h3>
-                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Actively co-managed stall operations, customer relationship management, and sales promotion strategies for commercial success.</p>
-                </div>
-                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-2.5" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
-                    <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Strategy & Operations</div>
-                    <h3 class="font-bold text-base text-white">Startup & Marketing Coordination</h3>
-                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Translated theoretical management principles into retail marketing execution and customer acquisition campaigns.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. CO-CURRICULAR & SPORTS -->
-        <section id="co-curricular" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
-            <i class="fa-solid fa-trophy section-bg-icon"></i>
-            <div class="flex items-center justify-between px-2 relative z-10">
-                <div>
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Leadership & Extracurriculars</h2>
-                    <p class="text-xs text-zinc-400">Club involvements, leadership roles & athletic pursuits.</p>
-                </div>
-                <span class="text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Leadership & Sports</span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10">
-                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-                    <div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest"><i class="fa-solid fa-users-rectangle mr-1.5"></i> Club Leadership</div>
-                    <h3 class="font-bold text-base text-white">University Affiliations</h3>
-                    <ul class="text-xs sm:text-sm text-zinc-300 space-y-2 list-disc pl-4">
-                        <li><strong class="text-white">Vice President:</strong> Jashore Student Welfare Association, University of Barishal.</li>
-                        <li><strong class="text-white">Member:</strong> Barishal University Career Club (BUCC).</li>
-                        <li><strong class="text-white">Member:</strong> Barishal University Business Club (BUBC).</li>
-                        <li><strong class="text-white">Member:</strong> Come For Road Child (CRC).</li>
-                        <li><strong class="text-white">Campus Ambassador:</strong> Admission Assistant, University of Barishal.</li>
-                    </ul>
+            <div class="relative overflow-hidden rounded-2xl bg-zinc-900/80 border border-white/5 p-6 relative z-10 min-h-[140px] flex items-center">
+                <div class="testimonial-item active space-y-3 w-full">
+                    <p class="text-xs sm:text-sm text-zinc-300 italic leading-relaxed">"Arup demonstrated exceptional dedication during his research and academic assistance tasks. His precision in data handling and professional management approach are truly commendable."</p>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <div class="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs border border-blue-500/30">BU</div>
+                        <div>
+                            <div class="text-xs font-bold text-white">Faculty Supervisor</div>
+                            <div class="text-[10px] text-zinc-400">Department of Management Studies, University of Barishal</div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-3" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
-                    <div class="text-[10px] font-bold text-amber-400 uppercase tracking-widest"><i class="fa-solid fa-futbol mr-1.5"></i> Sports & Athletics</div>
-                    <h3 class="font-bold text-base text-white">Recreational & Competitive Sports</h3>
-                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-                        Passionate about teamwork and tactical sports, actively participating in campus tournaments and competitive matches.
-                    </p>
-                    <div class="pt-1">
-                        <div class="text-[11px] font-bold text-zinc-300 mb-1">Favorite Sports:</div>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300 border border-white/5">Badminton</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300 border border-white/5">Table Tennis</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300 border border-white/5">Chess</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300 border border-white/5">Football</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-zinc-800 text-[11px] text-zinc-300 border border-white/5">Cricket</span>
+                <div class="testimonial-item space-y-3 w-full">
+                    <p class="text-xs sm:text-sm text-zinc-300 italic leading-relaxed">"A proactive and energetic team member. His problem-solving abilities and presentation slide designs significantly elevated our project deliverables."</p>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs border border-amber-500/30">AM</div>
+                        <div>
+                            <div class="text-xs font-bold text-white">Project Coordinator</div>
+                            <div class="text-[10px] text-zinc-400">BRAC Initiative Partner</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. ACADEMICS & SKILLS -->
+        <!-- 4. ACADEMICS & SKILLS -->
         <section id="academics" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <div class="md:col-span-7 bento-card p-6 sm:p-8 rounded-3xl space-y-6">
                 <i class="fa-solid fa-graduation-cap section-bg-icon"></i>
@@ -534,66 +518,34 @@
             </div>
         </section>
 
-        <!-- 6. CERTIFICATES & SERVICES -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
-            <div class="bento-card p-6 sm:p-8 rounded-3xl space-y-5">
-                <i class="fa-solid fa-certificate section-bg-icon"></i>
-                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Certificates & Trainings</h2>
-                <div class="space-y-4 relative z-10">
-                    <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-1.5 hover:border-blue-500/40 transition">
-                        <div class="flex justify-between text-[11px] font-bold text-blue-400">
-                            <span>360 Hours (Jan - Jun, 2024)</span>
-                            <span class="text-emerald-400">Grade A+</span>
-                        </div>
-                        <h3 class="font-bold text-base text-white">Computer Office Application</h3>
-                        <p class="text-xs text-zinc-400">Urban Social Services Office, Barishal</p>
+        <!-- 5. PROFESSIONAL SERVICES -->
+        <section id="services" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10">
+            <i class="fa-solid fa-handshake section-bg-icon"></i>
+            <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Professional Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
+                <div class="bg-gradient-to-r from-blue-600/15 via-zinc-900 to-zinc-900 p-4 rounded-2xl border border-blue-500/30 flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                        <i class="fa-solid fa-file-powerpoint text-base"></i>
                     </div>
-                    <div class="bg-zinc-900/80 p-5 rounded-2xl border border-white/5 space-y-1.5 hover:border-blue-500/40 transition">
-                        <div class="flex justify-between text-[11px] font-bold text-amber-400">
-                            <span>Aug - Oct, 2024</span>
-                            <span class="text-blue-400">Passed</span>
-                        </div>
-                        <h3 class="font-bold text-base text-white">EDGE: Web Design Training</h3>
-                        <p class="text-xs text-zinc-400">Dept. of CSE, University of Barishal & BCC</p>
+                    <div>
+                        <h4 class="font-extrabold text-xs sm:text-sm text-white">Presentation Slides Expert</h4>
+                        <p class="text-xs text-zinc-300 mt-0.5">Professional PowerPoint & pitch decks.</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- PROFESSIONAL SERVICES SECTION WITH PRESENTATION SLIDES & IMAGE-INSPIRED SERVICES -->
-            <div id="services" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5">
-                <i class="fa-solid fa-handshake section-bg-icon"></i>
-                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Professional Services</h2>
-                <div class="space-y-3.5 relative z-10">
-                    <!-- First Service: Presentation Slides Design & Expert -->
-                    <div class="bg-gradient-to-r from-blue-600/15 via-zinc-900 to-zinc-900 p-4 rounded-2xl border border-blue-500/30 flex items-center space-x-4 hover:border-blue-500 transition duration-300 shadow-lg group">
-                        <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-file-powerpoint text-base"></i>
-                        </div>
-                        <div class="flex-grow">
-                            <div class="flex items-center justify-between">
-                                <h4 class="font-extrabold text-xs sm:text-sm text-white">Presentation Slides Expert</h4>
-                                <span class="text-[9px] font-bold text-blue-400 bg-blue-500/20 px-2 py-0.5 rounded-full border border-blue-500/30">Top Skill</span>
-                            </div>
-                            <p class="text-xs text-zinc-300 mt-0.5">Professional PowerPoint & pitch decks, corporate slide design & structuring.</p>
-                        </div>
-                    </div>
+                <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-user-tie text-sm"></i></div>
+                    <div><h4 class="font-bold text-xs sm:text-sm text-white">HR Consulting & Resume Writing</h4><p class="text-xs text-zinc-400">CV formatting & advisory.</p></div>
+                </div>
 
-                    <!-- Second Service: HR Consulting & Resume Writing -->
-                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
-                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-user-tie text-sm"></i></div>
-                        <div><h4 class="font-bold text-xs sm:text-sm text-white">HR Consulting & Resume Writing</h4><p class="text-xs text-zinc-400">Professional CV formatting, cover letters & HR advisory.</p></div>
-                    </div>
-
-                    <!-- Third Service: Business Analytics & Research -->
-                    <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
-                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-chart-line text-sm"></i></div>
-                        <div><h4 class="font-bold text-xs sm:text-sm text-white">Business Analytics & Market Research</h4><p class="text-xs text-zinc-400">Data collection, survey tabulation, and statistical analysis.</p></div>
-                    </div>
+                <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-chart-line text-sm"></i></div>
+                    <div><h4 class="font-bold text-xs sm:text-sm text-white">Business Analytics</h4><p class="text-xs text-zinc-400">Data collection & survey analysis.</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- 7. AUTOMATIC SLIDESHOW SHOWCASE -->
+        <!-- 6. AUTOMATIC SLIDESHOW SHOWCASE -->
         <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <i class="fa-solid fa-laptop-code section-bg-icon"></i>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
@@ -647,7 +599,7 @@
             </div>
         </section>
 
-        <!-- 8. RECENT BLOG HIGHLIGHTS -->
+        <!-- 7. RECENT BLOG HIGHLIGHTS -->
         <section id="blog-highlights" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <i class="fa-solid fa-blog section-bg-icon"></i>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
@@ -664,78 +616,7 @@
             <div id="homeBlogContainer" class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10"></div>
         </section>
 
-        <!-- 9. VISUAL GALLERY & TRAVELS -->
-        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
-            <i class="fa-solid fa-camera-retro section-bg-icon"></i>
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
-                <div>
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Photography & Travel Highlights</h2>
-                    <p class="text-xs text-zinc-400">Captured moments and scenic explorations.</p>
-                </div>
-                <a href="gallery.html" class="self-start sm:self-auto text-[11px] font-bold text-amber-400 hover:text-amber-300 uppercase tracking-widest bg-amber-500/10 px-3 py-1.5 rounded-full border border-amber-500/20 transition flex items-center space-x-1.5">
-                    <span>View Full Gallery</span>
-                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-            </div>
-
-            <div class="relative overflow-hidden rounded-2xl bg-zinc-900/80 border border-white/5 aspect-video sm:aspect-[21/9] flex items-center justify-center relative z-10">
-                <div class="photo-slide-item active absolute inset-0 w-full h-full">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Seashore" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/95 via-transparent to-transparent flex items-end p-5 sm:p-6">
-                        <div>
-                            <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/20 px-2.5 py-1 rounded">Photography</span>
-                            <h3 class="text-sm sm:text-base font-bold text-white mt-1.5">Serene Seashore & Coastal Horizon</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="photo-slide-item absolute inset-0 w-full h-full">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Mountain" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/95 via-transparent to-transparent flex items-end p-5 sm:p-6">
-                        <div>
-                            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/20 px-2.5 py-1 rounded">Tours & Travels</span>
-                            <h3 class="text-sm sm:text-base font-bold text-white mt-1.5">Mountain Expedition & Scenic Valleys</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="photo-slide-item absolute inset-0 w-full h-full">
-                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80" alt="Road" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg/95 via-transparent to-transparent flex items-end p-5 sm:p-6">
-                        <div>
-                            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/20 px-2.5 py-1 rounded">Travel Diary</span>
-                            <h3 class="text-sm sm:text-base font-bold text-white mt-1.5">Highway Journey & Open Roads</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute bottom-4 right-4 z-10 flex space-x-2 bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-full border border-white/10">
-                    <button onclick="currentPhotoSlide(0)" class="photo-dot w-2 h-2 rounded-full bg-blue-500 transition-all"></button>
-                    <button onclick="currentPhotoSlide(1)" class="photo-dot w-2 h-2 rounded-full bg-zinc-500 transition-all"></button>
-                    <button onclick="currentPhotoSlide(2)" class="photo-dot w-2 h-2 rounded-full bg-zinc-500 transition-all"></button>
-                </div>
-            </div>
-        </section>
-
-        <!-- 10. NEWSLETTER SECTION -->
-        <section class="bento-card p-6 sm:p-12 rounded-3xl relative overflow-hidden text-center space-y-5 z-10" data-aos="fade-up" data-aos-duration="1000">
-            <i class="fa-regular fa-paper-plane section-bg-icon"></i>
-            <div class="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="max-w-xl mx-auto space-y-2.5 relative z-10">
-                <span class="text-[10px] uppercase font-bold text-blue-400 tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Stay Updated</span>
-                <h2 class="text-xl sm:text-2xl font-extrabold tracking-tight text-white section-heading">Subscribe to My Newsletter</h2>
-                <p class="text-xs sm:text-sm text-zinc-400">Get my latest articles on management, finance insights, and professional updates directly in your inbox.</p>
-            </div>
-
-            <form action="https://formspree.io/f/xqppqjbb" method="POST" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 relative z-10 pt-2">
-                <input type="email" name="newsletter_email" required class="flex-grow bg-zinc-900 border border-white/10 rounded-xl px-4 py-3.5 text-xs sm:text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="Enter your email address...">
-                <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3.5 rounded-xl text-xs transition shadow-lg shrink-0">
-                    Subscribe
-                </button>
-            </form>
-            <p class="text-[11px] text-zinc-500 relative z-10">No spam, unsubscribe at any time.</p>
-        </section>
-
-        <!-- 11. CONTACT SECTION & FORM -->
+        <!-- 8. CONTACT SECTION & FORM -->
         <section id="contact" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
             <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <i class="fa-solid fa-address-book section-bg-icon"></i>
@@ -798,7 +679,7 @@
         <i class="fa-solid fa-arrow-up text-xs"></i>
     </a>
 
-    <!-- TWO SEPARATE FLOATING ICONS WIDGET (WHATSAPP & AI CHAT) -->
+    <!-- TWO SEPARATE FLOATING ICONS WIDGET WITH PRESET PROMPTS -->
     <style>
         .right-floating-container {
             position: fixed;
@@ -830,7 +711,6 @@
             transform: scale(1.12);
         }
 
-        /* Separate Action Buttons (Hidden by default, slide up when active) */
         .sub-chat-btn {
             width: 46px;
             height: 46px;
@@ -861,7 +741,6 @@
             background: linear-gradient(135deg, #3b82f6, #1d4ed8);
         }
 
-        /* Main Trigger Button with Wave / Ripple Ring Effect */
         #chatToggleBtn {
             background: linear-gradient(135deg, #3b82f6, #1d4ed8);
             position: relative;
@@ -881,7 +760,6 @@
             100% { transform: scale(1); opacity: 0; }
         }
 
-        /* Notification Toast Style */
         #chatNotificationToast {
             position: absolute;
             bottom: 65px;
@@ -912,7 +790,6 @@
             transform: translateY(15px) scale(0.95);
         }
 
-        /* Full Live Chat Box Container */
         #chatBoxContainer {
             position: absolute;
             bottom: 68px;
@@ -978,11 +855,11 @@
         .popup-option-btn {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 8px 12px;
+            border-radius: 10px;
+            padding: 8px 10px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -1017,7 +894,7 @@
             <p class="text-[11px] text-zinc-300 leading-snug pt-1">Hello! 👋 Click here to chat with me or connect via WhatsApp!</p>
         </div>
 
-        <!-- FULL LIVE CHAT BOX CONTAINER -->
+        <!-- FULL LIVE CHAT BOX CONTAINER WITH PRESET BUTTONS -->
         <div id="chatBoxContainer">
             <div class="chat-header">
                 <div class="flex items-center space-x-2.5">
@@ -1036,12 +913,15 @@
                 <div class="bot-msg">
                     Hello! 👋 I am Arup's AI Assistant. How can I help you today? Choose from below:
                 </div>
-                <div class="flex flex-col gap-2 pt-1">
+                <div class="flex flex-col gap-1.5 pt-1">
                     <button onclick="handleQuickQuery('cv')" class="popup-option-btn text-xs font-semibold text-blue-400 border border-blue-500/30">
                         📄 Download Official CV (PDF)
                     </button>
                     <button onclick="handleQuickQuery('contact')" class="popup-option-btn text-xs font-semibold text-amber-400 border border-amber-500/30">
                         📞 Contact Information & Location
+                    </button>
+                    <button onclick="handleQuickQuery('services')" class="popup-option-btn text-xs font-semibold text-emerald-400 border border-emerald-500/30">
+                        💼 View Presentation & HR Services
                     </button>
                 </div>
             </div>
@@ -1076,7 +956,6 @@
     <script>
         AOS.init({ once: true, offset: 30, duration: 900 });
 
-        // Show Notification Toast after 2.5 Seconds and Auto-Hide after 5 Seconds
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const toast = document.getElementById('chatNotificationToast');
@@ -1101,7 +980,6 @@
             toggleSubChatButtons();
         }
 
-        // Toggle Two Separate Floating Icons (WhatsApp & AI Chat)
         function toggleSubChatButtons() {
             const toast = document.getElementById('chatNotificationToast');
             if(toast) {
@@ -1116,10 +994,8 @@
             const badge = document.getElementById('notifBadge');
             if(badge) badge.style.display = 'none';
 
-            // Close full chat box if open
             box.style.display = 'none';
 
-            // Toggle show class on N-S buttons
             const isOpen = waBtn.classList.contains('show');
             if (isOpen) {
                 waBtn.classList.remove('show');
@@ -1132,7 +1008,6 @@
             }
         }
 
-        // Open Full Live Chat Box
         function openLiveChatBox() {
             const waBtn = document.getElementById('whatsappFloatBtn');
             const aiBtn = document.getElementById('aiChatFloatBtn');
@@ -1165,17 +1040,21 @@
             if (type === 'cv') {
                 appendMessage("I want to download Arup's CV", "user");
                 setTimeout(() => {
-                    appendMessage("Certainly! You can download Arup Kumar Saha's official CV (PDF) by clicking the link below:\n\n👉 Arup_Kumar_Saha_CV.pdf", "bot");
+                    appendMessage("Certainly! You can download Arup Kumar Saha's official CV (PDF) by clicking the download button in the header or hero section.", "bot");
                 }, 500);
             } else if (type === 'contact') {
                 appendMessage("What is your contact info and location?", "user");
                 setTimeout(() => {
                     appendMessage("📞 Phone: +880 1646126678\n📧 Email: arup.bu.bd@gmail.com\n📍 Current Location: Bijoy 24 Hall, University of Barishal.", "bot");
                 }, 500);
+            } else if (type === 'services') {
+                appendMessage("What professional services do you offer?", "user");
+                setTimeout(() => {
+                    appendMessage("💼 Services:\n• Presentation Slides Expert (PowerPoint & Pitch Decks)\n• HR Consulting & Resume Writing\n• Business Analytics & Market Research", "bot");
+                }, 500);
             }
         }
 
-        // Smart Bot Response Parser
         function getSmartBotResponse(query) {
             const q = query.toLowerCase().trim();
 
@@ -1194,8 +1073,8 @@
             if (q.match(/contact|phone|email|location|address/)) {
                 return "📞 Contact Details:\n• Phone: +880 1646126678\n• Email: arup.bu.bd@gmail.com\n• Location: Bijoy 24 Hall, University of Barishal";
             }
-            if (q.match(/skill|software|spss|excel/)) {
-                return "⚙️ Skills: SPSS, AMOS, SmartPLS, MS Excel, Word, PowerPoint, HTML, CSS & AI Prompting.";
+            if (q.match(/skill|software|spss|excel|presentation/)) {
+                return "⚙️ Skills: Presentation Slides Design, SPSS, AMOS, SmartPLS, MS Excel, Word, PowerPoint, HTML, CSS & AI Prompting.";
             }
 
             return `Thank you for your message! To get in touch with Arup directly, please email at: arup.bu.bd@gmail.com`;
@@ -1215,7 +1094,6 @@
             }, 600);
         }
 
-        // Sequential Skill Badge Pop-up Observer
         const skillsSection = document.getElementById('skillsSection');
         const observerOptions = { root: null, threshold: 0.2 };
         const skillsObserver = new IntersectionObserver((entries, observer) => {
@@ -1268,8 +1146,7 @@
             homeBlogContainer.innerHTML = postsHTML;
         }
 
-        // CONCISE TYPEWRITER SCRIPT
-        const words = ["HR Professional", "Management Expert", "Strategic Planner", "HR & Admin Officer"];
+        const words = ["HR Professional", "Management Expert", "Presentation Slides Expert", "HR & Admin Officer"];
         let i = 0;
         function typingEffect() {
             let word = words[i].split("");
@@ -1327,7 +1204,6 @@
             }
         });
 
-        // SLIDESHOW
         let slideIndex = 0;
         const slides = document.querySelectorAll('.slide-item');
         const dots = document.querySelectorAll('.dot');
@@ -1357,35 +1233,17 @@
         }
         setInterval(showSlides, 6000);
 
-        // PHOTO SLIDESHOW
-        let photoSlideIndex = 0;
-        const photoSlides = document.querySelectorAll('.photo-slide-item');
-        const photoDots = document.querySelectorAll('.photo-dot');
-        function showPhotoSlides() {
-            if(photoSlides.length === 0) return;
-            photoSlides.forEach((slide) => slide.classList.remove('active'));
-            photoDots.forEach((dot) => {
-                dot.classList.remove('bg-blue-500');
-                dot.classList.add('bg-zinc-500');
-            });
-            photoSlideIndex++;
-            if (photoSlideIndex > photoSlides.length) { photoSlideIndex = 1; }
-            photoSlides[photoSlideIndex - 1].classList.add('active');
-            photoDots[photoSlideIndex - 1].classList.remove('bg-zinc-500');
-            photoDots[photoSlideIndex - 1].classList.add('bg-blue-500');
+        // TESTIMONIALS SLIDESHOW
+        let testimonialIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial-item');
+        function showTestimonials() {
+            if(testimonials.length === 0) return;
+            testimonials.forEach((item) => item.classList.remove('active'));
+            testimonialIndex++;
+            if (testimonialIndex > testimonials.length) { testimonialIndex = 1; }
+            testimonials[testimonialIndex - 1].classList.add('active');
         }
-        function currentPhotoSlide(n) {
-            photoSlideIndex = n;
-            photoSlides.forEach((slide) => slide.classList.remove('active'));
-            photoDots.forEach((dot) => {
-                dot.classList.remove('bg-blue-500');
-                dot.classList.add('bg-zinc-500');
-            });
-            photoSlides[photoSlideIndex].classList.add('active');
-            photoDots[photoSlideIndex].classList.remove('bg-zinc-500');
-            photoDots[photoSlideIndex].classList.add('bg-blue-500');
-        }
-        setInterval(showPhotoSlides, 6000);
+        setInterval(showTestimonials, 5500);
     </script>
 </body>
 </html>
