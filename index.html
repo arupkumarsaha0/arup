@@ -91,18 +91,18 @@
             width: 100%;
         }
 
-        /* HIGHLY VISIBLE & INTERACTIVE SKILL POP-UP ANIMATION */
-        @keyframes skillBouncePop {
+        /* HIGHLY VISIBLE & INTERACTIVE SKILL & PREFERENCE POP-UP ANIMATION */
+        @keyframes bouncePopEffect {
             0% {
                 opacity: 0;
-                transform: translateY(35px) scale(0.7);
+                transform: translateY(35px) scale(0.75);
             }
             60% {
                 opacity: 1;
-                transform: translateY(-6px) scale(1.05);
+                transform: translateY(-5px) scale(1.03);
             }
             80% {
-                transform: translateY(2px) scale(0.98);
+                transform: translateY(2px) scale(0.99);
             }
             100% {
                 opacity: 1;
@@ -110,7 +110,7 @@
             }
         }
 
-        .skill-badge {
+        .animated-badge {
             opacity: 0;
             transform: translateY(30px) scale(0.75);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -121,31 +121,24 @@
             transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
-        /* Sequential Bouncing Animation Trigger */
-        .skills-active .skill-badge {
-            animation: skillBouncePop 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        .active-animation .animated-badge {
+            animation: bouncePopEffect 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
         }
-        .skills-active .skill-badge:nth-child(1) { animation-delay: 0.08s; }
-        .skills-active .skill-badge:nth-child(2) { animation-delay: 0.16s; }
-        .skills-active .skill-badge:nth-child(3) { animation-delay: 0.24s; }
-        .skills-active .skill-badge:nth-child(4) { animation-delay: 0.32s; }
-        .skills-active .skill-badge:nth-child(5) { animation-delay: 0.40s; }
-        .skills-active .skill-badge:nth-child(6) { animation-delay: 0.48s; }
+        .active-animation .animated-badge:nth-child(1) { animation-delay: 0.1s; }
+        .active-animation .animated-badge:nth-child(2) { animation-delay: 0.2s; }
+        .active-animation .animated-badge:nth-child(3) { animation-delay: 0.3s; }
+        .active-animation .animated-badge:nth-child(4) { animation-delay: 0.4s; }
+        .active-animation .animated-badge:nth-child(5) { animation-delay: 0.5s; }
 
-        /* Highly Interactive Hover Effects */
-        .skill-badge:hover {
+        .animated-badge:hover {
             background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(245, 158, 11, 0.25));
             border-color: rgba(59, 130, 246, 0.8);
-            transform: translateY(-5px) scale(1.1);
+            transform: translateY(-4px) scale(1.08);
             box-shadow: 0 12px 25px -4px rgba(59, 130, 246, 0.5), 0 0 15px rgba(59, 130, 246, 0.3);
             color: #ffffff;
-        }
-        .skill-badge:hover i {
-            transform: rotate(12deg) scale(1.2);
-            color: #60a5fa;
         }
 
         .section-bg-icon {
@@ -272,7 +265,7 @@
     <main class="max-w-5xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 space-y-10 sm:space-y-12 relative overflow-hidden">
 
         <!-- 1. HERO SECTION -->
-        <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
+        <section id="about" data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10">
             <div class="md:col-span-8 bento-card p-6 sm:p-10 rounded-3xl flex flex-col justify-between space-y-6 relative overflow-hidden">
                 <i class="fa-solid fa-user-tie section-bg-icon"></i>
                 <div class="space-y-4 relative z-10">
@@ -344,9 +337,9 @@
             </div>
         </section>
 
-        <!-- CAREER PREFERENCES & SECTORS -->
-        <section id="preferences" class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
-            <div class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative overflow-hidden">
+        <!-- CAREER PREFERENCES & SECTORS WITH ANIMATED BADGES -->
+        <section id="preferences" data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+            <div id="prefSection1" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative overflow-hidden">
                 <i class="fa-solid fa-building section-bg-icon"></i>
                 <div class="flex items-center justify-between relative z-10">
                     <h3 class="text-base sm:text-lg font-bold text-white flex items-center space-x-2.5">
@@ -358,16 +351,16 @@
                 <p class="text-xs sm:text-sm text-zinc-400 relative z-10 leading-relaxed">
                     Open to contributing in structured environments across international development, financial sectors, corporate industries, and tourism.
                 </p>
-                <div class="flex flex-wrap gap-2 relative z-10 pt-1">
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-briefcase text-blue-400 text-[10px]"></i><span>International NGOs & Development Agencies</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-building-columns text-blue-400 text-[10px]"></i><span>Commercial Banks & Financial Institutions</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-plane-departure text-blue-400 text-[10px]"></i><span>Tourism & Travel Industry</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-shirt text-blue-400 text-[10px]"></i><span>Garments & Textile Conglomerates</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-briefcase text-blue-400 text-[10px]"></i><span>Multinational Corporations & FMCG</span></span>
+                <div class="flex flex-wrap gap-2.5 relative z-10 pt-1">
+                    <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-briefcase text-blue-400 text-xs"></i> International NGOs & Agencies</span>
+                    <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-building-columns text-blue-400 text-xs"></i> Commercial Banks & Finance</span>
+                    <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-plane-departure text-blue-400 text-xs"></i> Tourism & Travel Industry</span>
+                    <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-shirt text-blue-400 text-xs"></i> Garments & Textiles</span>
+                    <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-globe text-blue-400 text-xs"></i> Multinational Corporations</span>
                 </div>
             </div>
 
-            <div class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative overflow-hidden">
+            <div id="prefSection2" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative overflow-hidden">
                 <i class="fa-solid fa-bullseye section-bg-icon"></i>
                 <div class="flex items-center justify-between relative z-10">
                     <h3 class="text-base sm:text-lg font-bold text-white flex items-center space-x-2.5">
@@ -379,24 +372,24 @@
                 <p class="text-xs sm:text-sm text-zinc-400 relative z-10 leading-relaxed">
                     Seeking impactful roles aligned with my academic expertise in Human Resource Management, project coordination, and administration.
                 </p>
-                <div class="flex flex-wrap gap-2 relative z-10 pt-1">
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>HR & Admin Officer / Executive</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Project Coordinator & Programme Associate</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Management Trainee Officer (MTO / Bank Trainee)</span></span>
-                    <span class="px-3 py-1.5 rounded-xl bg-zinc-900 text-xs text-zinc-300 font-medium flex items-center space-x-1.5 border border-white/5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i><span>Corporate Operations & MIS Analyst</span></span>
+                <div class="flex flex-wrap gap-2.5 relative z-10 pt-1">
+                    <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-user-tie text-amber-400 text-xs"></i> HR & Admin Officer / Executive</span>
+                    <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-diagram-project text-amber-400 text-xs"></i> Project Coordinator</span>
+                    <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-award text-amber-400 text-xs"></i> Management Trainee (MTO)</span>
+                    <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-chart-line text-amber-400 text-xs"></i> Corporate Operations & MIS</span>
                 </div>
             </div>
         </section>
 
         <!-- 2. PROFESSIONAL EXPERIENCE -->
-        <section id="experience" class="space-y-4 relative z-10" data-aos="fade-up" data-aos-duration="1000">
+        <section id="experience" data-aos="fade-up" data-aos-duration="1000" class="space-y-4 relative z-10">
             <div class="flex items-center justify-between px-2">
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Professional Experience & Projects</h2>
                 <span class="text-[11px] text-blue-400 uppercase tracking-widest font-semibold bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Track Record</span>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
                     <i class="fa-solid fa-briefcase section-bg-icon"></i>
                     <div class="space-y-2.5 relative z-10">
                         <div class="text-[11px] font-bold text-blue-400">Jun 2025 - Sep 2025</div>
@@ -406,7 +399,7 @@
                     </div>
                     <span class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider relative z-10">Corporate Exposure</span>
                 </div>
-                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
                     <i class="fa-solid fa-hands-holding-child section-bg-icon"></i>
                     <div class="space-y-2.5 relative z-10">
                         <div class="text-[11px] font-bold text-amber-400">Jun 2024 - Mar 2025</div>
@@ -416,7 +409,7 @@
                     </div>
                     <span class="text-[10px] uppercase font-bold text-zinc-500 tracking-wider relative z-10">Operations & Data</span>
                 </div>
-                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between sm:col-span-2 md:col-span-1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                <div class="bento-card p-6 rounded-3xl space-y-4 flex flex-col justify-between sm:col-span-2 md:col-span-1" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
                     <i class="fa-solid fa-microscope section-bg-icon"></i>
                     <div class="space-y-2.5 relative z-10">
                         <div class="text-[11px] font-bold text-emerald-400">Apr 2023 - May 2024</div>
@@ -429,8 +422,8 @@
             </div>
         </section>
 
-        <!-- 3. FEATURED CASE STUDIES / PROBLEM SOLVING -->
-        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
+        <!-- 3. FEATURED CASE STUDIES -->
+        <section data-aos="fade-up" data-aos-duration="1000" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10">
             <i class="fa-solid fa-lightbulb section-bg-icon"></i>
             <div class="flex items-center justify-between px-2 relative z-10">
                 <div>
@@ -454,8 +447,8 @@
             </div>
         </section>
 
-        <!-- 4. ACADEMICS & HIGHLY INTERACTIVE SKILLS SECTION -->
-        <section id="academics" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
+        <!-- 4. ACADEMICS & SKILLS -->
+        <section id="academics" data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10">
             <div class="md:col-span-7 bento-card p-6 sm:p-8 rounded-3xl space-y-6">
                 <i class="fa-solid fa-graduation-cap section-bg-icon"></i>
                 <div class="flex items-center justify-between relative z-10">
@@ -463,73 +456,46 @@
                     <span class="text-[11px] font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Timeline</span>
                 </div>
                 <div class="relative border-l-2 border-blue-500/30 ml-3 space-y-8 py-3 relative z-10">
-                    <div class="relative pl-6 group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-                        <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-blue-500 ring-4 ring-[#040406] group-hover:scale-125 transition"></div>
+                    <div class="relative pl-6 group">
+                        <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-blue-500 ring-4 ring-[#040406]"></div>
                         <div class="space-y-1.5">
                             <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 px-2 py-0.5 rounded">Passing Year: 2023 | Result: First Class</span>
                             <h3 class="font-bold text-base text-white pt-1">MBA in Human Resource Management (HRM)</h3>
                             <p class="text-xs sm:text-sm text-zinc-400">University of Barishal</p>
                         </div>
                     </div>
-                    <div class="relative pl-6 group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-                        <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-amber-500 ring-4 ring-[#040406] group-hover:scale-125 transition"></div>
+                    <div class="relative pl-6 group">
+                        <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-amber-500 ring-4 ring-[#040406]"></div>
                         <div class="space-y-1.5">
                             <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2 py-0.5 rounded">Passing Year: 2022 | Result: First Class</span>
                             <h3 class="font-bold text-base text-white pt-1">BBA in Management Studies</h3>
                             <p class="text-xs sm:text-sm text-zinc-400">University of Barishal</p>
                         </div>
                     </div>
-                    <div class="relative pl-6 group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-                        <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-emerald-500 ring-4 ring-[#040406] group-hover:scale-125 transition"></div>
-                        <div class="space-y-1.5">
-                            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/10 px-2 py-0.5 rounded">Passing Year: 2018 | Result: Grade A</span>
-                            <h3 class="font-bold text-base text-white pt-1">HSC (Business Studies)</h3>
-                            <p class="text-xs sm:text-sm text-zinc-400">Dr. Abdur Razzak Municipal College, Jashore</p>
-                        </div>
-                    </div>
-                    <div class="relative pl-6 group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-                        <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-purple-500 ring-4 ring-[#040406] group-hover:scale-125 transition"></div>
-                        <div class="space-y-1.5">
-                            <span class="text-[10px] font-bold text-purple-400 uppercase tracking-widest bg-purple-500/10 px-2 py-0.5 rounded">Passing Year: 2016 | Result: Grade A</span>
-                            <h3 class="font-bold text-base text-white pt-1">SSC (Business Studies)</h3>
-                            <p class="text-xs sm:text-sm text-zinc-400">Sammilani Institution, Jashore</p>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <!-- SMART SKILLS & COMPETENCIES SECTION WITH ENHANCED INTERACTIVE POP-UP BADGES -->
-            <div id="skillsSection" class="md:col-span-5 bento-card p-6 sm:p-8 rounded-3xl space-y-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <!-- SKILLS WITH INTERACTIVE POP-UP BADGES -->
+            <div id="skillsSection" class="md:col-span-5 bento-card p-6 sm:p-8 rounded-3xl space-y-6">
                 <i class="fa-solid fa-brain section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Skills & Competencies</h2>
                 <div class="space-y-5 relative z-10">
                     <div>
-                        <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-2.5 flex items-center justify-between">
-                            <span>Technical & Software</span>
-                            <span class="text-[9px] text-zinc-500 lowercase">(hover to interact)</span>
-                        </div>
+                        <div class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-2.5">Technical & Software</div>
                         <div class="flex flex-wrap gap-2.5">
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-chart-pie text-blue-400 text-xs"></i> SPSS, AMOS & SmartPLS</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-file-powerpoint text-amber-400 text-xs"></i> MS Office & PPT</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-file-excel text-emerald-400 text-xs"></i> Advanced MS Excel</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-code text-sky-400 text-xs"></i> HTML, CSS & Bootstrap</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-robot text-purple-400 text-xs"></i> AI Prompting</span>
+                            <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-chart-pie text-blue-400 text-xs"></i> SPSS, AMOS & SmartPLS</span>
+                            <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-file-powerpoint text-amber-400 text-xs"></i> MS Office & PPT</span>
+                            <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-file-excel text-emerald-400 text-xs"></i> Advanced MS Excel</span>
+                            <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-code text-sky-400 text-xs"></i> HTML, CSS & Bootstrap</span>
+                            <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-robot text-purple-400 text-xs"></i> AI Prompting</span>
                         </div>
                     </div>
                     <div>
                         <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-2.5">Languages Known</div>
                         <div class="flex flex-wrap gap-2.5">
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-language text-amber-400 text-xs"></i> Bangla (Native)</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-globe text-blue-400 text-xs"></i> English (Professional)</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-comments text-emerald-400 text-xs"></i> Hindi (Conversational)</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2.5">Admin & Soft Skills</div>
-                        <div class="flex flex-wrap gap-2.5">
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-clipboard-user text-emerald-400 text-xs"></i> Attendance Records</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-folder-open text-amber-400 text-xs"></i> Office Filing</span>
-                            <span class="skill-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-users text-blue-400 text-xs"></i> Strategic Communication</span>
+                            <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-language text-amber-400 text-xs"></i> Bangla (Native)</span>
+                            <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-globe text-blue-400 text-xs"></i> English (Professional)</span>
+                            <span class="animated-badge px-3.5 py-2 rounded-xl text-xs text-zinc-200 font-medium"><i class="fa-solid fa-comments text-emerald-400 text-xs"></i> Hindi (Conversational)</span>
                         </div>
                     </div>
                 </div>
@@ -537,7 +503,7 @@
         </section>
 
         <!-- 5. PROFESSIONAL SERVICES -->
-        <section id="services" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10">
+        <section id="services" data-aos="fade-up" data-aos-duration="1000" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10">
             <i class="fa-solid fa-handshake section-bg-icon"></i>
             <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Professional Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
@@ -563,79 +529,8 @@
             </div>
         </section>
 
-        <!-- 6. AUTOMATIC SLIDESHOW SHOWCASE -->
-        <section class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
-            <i class="fa-solid fa-laptop-code section-bg-icon"></i>
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
-                <div>
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Featured Presentations & Excel Demos</h2>
-                    <p class="text-xs text-zinc-400">Highlights from my work hub and academic slide decks.</p>
-                </div>
-                <a href="portfolio.html" class="self-start sm:self-auto text-[11px] font-bold text-blue-400 hover:text-blue-300 uppercase tracking-widest bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20 transition flex items-center space-x-1.5">
-                    <span>View All Hub</span>
-                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-            </div>
-
-            <div class="relative overflow-hidden rounded-2xl bg-zinc-900/80 border border-white/5 p-5 sm:p-6 min-h-[190px] relative z-10">
-                <div class="slide-item active space-y-3">
-                    <div class="flex justify-between items-center text-[11px] font-bold text-blue-400 uppercase tracking-widest">
-                        <span class="flex items-center space-x-2"><i class="fa-solid fa-file-powerpoint text-base"></i><span>Presentation Deck</span></span>
-                        <span>Slides / PDF</span>
-                    </div>
-                    <h3 class="font-bold text-base sm:text-lg text-white">HR Practices & Employee Retention Strategy</h3>
-                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Comprehensive slide deck covering modern recruitment trends, employee motivation theories, and retention frameworks.</p>
-                    <div class="pt-2 flex justify-between items-center">
-                        <a href="portfolio.html" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1.5">
-                            <span>Explore Showcase</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </a>
-                        <span class="text-[11px] text-zinc-500">Slide 1 of 2</span>
-                    </div>
-                </div>
-
-                <div class="slide-item space-y-3">
-                    <div class="flex justify-between items-center text-[11px] font-bold text-emerald-400 uppercase tracking-widest">
-                        <span class="flex items-center space-x-2"><i class="fa-solid fa-file-excel text-base"></i><span>Excel & Data Model</span></span>
-                        <span>XLSX / Dashboard</span>
-                    </div>
-                    <h3 class="font-bold text-base sm:text-lg text-white">Capital Budgeting & Working Capital Model</h3>
-                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">Advanced financial analysis workbook featuring automated NPV, IRR calculations, ratio analysis, and forecasting charts.</p>
-                    <div class="pt-2 flex justify-between items-center">
-                        <a href="portfolio.html" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold inline-flex items-center space-x-1.5">
-                            <span>Explore Showcase</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </a>
-                        <span class="text-[11px] text-zinc-500">Slide 2 of 2</span>
-                    </div>
-                </div>
-
-                <div class="flex justify-center space-x-2 mt-5">
-                    <button onclick="currentSlide(0)" class="dot w-2 h-2 rounded-full bg-blue-500 transition-all"></button>
-                    <button onclick="currentSlide(1)" class="dot w-2 h-2 rounded-full bg-zinc-700 transition-all"></button>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. RECENT BLOG HIGHLIGHTS -->
-        <section id="blog-highlights" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5 relative z-10" data-aos="fade-up" data-aos-duration="1000">
-            <i class="fa-solid fa-blog section-bg-icon"></i>
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2 relative z-10">
-                <div>
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading">Latest From My Blog</h2>
-                    <p class="text-xs text-zinc-400">Thoughts, insights, and professional writings.</p>
-                </div>
-                <a href="blog.html" class="self-start sm:self-auto text-[11px] font-bold text-blue-400 hover:text-blue-300 uppercase tracking-widest bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20 transition flex items-center space-x-1.5">
-                    <span>View All Blog</span>
-                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-            </div>
-
-            <div id="homeBlogContainer" class="grid grid-cols-1 md:grid-cols-2 gap-5 relative z-10"></div>
-        </section>
-
-        <!-- 8. CONTACT SECTION & FORM -->
-        <section id="contact" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10" data-aos="fade-up" data-aos-duration="1000">
+        <!-- 6. CONTACT SECTION -->
+        <section id="contact" data-aos="fade-up" data-aos-duration="1000" class="grid grid-cols-1 md:grid-cols-12 gap-6 relative z-10">
             <div class="md:col-span-6 bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <i class="fa-solid fa-address-book section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Contact Details</h2>
@@ -684,12 +579,6 @@
     <!-- FOOTER -->
     <footer class="max-w-5xl mx-auto px-4 sm:px-6 mt-16 py-8 border-t border-white/10 text-center text-xs text-zinc-500">
         <p>&copy; 2026 Arup Kumar Saha. All Rights Reserved.</p>
-        <div class="flex lg:hidden items-center justify-center space-x-3.5 mt-4">
-            <a href="https://www.linkedin.com/in/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-blue-600 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="LinkedIn"><i class="fa-brands fa-linkedin text-xs"></i></a>
-            <a href="https://github.com/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-zinc-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="GitHub"><i class="fa-brands fa-github text-xs"></i></a>
-            <a href="https://facebook.com/arupkumarsaha0" target="_blank" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-blue-700 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="Facebook"><i class="fa-brands fa-facebook text-xs"></i></a>
-            <a href="mailto:arup.bu.bd@gmail.com" class="w-8 h-8 rounded-full bg-zinc-900 hover:bg-amber-600 text-zinc-400 hover:text-white flex items-center justify-center transition border border-white/5" title="Email"><i class="fa-solid fa-envelope text-xs"></i></a>
-        </div>
     </footer>
 
     <!-- SCROLL TO TOP -->
@@ -697,7 +586,7 @@
         <i class="fa-solid fa-arrow-up text-xs"></i>
     </a>
 
-    <!-- TWO SEPARATE FLOATING ICONS WIDGET WITH PRESET PROMPTS -->
+    <!-- CHAT WIDGET -->
     <style>
         .right-floating-container {
             position: fixed;
@@ -725,10 +614,7 @@
             text-decoration: none;
             position: relative;
         }
-        .float-btn:hover {
-            transform: scale(1.12);
-        }
-
+        .float-btn:hover { transform: scale(1.12); }
         .sub-chat-btn {
             width: 46px;
             height: 46px;
@@ -751,63 +637,9 @@
             transform: translateY(0) scale(1);
             pointer-events: auto;
         }
-
-        #whatsappFloatBtn {
-            background: linear-gradient(135deg, #22c55e, #15803d);
-        }
-        #aiChatFloatBtn {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-        }
-
-        #chatToggleBtn {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            position: relative;
-        }
-        #chatToggleBtn::before {
-            content: '';
-            position: absolute;
-            inset: -4px;
-            border-radius: 50%;
-            background: rgba(59, 130, 246, 0.5);
-            animation: wavePulse 2.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
-            z-index: -1;
-        }
-        @keyframes wavePulse {
-            0% { transform: scale(1); opacity: 0.8; }
-            50% { transform: scale(1.35); opacity: 0; }
-            100% { transform: scale(1); opacity: 0; }
-        }
-
-        #chatNotificationToast {
-            position: absolute;
-            bottom: 65px;
-            right: 0;
-            width: 270px;
-            background: rgba(14, 15, 20, 0.96);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(59, 130, 246, 0.4);
-            border-radius: 14px;
-            padding: 12px 14px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-            display: none;
-            flex-direction: column;
-            gap: 6px;
-            cursor: pointer;
-            opacity: 0;
-            transform: translateY(15px) scale(0.95);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            z-index: 10000;
-        }
-        #chatNotificationToast.show {
-            display: flex;
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
-        #chatNotificationToast.hide {
-            opacity: 0;
-            transform: translateY(15px) scale(0.95);
-        }
-
+        #whatsappFloatBtn { background: linear-gradient(135deg, #22c55e, #15803d); }
+        #aiChatFloatBtn { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+        #chatToggleBtn { background: linear-gradient(135deg, #3b82f6, #1d4ed8); position: relative; }
         #chatBoxContainer {
             position: absolute;
             bottom: 68px;
@@ -820,200 +652,70 @@
             overflow: hidden;
             display: none;
             flex-direction: column;
-            animation: chatPopup 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             z-index: 10002;
         }
-        @keyframes chatPopup {
-            from { opacity: 0; transform: translateY(15px) scale(0.95); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-        .chat-header {
-            background: linear-gradient(135deg, #0e0f14, #181922);
-            padding: 14px 16px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .chat-body {
-            padding: 14px;
-            height: 280px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            font-size: 12px;
-        }
-        .chat-footer {
-            padding: 10px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            background: #090a0e;
-            display: flex;
-            gap: 8px;
-        }
-        .bot-msg {
-            background: rgba(59, 130, 246, 0.12);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            color: #e2e8f0;
-            padding: 9px 12px;
-            border-radius: 12px;
-            max-width: 85%;
-            line-height: 1.4;
-            align-self: flex-start;
-        }
-        .user-msg {
-            background: #3b82f6;
-            color: #ffffff;
-            padding: 9px 12px;
-            border-radius: 12px;
-            max-width: 85%;
-            line-height: 1.4;
-            align-self: flex-end;
-        }
-        .popup-option-btn {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 10px;
-            padding: 8px 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: #ffffff;
-            width: 100%;
-            text-align: left;
-        }
-        .popup-option-btn:hover {
-            background: rgba(59, 130, 246, 0.15);
-            border-color: rgba(59, 130, 246, 0.5);
-        }
-        .notification-badge {
-            position: absolute;
-            top: -2px;
-            right: -2px;
-            width: 14px;
-            height: 14px;
-            background: #ef4444;
-            border-radius: 50%;
-            border: 2px solid #040406;
-            animation: pulse 2s infinite;
-        }
+        .chat-header { background: #181922; padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between; }
+        .chat-body { padding: 14px; height: 260px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; font-size: 12px; }
+        .chat-footer { padding: 10px; border-top: 1px solid rgba(255,255,255,0.08); background: #090a0e; display: flex; gap: 8px; }
+        .bot-msg { background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.2); color: #e2e8f0; padding: 9px 12px; border-radius: 12px; max-width: 85%; }
+        .user-msg { background: #3b82f6; color: #ffffff; padding: 9px 12px; border-radius: 12px; max-width: 85%; align-self: flex-end; }
+        .popup-option-btn { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 8px 10px; display: flex; align-items: center; gap: 8px; cursor: pointer; color: #ffffff; width: 100%; text-align: left; }
+        .popup-option-btn:hover { background: rgba(59,130,246,0.15); border-color: rgba(59,130,246,0.5); }
     </style>
 
     <div class="right-floating-container">
-        <!-- Notification Toast -->
-        <div id="chatNotificationToast" onclick="openChatFromToast()">
-            <div class="flex items-center space-x-2">
-                <div class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-[10px] border border-blue-500/30">A</div>
-                <span class="text-xs font-bold text-white">Arup's Assistant</span>
-            </div>
-            <p class="text-[11px] text-zinc-300 leading-snug pt-1">Hello! 👋 Click here to chat with me or connect via WhatsApp!</p>
-        </div>
-
-        <!-- FULL LIVE CHAT BOX CONTAINER WITH PRESET BUTTONS -->
         <div id="chatBoxContainer">
             <div class="chat-header">
                 <div class="flex items-center space-x-2.5">
                     <div class="w-7 h-7 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs border border-blue-500/30">A</div>
-                    <div>
-                        <h4 class="text-xs font-bold text-white">Arup's Assistant</h4>
-                        <div class="flex items-center space-x-1 text-[9px] text-emerald-400">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                            <span class="text-emerald-400 font-semibold">Online</span>
-                        </div>
-                    </div>
+                    <h4 class="text-xs font-bold text-white">Arup's Assistant</h4>
                 </div>
                 <button onclick="toggleLiveChatBox()" class="text-zinc-400 hover:text-white text-xs p-1"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div id="chatBody" class="chat-body">
-                <div class="bot-msg">
-                    Hello! 👋 I am Arup's AI Assistant. How can I help you today? Choose from below:
-                </div>
+                <div class="bot-msg">Hello! 👋 How can I assist you today? Choose from below:</div>
                 <div class="flex flex-col gap-1.5 pt-1">
-                    <button onclick="handleQuickQuery('cv')" class="popup-option-btn text-xs font-semibold text-blue-400 border border-blue-500/30">
-                        📄 Download Official CV (PDF)
-                    </button>
-                    <button onclick="handleQuickQuery('contact')" class="popup-option-btn text-xs font-semibold text-amber-400 border border-amber-500/30">
-                        📞 Contact Information & Location
-                    </button>
-                    <button onclick="handleQuickQuery('services')" class="popup-option-btn text-xs font-semibold text-emerald-400 border border-emerald-500/30">
-                        💼 View Presentation & HR Services
-                    </button>
+                    <button onclick="handleQuickQuery('cv')" class="popup-option-btn text-xs font-semibold text-blue-400 border border-blue-500/30">📄 Download CV (PDF)</button>
+                    <button onclick="handleQuickQuery('contact')" class="popup-option-btn text-xs font-semibold text-amber-400 border border-amber-500/30">📞 Contact Information</button>
                 </div>
             </div>
             <div class="chat-footer">
                 <input type="text" id="chatInput" placeholder="Type a message..." class="flex-grow bg-zinc-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-blue-500" onkeypress="if(event.key === 'Enter') sendUserMessage()">
-                <button onclick="sendUserMessage()" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 rounded-xl text-xs transition"><i class="fa-solid fa-paper-plane"></i></button>
+                <button onclick="sendUserMessage()" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 rounded-xl text-xs"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
         </div>
 
-        <!-- SUB CHAT BUTTON 2: AI Assistant Icon -->
-        <button id="aiChatFloatBtn" class="sub-chat-btn" onclick="openLiveChatBox()" title="Live AI Assistant">
-            <i class="fa-solid fa-comments text-sm"></i>
-        </button>
-
-        <!-- SUB CHAT BUTTON 1: WhatsApp Icon -->
-        <a id="whatsappFloatBtn" class="sub-chat-btn" href="https://wa.me/8801646126678?text=Hello%20Arup,%20I%20visited%20your%20portfolio!" target="_blank" title="WhatsApp Chat">
-            <i class="fa-brands fa-whatsapp text-lg"></i>
-        </a>
-
-        <!-- MAIN FLOATING TRIGGER BUTTON WITH WAVE EFFECT -->
-        <button id="chatToggleBtn" class="float-btn" onclick="toggleSubChatButtons()" title="Chat with Arup">
-            <i id="toggleIcon" class="fa-solid fa-comments text-lg"></i>
-            <span id="notifBadge" class="notification-badge"></span>
-        </button>
+        <button id="aiChatFloatBtn" class="sub-chat-btn" onclick="openLiveChatBox()" title="Live AI Assistant"><i class="fa-solid fa-comments text-sm"></i></button>
+        <a id="whatsappFloatBtn" class="sub-chat-btn" href="https://wa.me/8801646126678?text=Hello%20Arup,%20I%20visited%20your%20portfolio!" target="_blank" title="WhatsApp Chat"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+        <button id="chatToggleBtn" class="float-btn" onclick="toggleSubChatButtons()" title="Chat"><i id="toggleIcon" class="fa-solid fa-comments text-lg"></i></button>
     </div>
 
-    <!-- CENTRAL DATA SCRIPT -->
+    <!-- SCRIPT -->
     <script src="blogs-data.js"></script>
-
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ once: true, offset: 30, duration: 900 });
+        AOS.init({ once: true, offset: 50, duration: 900 });
 
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                const toast = document.getElementById('chatNotificationToast');
-                const box = document.getElementById('chatBoxContainer');
-                if (box.style.display !== 'flex' && toast) {
-                    toast.classList.add('show');
-                    
-                    setTimeout(() => {
-                        toast.classList.remove('show');
-                        toast.classList.add('hide');
-                    }, 5000);
+        // INTERSECTION OBSERVER FOR ALL ANIMATED SECTIONS AND PREFERENCES
+        const observerOptions = { root: null, threshold: 0.15 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active-animation');
                 }
-            }, 2500);
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('#skillsSection, #prefSection1, #prefSection2').forEach(el => {
+            if(el) observer.observe(el);
         });
 
-        function openChatFromToast() {
-            const toast = document.getElementById('chatNotificationToast');
-            if(toast) {
-                toast.classList.remove('show');
-                toast.classList.add('hide');
-            }
-            toggleSubChatButtons();
-        }
-
         function toggleSubChatButtons() {
-            const toast = document.getElementById('chatNotificationToast');
-            if(toast) {
-                toast.classList.remove('show');
-                toast.classList.add('hide');
-            }
-
             const waBtn = document.getElementById('whatsappFloatBtn');
             const aiBtn = document.getElementById('aiChatFloatBtn');
             const box = document.getElementById('chatBoxContainer');
             const toggleIcon = document.getElementById('toggleIcon');
-            const badge = document.getElementById('notifBadge');
-            if(badge) badge.style.display = 'none';
-
             box.style.display = 'none';
-
             const isOpen = waBtn.classList.contains('show');
             if (isOpen) {
                 waBtn.classList.remove('show');
@@ -1027,14 +729,9 @@
         }
 
         function openLiveChatBox() {
-            const waBtn = document.getElementById('whatsappFloatBtn');
-            const aiBtn = document.getElementById('aiChatFloatBtn');
-            const toggleIcon = document.getElementById('toggleIcon');
-            
-            waBtn.classList.remove('show');
-            aiBtn.classList.remove('show');
-            toggleIcon.className = "fa-solid fa-comments text-lg";
-
+            document.getElementById('whatsappFloatBtn').classList.remove('show');
+            document.getElementById('aiChatFloatBtn').classList.remove('show');
+            document.getElementById('toggleIcon').className = "fa-solid fa-comments text-lg";
             const box = document.getElementById('chatBoxContainer');
             box.style.display = 'flex';
             document.getElementById('chatInput').focus();
@@ -1057,114 +754,25 @@
         function handleQuickQuery(type) {
             if (type === 'cv') {
                 appendMessage("I want to download Arup's CV", "user");
-                setTimeout(() => {
-                    appendMessage("Certainly! You can download Arup Kumar Saha's official CV (PDF) by clicking the download button in the header or hero section.", "bot");
-                }, 500);
+                setTimeout(() => { appendMessage("You can download Arup Kumar Saha's official CV from the header or hero section.", "bot"); }, 500);
             } else if (type === 'contact') {
-                appendMessage("What is your contact info and location?", "user");
-                setTimeout(() => {
-                    appendMessage("📞 Phone: +880 1646126678\n📧 Email: arup.bu.bd@gmail.com\n📍 Current Location: Bijoy 24 Hall, University of Barishal.", "bot");
-                }, 500);
-            } else if (type === 'services') {
-                appendMessage("What professional services do you offer?", "user");
-                setTimeout(() => {
-                    appendMessage("💼 Services:\n• Presentation Slides Expert (PowerPoint & Pitch Decks)\n• HR Consulting & Resume Writing\n• Business Analytics & Market Research", "bot");
-                }, 500);
+                appendMessage("What is your contact info?", "user");
+                setTimeout(() => { appendMessage("📞 Phone: +880 1646126678\n📧 Email: arup.bu.bd@gmail.com", "bot"); }, 500);
             }
-        }
-
-        function getSmartBotResponse(query) {
-            const q = query.toLowerCase().trim();
-
-            if (q.match(/hi|hello|hey|assalamu|salam|namaste/)) {
-                return "Hello! Welcome to Arup Kumar Saha's professional portfolio. How can I assist you today?";
-            }
-            if (q.match(/cv|resume|download|সিভি/)) {
-                return "Certainly! You can download Arup's official CV (PDF) directly from the header or about section.";
-            }
-            if (q.match(/education|study|degree|mba|bba|ssc|hsc/)) {
-                return "🎓 Educational Background:\n• MBA in HRM: First Class (Barishal University)\n• BBA in Management Studies: First Class (Barishal University)\n• HSC: Grade A (Dr. Abdur Razzak Municipal College, Jashore)\n• SSC: Grade A (Sammilani Institution, Jashore)";
-            }
-            if (q.match(/experience|job|work|career|intern|brac|amrita/)) {
-                return "💼 Professional Experience:\n• HR & Admin Intern at Amrita Consumer Food Products Ltd.\n• Project Volunteer at BRAC (Barishal)\n• Research Assistant at University of Barishal";
-            }
-            if (q.match(/contact|phone|email|location|address/)) {
-                return "📞 Contact Details:\n• Phone: +880 1646126678\n• Email: arup.bu.bd@gmail.com\n• Location: Bijoy 24 Hall, University of Barishal";
-            }
-            if (q.match(/skill|software|spss|excel|presentation/)) {
-                return "⚙️ Skills: Presentation Slides Design, SPSS, AMOS, SmartPLS, MS Excel, Word, PowerPoint, HTML, CSS & AI Prompting.";
-            }
-
-            return `Thank you for your message! To get in touch with Arup directly, please email at: arup.bu.bd@gmail.com`;
         }
 
         function sendUserMessage() {
             const input = document.getElementById('chatInput');
             const text = input.value.trim();
             if(!text) return;
-            
             appendMessage(text, "user");
             input.value = "";
-
             setTimeout(() => {
-                const botReply = getSmartBotResponse(text);
-                appendMessage(botReply, "bot");
+                appendMessage("Thank you for your message! Please email at: arup.bu.bd@gmail.com", "bot");
             }, 600);
         }
 
-        /* REFINED INTERSECTION OBSERVER FOR HIGH VISIBILITY POP-UP */
-        const skillsSection = document.getElementById('skillsSection');
-        const observerOptions = { root: null, threshold: 0.15 };
-        const skillsObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    skillsSection.classList.add('skills-active');
-                }
-            });
-        }, observerOptions);
-
-        if (skillsSection) {
-            skillsObserver.observe(skillsSection);
-        }
-
-        const homeBlogContainer = document.getElementById('homeBlogContainer');
-        if (siteData.isComingSoon) {
-            homeBlogContainer.innerHTML = `
-                <div class="col-span-full bg-zinc-900/60 p-6 rounded-2xl border border-white/5 text-center space-y-3">
-                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Notice</span>
-                    <h3 class="font-bold text-base text-white">Blog Hub is Coming Soon</h3>
-                    <p class="text-xs sm:text-sm text-zinc-400 max-w-md mx-auto">${siteData.comingSoonMessage}</p>
-                    <div class="pt-2">
-                        <a href="blog.html" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1.5">
-                            <span>Visit Blog Page</span>
-                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-            `;
-        } else {
-            let postsHTML = '';
-            siteData.posts.forEach(post => {
-                postsHTML += `
-                    <div class="bg-zinc-900/60 p-5 rounded-2xl border border-white/5 space-y-3 hover:border-blue-500/40 transition">
-                        <div class="flex justify-between text-[11px] font-bold text-blue-400 uppercase tracking-widest">
-                            <span>${post.category}</span>
-                            <span>${post.date}</span>
-                        </div>
-                        <h3 class="font-bold text-base text-white hover:text-blue-400 transition cursor-pointer">${post.title}</h3>
-                        <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">${post.excerpt}</p>
-                        <div class="pt-2">
-                            <a href="${post.link}" class="text-xs text-blue-400 hover:text-blue-300 font-bold inline-flex items-center space-x-1.5">
-                                <span>Read More</span>
-                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                            </a>
-                        </div>
-                    </div>
-                `;
-            });
-            homeBlogContainer.innerHTML = postsHTML;
-        }
-
+        // TYPEWRITER EFFECT
         const words = ["HR Professional", "Management Expert", "Presentation Slides Expert", "HR & Admin Officer"];
         let i = 0;
         function typingEffect() {
@@ -1197,71 +805,17 @@
         }
         typingEffect();
 
+        // MOBILE MENU & SCROLL TOP
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        menuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            mobileMenu.classList.toggle('hidden');
-        });
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
-        });
-        document.addEventListener('click', (e) => {
-            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
+        menuBtn.addEventListener('click', (e) => { e.stopPropagation(); mobileMenu.classList.toggle('hidden'); });
+        document.addEventListener('click', (e) => { if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) mobileMenu.classList.add('hidden'); });
 
         const scrollTopBtn = document.getElementById('scrollTopBtn');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
-            } else {
-                scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
-            }
+            if (window.scrollY > 300) scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+            else scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
         });
-
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.slide-item');
-        const dots = document.querySelectorAll('.dot');
-        function showSlides() {
-            if(slides.length === 0) return;
-            slides.forEach((slide) => slide.classList.remove('active'));
-            dots.forEach((dot) => {
-                dot.classList.remove('bg-blue-500', 'w-6');
-                dot.classList.add('bg-zinc-700', 'w-2');
-            });
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            slides[slideIndex - 1].classList.add('active');
-            dots[slideIndex - 1].classList.remove('bg-zinc-700', 'w-2');
-            dots[slideIndex - 1].classList.add('bg-blue-500', 'w-6');
-        }
-        function currentSlide(n) {
-            slideIndex = n;
-            slides.forEach((slide) => slide.classList.remove('active'));
-            dots.forEach((dot) => {
-                dot.classList.remove('bg-blue-500', 'w-6');
-                dot.classList.add('bg-zinc-700', 'w-2');
-            });
-            slides[slideIndex].classList.add('active');
-            dots[slideIndex].classList.remove('bg-zinc-700', 'w-2');
-            dots[slideIndex].classList.add('bg-blue-500', 'w-6');
-        }
-        setInterval(showSlides, 6000);
-
-        let testimonialIndex = 0;
-        const testimonials = document.querySelectorAll('.testimonial-item');
-        function showTestimonials() {
-            if(testimonials.length === 0) return;
-            testimonials.forEach((item) => item.classList.remove('active'));
-            testimonialIndex++;
-            if (testimonialIndex > testimonials.length) { testimonialIndex = 1; }
-            testimonials[testimonialIndex - 1].classList.add('active');
-        }
-        setInterval(showTestimonials, 5500);
     </script>
 </body>
 </html>
