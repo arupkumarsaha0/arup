@@ -256,7 +256,6 @@
                     </span>
                     <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight flex items-center gap-3">
                         <span class="section-heading">Arup Kumar Saha</span>
-                        <!-- Verified Blue Badge -->
                         <span class="inline-flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 bg-blue-600 text-white rounded-full text-xs shadow-lg shrink-0" title="Verified Professional">
                             <i class="fa-solid fa-check text-[11px]"></i>
                         </span>
@@ -560,12 +559,12 @@
                 </div>
             </div>
 
-            <!-- ENHANCED PROFESSIONAL SERVICES SECTION WITH PRESENTATION SLIDES & IMAGE-INSPIRED SERVICES -->
+            <!-- PROFESSIONAL SERVICES SECTION WITH PRESENTATION SLIDES & IMAGE-INSPIRED SERVICES -->
             <div id="services" class="bento-card p-6 sm:p-8 rounded-3xl space-y-5">
                 <i class="fa-solid fa-handshake section-bg-icon"></i>
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-200 section-heading relative z-10">Professional Services</h2>
                 <div class="space-y-3.5 relative z-10">
-                    <!-- First Service: Presentation Slides Design & Expert (Highlighted) -->
+                    <!-- First Service: Presentation Slides Design & Expert -->
                     <div class="bg-gradient-to-r from-blue-600/15 via-zinc-900 to-zinc-900 p-4 rounded-2xl border border-blue-500/30 flex items-center space-x-4 hover:border-blue-500 transition duration-300 shadow-lg group">
                         <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition duration-300">
                             <i class="fa-solid fa-file-powerpoint text-base"></i>
@@ -579,13 +578,13 @@
                         </div>
                     </div>
 
-                    <!-- Second Service: HR Consulting & Resume Writing (Inspired from Image) -->
+                    <!-- Second Service: HR Consulting & Resume Writing -->
                     <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
                         <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-user-tie text-sm"></i></div>
                         <div><h4 class="font-bold text-xs sm:text-sm text-white">HR Consulting & Resume Writing</h4><p class="text-xs text-zinc-400">Professional CV formatting, cover letters & HR advisory.</p></div>
                     </div>
 
-                    <!-- Third Service: Business Analytics & Research (Inspired from Image) -->
+                    <!-- Third Service: Business Analytics & Research -->
                     <div class="bg-zinc-900/80 p-4 rounded-2xl border border-white/5 flex items-center space-x-3.5 hover:border-blue-500/40 transition">
                         <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-chart-line text-sm"></i></div>
                         <div><h4 class="font-bold text-xs sm:text-sm text-white">Business Analytics & Market Research</h4><p class="text-xs text-zinc-400">Data collection, survey tabulation, and statistical analysis.</p></div>
@@ -799,7 +798,7 @@
         <i class="fa-solid fa-arrow-up text-xs"></i>
     </a>
 
-    <!-- UNIFIED FLOATING CHAT WIDGET WITH WAVE EFFECT & TWO POPUP OPTIONS -->
+    <!-- TWO SEPARATE FLOATING ICONS WIDGET (WHATSAPP & AI CHAT) -->
     <style>
         .right-floating-container {
             position: fixed;
@@ -822,16 +821,47 @@
             color: #ffffff;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             border: 1px solid rgba(255, 255, 255, 0.2);
             text-decoration: none;
             position: relative;
         }
         .float-btn:hover {
-            transform: scale(1.1);
+            transform: scale(1.12);
         }
-        
-        /* Unified Trigger Button with Wave / Ripple Ring Effect */
+
+        /* Separate Action Buttons (Hidden by default, slide up when active) */
+        .sub-chat-btn {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            text-decoration: none;
+            opacity: 0;
+            transform: translateY(20px) scale(0.5);
+            pointer-events: none;
+        }
+        .sub-chat-btn.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        #whatsappFloatBtn {
+            background: linear-gradient(135deg, #22c55e, #15803d);
+        }
+        #aiChatFloatBtn {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        }
+
+        /* Main Trigger Button with Wave / Ripple Ring Effect */
         #chatToggleBtn {
             background: linear-gradient(135deg, #3b82f6, #1d4ed8);
             position: relative;
@@ -882,29 +912,6 @@
             transform: translateY(15px) scale(0.95);
         }
 
-        /* Popup Menu Box showing the two classic options */
-        #chatOptionsPopup {
-            position: absolute;
-            bottom: 68px;
-            right: 0;
-            width: 290px;
-            background: #0e0f14;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-            overflow: hidden;
-            display: none;
-            flex-direction: column;
-            padding: 14px;
-            gap: 10px;
-            animation: chatPopup 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            z-index: 10001;
-        }
-        @keyframes chatPopup {
-            from { opacity: 0; transform: translateY(15px) scale(0.95); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-
         /* Full Live Chat Box Container */
         #chatBoxContainer {
             position: absolute;
@@ -920,6 +927,10 @@
             flex-direction: column;
             animation: chatPopup 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             z-index: 10002;
+        }
+        @keyframes chatPopup {
+            from { opacity: 0; transform: translateY(15px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
         }
         .chat-header {
             background: linear-gradient(135deg, #0e0f14, #181922);
@@ -968,10 +979,10 @@
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 12px;
-            padding: 12px 14px;
+            padding: 8px 12px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -982,7 +993,6 @@
         .popup-option-btn:hover {
             background: rgba(59, 130, 246, 0.15);
             border-color: rgba(59, 130, 246, 0.5);
-            transform: translateY(-2px);
         }
         .notification-badge {
             position: absolute;
@@ -1007,42 +1017,7 @@
             <p class="text-[11px] text-zinc-300 leading-snug pt-1">Hello! 👋 Click here to chat with me or connect via WhatsApp!</p>
         </div>
 
-        <!-- 1. POPUP MENU WITH TWO OPTIONS -->
-        <div id="chatOptionsPopup">
-            <div class="flex items-center justify-between pb-2 border-b border-white/10">
-                <div class="flex items-center space-x-2">
-                    <div class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-[10px] border border-blue-500/30">A</div>
-                    <span class="text-xs font-bold text-white">Choose Chat Option</span>
-                </div>
-                <button onclick="toggleChatPopup()" class="text-zinc-400 hover:text-white text-xs p-1"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            
-            <div class="flex flex-col gap-2.5 pt-1">
-                <!-- Option 1: WhatsApp Chat -->
-                <a href="https://wa.me/8801646126678?text=Hello%20Arup,%20I%20visited%20your%20portfolio!" target="_blank" class="popup-option-btn">
-                    <div class="w-9 h-9 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/30">
-                        <i class="fa-brands fa-whatsapp text-base"></i>
-                    </div>
-                    <div>
-                        <div class="text-xs font-bold text-white">WhatsApp Chat</div>
-                        <div class="text-[10px] text-zinc-400">Direct message on WhatsApp</div>
-                    </div>
-                </a>
-
-                <!-- Option 2: Live AI Assistant Chat -->
-                <button onclick="openLiveChatBox()" class="popup-option-btn">
-                    <div class="w-9 h-9 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/30">
-                        <i class="fa-solid fa-comments text-sm"></i>
-                    </div>
-                    <div>
-                        <div class="text-xs font-bold text-white">Live AI Assistant</div>
-                        <div class="text-[10px] text-zinc-400">Instant answers about Arup</div>
-                    </div>
-                </button>
-            </div>
-        </div>
-
-        <!-- 2. FULL LIVE CHAT BOX CONTAINER -->
+        <!-- FULL LIVE CHAT BOX CONTAINER -->
         <div id="chatBoxContainer">
             <div class="chat-header">
                 <div class="flex items-center space-x-2.5">
@@ -1062,10 +1037,10 @@
                     Hello! 👋 I am Arup's AI Assistant. How can I help you today? Choose from below:
                 </div>
                 <div class="flex flex-col gap-2 pt-1">
-                    <button onclick="handleQuickQuery('cv')" class="popup-option-btn py-2 px-3 text-left text-xs font-semibold text-blue-400 border border-blue-500/30">
+                    <button onclick="handleQuickQuery('cv')" class="popup-option-btn text-xs font-semibold text-blue-400 border border-blue-500/30">
                         📄 Download Official CV (PDF)
                     </button>
-                    <button onclick="handleQuickQuery('contact')" class="popup-option-btn py-2 px-3 text-left text-xs font-semibold text-amber-400 border border-amber-500/30">
+                    <button onclick="handleQuickQuery('contact')" class="popup-option-btn text-xs font-semibold text-amber-400 border border-amber-500/30">
                         📞 Contact Information & Location
                     </button>
                 </div>
@@ -1076,9 +1051,19 @@
             </div>
         </div>
 
-        <!-- 3. UNIFIED FLOATING TRIGGER BUTTON WITH WAVE EFFECT -->
-        <button id="chatToggleBtn" class="float-btn" onclick="toggleChatPopup()" title="Chat with Arup">
-            <i class="fa-solid fa-comments text-lg"></i>
+        <!-- SUB CHAT BUTTON 2: AI Assistant Icon -->
+        <button id="aiChatFloatBtn" class="sub-chat-btn" onclick="openLiveChatBox()" title="Live AI Assistant">
+            <i class="fa-solid fa-comments text-sm"></i>
+        </button>
+
+        <!-- SUB CHAT BUTTON 1: WhatsApp Icon -->
+        <a id="whatsappFloatBtn" class="sub-chat-btn" href="https://wa.me/8801646126678?text=Hello%20Arup,%20I%20visited%20your%20portfolio!" target="_blank" title="WhatsApp Chat">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+        </a>
+
+        <!-- MAIN FLOATING TRIGGER BUTTON WITH WAVE EFFECT -->
+        <button id="chatToggleBtn" class="float-btn" onclick="toggleSubChatButtons()" title="Chat with Arup">
+            <i id="toggleIcon" class="fa-solid fa-comments text-lg"></i>
             <span id="notifBadge" class="notification-badge"></span>
         </button>
     </div>
@@ -1095,9 +1080,8 @@
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const toast = document.getElementById('chatNotificationToast');
-                const popup = document.getElementById('chatOptionsPopup');
                 const box = document.getElementById('chatBoxContainer');
-                if (popup.style.display !== 'flex' && box.style.display !== 'flex' && toast) {
+                if (box.style.display !== 'flex' && toast) {
                     toast.classList.add('show');
                     
                     setTimeout(() => {
@@ -1114,35 +1098,50 @@
                 toast.classList.remove('show');
                 toast.classList.add('hide');
             }
-            toggleChatPopup();
+            toggleSubChatButtons();
         }
 
-        // Toggle Popup Menu with two distinct buttons
-        function toggleChatPopup() {
+        // Toggle Two Separate Floating Icons (WhatsApp & AI Chat)
+        function toggleSubChatButtons() {
             const toast = document.getElementById('chatNotificationToast');
             if(toast) {
                 toast.classList.remove('show');
                 toast.classList.add('hide');
             }
 
-            const popup = document.getElementById('chatOptionsPopup');
+            const waBtn = document.getElementById('whatsappFloatBtn');
+            const aiBtn = document.getElementById('aiChatFloatBtn');
             const box = document.getElementById('chatBoxContainer');
+            const toggleIcon = document.getElementById('toggleIcon');
             const badge = document.getElementById('notifBadge');
             if(badge) badge.style.display = 'none';
 
-            // Close full chat if open
+            // Close full chat box if open
             box.style.display = 'none';
 
-            if (popup.style.display === 'flex') {
-                popup.style.display = 'none';
+            // Toggle show class on N-S buttons
+            const isOpen = waBtn.classList.contains('show');
+            if (isOpen) {
+                waBtn.classList.remove('show');
+                aiBtn.classList.remove('show');
+                toggleIcon.className = "fa-solid fa-comments text-lg";
             } else {
-                popup.style.display = 'flex';
+                waBtn.classList.add('show');
+                aiBtn.classList.add('show');
+                toggleIcon.className = "fa-solid fa-xmark text-lg";
             }
         }
 
-        // Open Full Live Chat Box from Popup option
+        // Open Full Live Chat Box
         function openLiveChatBox() {
-            document.getElementById('chatOptionsPopup').style.display = 'none';
+            const waBtn = document.getElementById('whatsappFloatBtn');
+            const aiBtn = document.getElementById('aiChatFloatBtn');
+            const toggleIcon = document.getElementById('toggleIcon');
+            
+            waBtn.classList.remove('show');
+            aiBtn.classList.remove('show');
+            toggleIcon.className = "fa-solid fa-comments text-lg";
+
             const box = document.getElementById('chatBoxContainer');
             box.style.display = 'flex';
             document.getElementById('chatInput').focus();
